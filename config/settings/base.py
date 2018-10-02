@@ -71,6 +71,7 @@ THIRD_PARTY_APPS = [
 ]
 LOCAL_APPS = [
     'pycon.users.apps.UsersAppConfig',
+    'pycon.proposals.apps.ProposalsConfig',
     # Your stuff: custom apps go here
 ]
 # https://docs.djangoproject.com/en/dev/ref/settings/#installed-apps
