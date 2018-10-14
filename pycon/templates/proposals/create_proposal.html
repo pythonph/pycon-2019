@@ -3,8 +3,31 @@
 {% load widget_tweaks %}
 {% block content %}
   <div class="row">
-    <div class="col-sm-6"></div>
-    <div class="col-sm-6">
+    <div class="col-sm-4">
+      <div class="card">
+        <div class="card-header">
+          Call for Proposal
+        </div>
+        <div class="card-body">
+          We are now accepting proposals of presentations for next year's PyCon PH! Here are a few
+          tips* on submitting a proposal:
+
+          <ul>
+            <li>
+              Submit early so we can give feedback or request for changes.
+            </li>
+            <li>
+              Include details about the intended audience of your talk. e.g. devops engineers, data
+              scientists, django users, etc.
+            </li>
+            <li>
+              Avoid self-advertisements except for open source contributions.
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="col-sm-8">
       <form method="POST">
         {% csrf_token %}
         <div class="form-group">
