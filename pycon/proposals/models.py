@@ -39,3 +39,6 @@ class Proposal(Audit):
         choices=PRESENTATION_TYPE_CHOICES
     )
     duration = models.DurationField()
+
+    def __str__(self):
+        return self.title

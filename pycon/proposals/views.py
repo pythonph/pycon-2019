@@ -14,4 +14,5 @@ class ProposalCreateView(CreateView):
         'presentation_type',
         'duration'
     ]
+    success_url = '/'
     template_name = 'proposals/create_proposal.html'
