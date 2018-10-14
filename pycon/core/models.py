@@ -4,8 +4,8 @@ from django.db import models
 
 
 class Audit(models.Model):
-    created_time = models.DateTimeField(auto_add_now=True)
-    modified_time = models.DateTimeField(auto_add=True)
+    created_time = models.DateTimeField(auto_now_add=True)
+    modified_time = models.DateTimeField(auto_now=True)
     is_active = models.BooleanField(default=True)
 
     class Meta:
