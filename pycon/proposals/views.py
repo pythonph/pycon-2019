@@ -16,3 +16,8 @@ class ProposalCreateView(CreateView):
     ]
     success_url = '/'
     template_name = 'proposals/create_proposal.html'
+
+    def form_valid(self, form):
+        obj = form.save(commit=False)
+        obj.user = self.request.user
+        return super(ProposalCreateView, self).form_valid(form)

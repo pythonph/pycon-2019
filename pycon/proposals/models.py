@@ -1,11 +1,11 @@
 from django.db import models
 
-from core.models import Audit
+from core.models import UserAudit
 
 # Create your models here.
 
 
-class Proposal(Audit):
+class Proposal(UserAudit):
 
     BEGINNER = 'beginner'
     ADVANCE = 'advance'

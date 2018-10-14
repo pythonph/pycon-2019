@@ -10,6 +10,7 @@ class ProposalAdmin(AuditModelAdmin):
 
     list_display = (
         'id',
+        'user',
         'title',
         'is_active'
     )
