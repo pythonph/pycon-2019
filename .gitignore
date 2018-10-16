@@ -282,3 +282,6 @@ pip-selfcheck.json
 pycon/media/
 
 .pytest_cache/
+
+# Environment variables
+.env
