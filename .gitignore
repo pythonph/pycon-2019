@@ -278,10 +278,10 @@ pip-selfcheck.json
 
 
 ### Project template
-
-pycon/media/
-
+.nvimrc
 .pytest_cache/
+_build/
+pycon/media/
 
 # Environment variables
 .env
