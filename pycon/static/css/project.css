@@ -23,15 +23,23 @@
 }
 
 #about-us-section {
-  background-color: white;
+  background-color: #ffcc00;
   padding: 100px 100px 100px 100px;
   min-height: 400px;
 }
 
 #application-section {
-  background-color: white;
+  background-color: #007acc;
   padding: 100px 100px 100px 100px;
   min-height: 800px;
+}
+
+#map-venue-section > .space{
+  background-color: orange;
+}
+
+#map-venue-section > .details {
+  background-color: #9900ff;
 }
 
 .design-container {
@@ -106,5 +114,9 @@
   border-left: 10px solid black;
   border-right: 10px solid black;
   border-bottom: 10px solid black;
+}
+.border-left-right {
+  border-left: 10px solid black;
+  border-right: 10px solid black;
 }
 
