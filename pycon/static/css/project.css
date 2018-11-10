@@ -28,6 +28,83 @@
   min-height: 400px;
 }
 
+#application-section {
+  background-color: white;
+  padding: 100px 100px 100px 100px;
+  min-height: 800px;
+}
+
 .design-container {
   background-color: black;
 }
+
+.icon {
+  font-size: 100px;
+}
+
+.margin-all,
+.margin-right {
+  margin-right: 75px;
+}
+
+.margin-all,
+.margin-left {
+  margin-left: 75px;
+}
+
+.margin-all,
+.margin-top {
+  margin-top: 75px;
+}
+
+.margin-all,
+.margin-bottom {
+  margin-bottom: 75px;
+}
+
+.padding-all,
+.padding-right {
+  padding-right: 75px;
+}
+
+.padding-all,
+.padding-left {
+  padding-left: 75px;
+}
+
+.padding-all,
+.padding-top {
+  padding-top: 75px;
+}
+
+.padding-all,
+.padding-bottom {
+  padding-bottom: 75px;
+}
+
+.card-body {
+  min-height: 300px;
+}
+
+.card-content {
+  min-height: 150px;
+}
+
+.card-footer {
+  background-color: white;
+  border: none;
+}
+
+.border-around {
+  border-left: 10px solid black;
+  border-right: 10px solid black;
+  border-bottom: 10px solid black;
+  border-top: 10px solid black;
+}
+
+.border-around-top-0 {
+  border-left: 10px solid black;
+  border-right: 10px solid black;
+  border-bottom: 10px solid black;
+}
+
