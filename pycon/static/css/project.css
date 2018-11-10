@@ -11,3 +11,13 @@
   background-color: #f2dede;
   border-color: #eed3d7;
 }
+
+
+/* Custom project styles */
+
+#banner-section {
+  background-image: url("../images/banner-image.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  min-height: 1000px;
+}
