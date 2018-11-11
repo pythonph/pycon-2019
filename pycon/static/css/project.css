@@ -24,6 +24,11 @@ img {
   width: 100%;
 }
 
+a.btn{
+  white-space: normal;
+  padding: .5rem;
+}
+
 #banner-section {
 }
 
@@ -61,7 +66,7 @@ img {
 
 #coc-section > div > .placeholder {
   background-color: orange;
-  min-height: 27em;
+  min-height: 27rem;
   min-width: 100%;
 }
 
@@ -75,49 +80,49 @@ img {
 }
 
 .icon {
-  font-size: 4em;
+  font-size: 4rem;
 }
 
 .padding-all,
 .padding-lrb-half-top,
 .padding-right {
-  padding-right: 2.5em;
+  padding-right: 2.3rem;
 }
 
 .padding-all,
 .padding-lrb-half-top,
 .padding-left {
-  padding-left: 2.5em;
+  padding-left: 2.3rem;
 }
 
 .padding-all,
 .padding-top {
-  padding-top: 2.5em;
+  padding-top: 2.3rem;
 }
 
 .padding-all,
 .padding-lrb-half-top,
 .padding-bottom {
-  padding-bottom: 2.5em;
+  padding-bottom: 2.3rem;
 }
 
 .padding-lrb-half-top {
-  padding-top: 1.25em;
+  padding-top: 1.15rem;
 }
 
 .padding-0 {
-  padding-top: 0em;
-  padding-left: 0em;
-  padding-bottom: 0em;
-  padding-right: 0em;
+  padding-top: 0rem;
+  padding-left: 0rem;
+  padding-bottom: 0rem;
+  padding-right: 0rem;
 }
 
 .card-body {
-  min-height: 13em;
+  min-height: 13rem;
 }
 
 .card-content {
-  min-height: 10em;
+  min-height: 10rem;
 }
 
 .card-footer {
@@ -126,46 +131,46 @@ img {
 }
 
 .border-around {
-  border-left: .3em solid black;
-  border-right: .3em solid black;
-  border-bottom: .3em solid black;
-  border-top: .3em solid black;
+  border-left: .25rem solid black;
+  border-right: .25rem solid black;
+  border-bottom: .25rem solid black;
+  border-top: .25rem solid black;
 }
 
 .border-around-top-0 {
-  border-left: .3em solid black;
-  border-right: .3em solid black;
-  border-bottom: .3em solid black;
+  border-left: .25rem solid black;
+  border-right: .25rem solid black;
+  border-bottom: .25rem solid black;
 }
 
 .border-left-right {
-  border-left: .3em solid black;
-  border-right: .3em solid black;
+  border-left: .25rem solid black;
+  border-right: .25rem solid black;
 }
 
 .border-left-1 {
-  border-left: .3em solid black;
+  border-left: .25rem solid black;
 }
 
 .border-right-1 {
-  border-right: .3em solid black;
+  border-right: .25rem solid black;
 }
 
 .border-bottom-1 {
-  border-bottom: .3em solid black;
+  border-bottom: .25rem solid black;
 }
 
 .border-right-bottom {
-  border-right: .3em solid black;
-  border-bottom: .3em solid black;
+  border-right: .25rem solid black;
+  border-bottom: .25rem solid black;
 }
 
 .margin-top-half {
-  margin-top: 1.25em;
+  margin-top: 1.15rem;
 }
 
 .title {
-  font-size: 1.5em;
+  font-size: 1.3rem;
   font-weight: bold;
 }
 
