@@ -24,13 +24,11 @@
 
 #about-us-section {
   background-color: #ffcc00;
-  padding: 100px 100px 100px 100px;
   min-height: 400px;
 }
 
 #application-section {
   background-color: #007acc;
-  padding: 100px 100px 100px 100px;
   min-height: 800px;
 }
 
@@ -40,6 +38,31 @@
 
 #map-venue-section > .details {
   background-color: #9900ff;
+}
+
+#question-section {
+  background-color: #ffcc00;
+  min-height: 200px;
+}
+
+#coc-section > #long-version {
+  background-color: white;
+}
+
+#coc-section > div > #coc {
+  background-color: red;
+}
+
+#coc-section > div > .placeholder {
+  background-color: orange;
+  min-height: 250px;
+  min-width: 100%;
+}
+
+#coc-section > div > #license {
+  background-color: #007acc;
+  min-height: 300px;
+  min-width: 100%;
 }
 
 .design-container {
@@ -90,6 +113,13 @@
   padding-bottom: 75px;
 }
 
+.padding-0{
+  padding-top: 0px;
+  padding-left: 0px;
+  padding-bottom: 0px;
+  padding-right: 0px;
+}
+
 .card-body {
   min-height: 300px;
 }
@@ -115,8 +145,26 @@
   border-right: 10px solid black;
   border-bottom: 10px solid black;
 }
+
 .border-left-right {
   border-left: 10px solid black;
   border-right: 10px solid black;
+}
+
+.border-left-1 {
+  border-left: 10px solid black;
+}
+
+.border-right-1 {
+  border-right: 10px solid black;
+}
+
+.border-bottom-1 {
+  border-bottom: 10px solid black;
+}
+
+.border-right-bottom {
+  border-right: 10px solid black;
+  border-bottom: 10px solid black;
 }
 
