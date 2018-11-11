@@ -15,7 +15,7 @@
 
 /* Custom project styles */
 
-p, button, .text {
+p, a, button, .text {
   font-family: "Courier New", Courier, monospace !important;
 }
 
@@ -49,7 +49,6 @@ img {
 
 #question-section {
   background-color: #ffcc00;
-  min-height: 13em;
 }
 
 #coc-section > #long-version {
