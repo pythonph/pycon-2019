@@ -15,21 +15,24 @@
 
 /* Custom project styles */
 
+p, button, .text {
+  font-family: "Courier New", Courier, monospace !important;
+}
+
+img {
+  height: 100%;
+  width: 100%;
+}
+
 #banner-section {
-  background-image: url("../images/banner-image.png");
-  background-repeat: no-repeat;
-  background-size: 100% auto;
-  min-height: 840px;
 }
 
 #about-us-section {
   background-color: #ffcc00;
-  min-height: 400px;
 }
 
 #application-section {
   background-color: #007acc;
-  min-height: 800px;
 }
 
 #map-venue-section > .space{
@@ -39,10 +42,14 @@
 #map-venue-section > .details {
   background-color: #9900ff;
 }
+#map {
+  height: 100%;
+  width: 100%;
+}
 
 #question-section {
   background-color: #ffcc00;
-  min-height: 200px;
+  min-height: 13em;
 }
 
 #coc-section > #long-version {
@@ -55,13 +62,12 @@
 
 #coc-section > div > .placeholder {
   background-color: orange;
-  min-height: 250px;
+  min-height: 27em;
   min-width: 100%;
 }
 
 #coc-section > div > #license {
   background-color: #007acc;
-  min-height: 300px;
   min-width: 100%;
 }
 
@@ -70,62 +76,49 @@
 }
 
 .icon {
-  font-size: 100px;
-}
-
-.margin-all,
-.margin-right {
-  margin-right: 75px;
-}
-
-.margin-all,
-.margin-left {
-  margin-left: 75px;
-}
-
-.margin-all,
-.margin-top {
-  margin-top: 75px;
-}
-
-.margin-all,
-.margin-bottom {
-  margin-bottom: 75px;
+  font-size: 4em;
 }
 
 .padding-all,
+.padding-lrb-half-top,
 .padding-right {
-  padding-right: 75px;
+  padding-right: 2.5em;
 }
 
 .padding-all,
+.padding-lrb-half-top,
 .padding-left {
-  padding-left: 75px;
+  padding-left: 2.5em;
 }
 
 .padding-all,
 .padding-top {
-  padding-top: 75px;
+  padding-top: 2.5em;
 }
 
 .padding-all,
+.padding-lrb-half-top,
 .padding-bottom {
-  padding-bottom: 75px;
+  padding-bottom: 2.5em;
 }
 
-.padding-0{
-  padding-top: 0px;
-  padding-left: 0px;
-  padding-bottom: 0px;
-  padding-right: 0px;
+.padding-lrb-half-top {
+  padding-top: 1.25em;
+}
+
+.padding-0 {
+  padding-top: 0em;
+  padding-left: 0em;
+  padding-bottom: 0em;
+  padding-right: 0em;
 }
 
 .card-body {
-  min-height: 300px;
+  min-height: 13em;
 }
 
 .card-content {
-  min-height: 150px;
+  min-height: 10em;
 }
 
 .card-footer {
@@ -134,37 +127,53 @@
 }
 
 .border-around {
-  border-left: 10px solid black;
-  border-right: 10px solid black;
-  border-bottom: 10px solid black;
-  border-top: 10px solid black;
+  border-left: .3em solid black;
+  border-right: .3em solid black;
+  border-bottom: .3em solid black;
+  border-top: .3em solid black;
 }
 
 .border-around-top-0 {
-  border-left: 10px solid black;
-  border-right: 10px solid black;
-  border-bottom: 10px solid black;
+  border-left: .3em solid black;
+  border-right: .3em solid black;
+  border-bottom: .3em solid black;
 }
 
 .border-left-right {
-  border-left: 10px solid black;
-  border-right: 10px solid black;
+  border-left: .3em solid black;
+  border-right: .3em solid black;
 }
 
 .border-left-1 {
-  border-left: 10px solid black;
+  border-left: .3em solid black;
 }
 
 .border-right-1 {
-  border-right: 10px solid black;
+  border-right: .3em solid black;
 }
 
 .border-bottom-1 {
-  border-bottom: 10px solid black;
+  border-bottom: .3em solid black;
 }
 
 .border-right-bottom {
-  border-right: 10px solid black;
-  border-bottom: 10px solid black;
+  border-right: .3em solid black;
+  border-bottom: .3em solid black;
 }
 
+.margin-top-half {
+  margin-top: 1.25em;
+}
+
+.title {
+  font-size: 1.5em;
+  font-weight: bold;
+}
+
+.text-white {
+  font-color: white
+}
+
+.bg-yellow {
+  background-color: yellow;
+}
