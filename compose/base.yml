@@ -1,0 +1,30 @@
+version: '2'
+
+services:
+    pycon-web:
+        restart: always
+        build:
+          context: ../
+        image: pycon-web
+        volumes:
+          - ../:/srv/funny/pycon
+        container_name: pycon-web
+        working_dir: "/srv/funny/pycon"
+        command: scripts/docker_startup.sh
+        ports:
+          - "2329:22"
+
+    pycon-nginx:
+        restart: always
+        build:
+            context: ../
+            dockerfile: DockerfileNginx
+        image: pycon-nginx
+        container_name: pycon-nginx
+        volumes_from:
+            - pycon-web
+        links:
+            - pycon-web
+        ports:
+            - "80:80"
+            - "443:443"
