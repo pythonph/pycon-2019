@@ -11,6 +11,12 @@ PyCon PH Website.
 :License: MIT
 
 
+Requirements
+------------
+
+* Docker
+
+
 Settings
 --------
 
@@ -20,6 +26,27 @@ Moved to settings_.
 
 Basic Commands
 --------------
+
+Spinning up your development environment
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+::
+
+    $ docker-compose up
+
+You can now access the Django dev server at localhost:8000, and the
+live-reloading Gulp server at localhost:3000.
+
+Running commands inside the docker container
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+::
+
+    $ docker-compose run <container> <command>
+
+    // e.g.
+    $ docker-compose run django python manage.py migrate
+    $ docker-compose run gulp gulp styles
 
 Setting Up Your Users
 ^^^^^^^^^^^^^^^^^^^^^
