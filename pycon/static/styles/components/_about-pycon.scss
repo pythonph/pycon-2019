@@ -1,0 +1,70 @@
+.about-pycon {
+  &__image {
+    @include popup-border;
+
+    background-image: url("/static/images/about-photo.jpg");
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding-top: 67%;
+    position: relative;
+
+    // Decorative box
+    &::after {
+      background-color: $la-rioja;
+      border: 5px solid $woodsmoke;
+      bottom: vr(1);
+      content: "";
+      height: vr(2);
+      position: absolute;
+      right: -5px;
+      width: 90%;
+    }
+  }
+
+  &__content {
+    @include popup-border;
+
+    background-color: $selective-yellow;
+    padding: vr(2) vr(1);
+  }
+
+  @include breakpoint($hidpi) {
+    &__image {
+      background-image: url("/static/images/about-photo@2x.jpg");
+    }
+  }
+
+  @include from(4) {
+    display: flex;
+    flex-direction: row;
+
+    &__image {
+      flex: 1;
+      order: 2;
+      padding: 0;
+    }
+
+    &__content {
+      border-right: 0;
+      flex: 0;
+      flex-basis: 54%;
+      order: 1;
+      padding-left: calc(#{vr(1)} - 10px);
+
+      > h3 {
+        @include typi("h2");
+      }
+
+      > p {
+        @include typi("h4");
+      }
+    }
+  }
+
+  @include breakpoint($container + vr(8)) {
+    &__content {
+      padding-left: calc((100vw - #{$container} - 20px) / 2);
+    }
+  }
+}

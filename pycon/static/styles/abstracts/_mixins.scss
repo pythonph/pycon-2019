@@ -6,3 +6,12 @@
   max-width: calc(100vw - #{$outer-padding * 2});
   width: $container-width;
 }
+
+@mixin popup-border {
+  border: 5px solid $woodsmoke;
+  border-bottom: 0;
+
+  @include from(3) {
+    border-width: 10px;
+  }
+}

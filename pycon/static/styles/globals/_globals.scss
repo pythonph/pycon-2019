@@ -29,6 +29,9 @@ h2 {
 
 h3 {
   @include typi("h3");
+
+  font-family: $futura-pt-bold;
+  letter-spacing: 0.2px;
 }
 
 h4 {

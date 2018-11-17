@@ -1,8 +1,20 @@
 .home-hero {
-  border: 5px solid $woodsmoke;
   height: 100vh;
-  position: absolute;
+  overflow: hidden;
   width: 100%;
+
+  // Overlay border
+  &::after {
+    @include popup-border;
+
+    box-sizing: border-box;
+    content: "";
+    height: 100vh;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 100vw;
+  }
 
   &__logo-area {
     @include container;
@@ -104,8 +116,6 @@
   }
 
   @include from(3) {
-    border-width: 10px;
-
     &__logo-area {
       margin-top: vr(3.5);
 
