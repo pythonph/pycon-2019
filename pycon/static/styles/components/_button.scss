@@ -1,0 +1,15 @@
+.button {
+  @include typi("h4");
+
+  background-color: $pomegranate;
+  border: 4px solid $woodsmoke;
+  box-shadow: none;
+  color: $white;
+  cursor: pointer;
+  display: inline-block;
+  font-weight: $medium;
+  outline: 0;
+  padding: vr(0.5) vr(2);
+  text-align: center;
+  text-decoration: none;
+}

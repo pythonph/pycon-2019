@@ -1,0 +1,135 @@
+.home-hero {
+  border: 5px solid $woodsmoke;
+  height: 100vh;
+  position: absolute;
+  width: 100%;
+
+  &__logo-area {
+    @include container;
+
+    margin-top: vr(5);
+
+    .button {
+      display: block;
+      margin: 0 auto;
+      max-width: vr(10);
+    }
+  }
+
+  &__logo {
+    margin-bottom: vr(1);
+
+    > svg {
+      height: auto;
+      width: 100%;
+    }
+  }
+
+  &__meta {
+    // font-weight: $demi;
+    display: flex;
+    flex-direction: row;
+    font-family: $futura-pt-bold;
+    justify-content: space-between;
+    letter-spacing: 0.1px;
+    margin-bottom: vr(4);
+
+    > span {
+      white-space: nowrap;
+    }
+  }
+
+  &__layers {
+    bottom: 0;
+    height: 100%;
+    left: 0;
+    overflow: hidden;
+    pointer-events: none;
+    position: absolute;
+    width: 100%;
+  }
+
+  &__cloud1,
+  &__cloud2 {
+    height: auto;
+    position: absolute;
+    width: vr(3.5);
+  }
+
+  &__cloud1 {
+    right: vr(1);
+    top: vr(1);
+  }
+
+  &__cloud2 {
+    left: vr(1);
+    top: vr(12);
+    transform: translateY(-50%);
+  }
+
+  &__buildings {
+    bottom: -5px;
+    height: 100%;
+    left: 50%;
+    max-height: 40vh;
+    min-width: 1000px;
+    position: absolute;
+    transform: translateX(-50%);
+    width: 100%;
+  }
+
+  $total-width: 1596px;
+
+  &__building-layer1,
+  &__building-layer2,
+  &__building-layer3 {
+    bottom: 0;
+    height: auto;
+    position: absolute;
+  }
+
+  &__building-layer1 {
+    left: percentage(104px / $total-width);
+    width: percentage(1492px / $total-width);
+  }
+
+  &__building-layer2 {
+    left: percentage(4px / $total-width);
+    width: percentage(1366px / $total-width);
+  }
+
+  &__building-layer3 {
+    left: percentage(19px / $total-width);
+    width: percentage(1472px / $total-width);
+  }
+
+  @include from(3) {
+    border-width: 10px;
+
+    &__logo-area {
+      margin-top: vr(3.5);
+
+      .button {
+        max-width: vr(11);
+      }
+    }
+
+    &__logo-wrapper {
+      margin: 0 auto;
+      max-width: span(9 of 15);
+    }
+
+    &__meta {
+      @include typi("h3");
+
+      margin-bottom: vr(2);
+    }
+
+    &__cloud1,
+    &__cloud2 {
+      height: auto;
+      position: absolute;
+      width: vr(6);
+    }
+  }
+}

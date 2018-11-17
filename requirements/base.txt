@@ -19,3 +19,4 @@ coreapi==2.3.3  # https://github.com/core-api/python-client
 
 # Additional
 django-widget-tweaks
+django-inline-svg
