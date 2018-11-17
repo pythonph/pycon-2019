@@ -128,11 +128,11 @@
       margin: 0 auto;
       max-width: span(9 of 15);
     }
+  }
 
+  @include from(4) {
     &__meta {
-      @include typi("h3");
-
-      margin-bottom: vr(2);
+      @include typi("h4");
     }
 
     &__cloud1,
@@ -140,6 +140,14 @@
       height: auto;
       position: absolute;
       width: vr(6);
+    }
+  }
+
+  @include from(6) {
+    &__meta {
+      @include typi("h3");
+
+      margin-bottom: vr(2);
     }
   }
 }
