@@ -9,7 +9,17 @@
   display: inline-block;
   font-weight: $medium;
   outline: 0;
-  padding: vr(0.5) vr(2);
+  padding: vr(0.5) vr(1);
   text-align: center;
   text-decoration: none;
+  width: 100%;
+
+  &--borderless {
+    border: 0;
+  }
+
+  &--green {
+    background-color: $la-rioja;
+    color: $black;
+  }
 }

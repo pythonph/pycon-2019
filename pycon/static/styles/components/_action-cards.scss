@@ -1,0 +1,35 @@
+.action-cards {
+  @include popup-border;
+
+  background-color: $bondi-blue;
+
+  &__container {
+    @include container;
+
+    padding: vr(2) 0;
+  }
+
+  @include to(4) {
+    .action-card {
+      margin: 0 auto;
+      max-width: vr(18);
+
+      &:not(:last-child) {
+        margin-bottom: vr(2);
+      }
+    }
+  }
+
+  @include from(4) {
+    &__container {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+    }
+
+    .action-card {
+      flex: 0;
+      flex-basis: span(5);
+    }
+  }
+}

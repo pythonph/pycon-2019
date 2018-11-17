@@ -1,0 +1,36 @@
+.action-card {
+  background-color: $white;
+  border: 5px solid $woodsmoke;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  padding: vr(2);
+  text-align: center;
+
+  > svg {
+    display: block;
+    fill: $black;
+    height: vr(3);
+    margin: 0 auto vr(1.5);
+    width: vr(3);
+  }
+
+  > p {
+    margin-bottom: vr(1);
+  }
+
+  .button {
+    margin-top: auto;
+  }
+
+  @include from(3) {
+    border-width: 10px;
+  }
+
+  @include from(4) {
+    > svg {
+      height: vr(4);
+      width: vr(4);
+    }
+  }
+}
