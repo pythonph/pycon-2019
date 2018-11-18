@@ -49,15 +49,6 @@
     }
   }
 
-  @include from(3) {
-    &__content,
-    &__content-wrapper {
-      &::after {
-        border-width: 10px;
-      }
-    }
-  }
-
   @include from(4) {
     display: flex;
     flex-direction: row;
@@ -69,13 +60,21 @@
       order: 2;
     }
 
+    &__content,
+    &__content-wrapper {
+      &::after {
+        border-width: 10px;
+      }
+    }
+
     &__content-main {
       > h3 {
         @include typi("h2");
       }
 
       > p {
-        @include typi("h4");
+        font-size: ms(1);
+        line-height: 1.4;
       }
     }
 

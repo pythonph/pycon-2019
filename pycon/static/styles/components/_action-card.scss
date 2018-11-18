@@ -23,11 +23,9 @@
     margin-top: auto;
   }
 
-  @include from(3) {
-    border-width: 10px;
-  }
-
   @include from(4) {
+    border-width: 10px;
+
     > svg {
       height: vr(4);
       width: vr(4);

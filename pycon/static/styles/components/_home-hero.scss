@@ -39,13 +39,13 @@
   }
 
   &__meta {
-    // font-weight: $demi;
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     font-family: $futura-pt-bold;
     justify-content: space-between;
     letter-spacing: 0.1px;
     margin-bottom: vr(4);
+    text-align: center;
 
     > span {
       white-space: nowrap;
@@ -114,6 +114,13 @@
   &__building-layer3 {
     left: percentage(19px / $total-width);
     width: percentage(1472px / $total-width);
+  }
+
+  // Fix overlapping date and city
+  @include breakpoint(425px) {
+    &__meta {
+      flex-direction: row;
+    }
   }
 
   @include from(3) {
