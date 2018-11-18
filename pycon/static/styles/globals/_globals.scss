@@ -42,8 +42,14 @@ h4 {
 
 p {
   @include typi("p");
+
+  font-weight: $light;
 }
 
 small {
   @include typi("small");
+}
+
+strong {
+  font-family: $futura-pt-bold;
 }

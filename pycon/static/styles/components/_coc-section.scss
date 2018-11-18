@@ -1,0 +1,108 @@
+/* autoprefixer grid: on */ // sass-lint:disable-line no-css-comments
+
+.coc-section {
+  &__short-coc {
+    @include popup-border;
+
+    background-color: $pomegranate;
+    color: $white;
+    padding: vr(2) vr(1);
+  }
+
+  &__long-coc {
+    @include popup-border;
+
+    padding: vr(2) vr(1);
+  }
+
+  &__license {
+    @include popup-border;
+
+    background-color: $bondi-blue;
+    color: $white;
+    padding: vr(2) vr(1);
+  }
+
+  // Decorative boxes
+  &__boxes-outer {
+    display: flex;
+    flex-direction: row;
+  }
+
+  &__boxes-left,
+  &__boxes-right {
+    flex: 0;
+    flex-basis: 50%;
+  }
+
+  &__boxes-left {
+    @include popup-border;
+
+    background-color: $pizazz;
+    border-right: 0;
+    padding-top: 50%;
+  }
+
+  &__boxes-right {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__boxes-top-right {
+    @include popup-border;
+
+    background-color: $la-rioja;
+    flex: 0;
+    flex-basis: 40%;
+  }
+
+  &__boxes-bottom-right {
+    @include popup-border;
+
+    background-color: $electric-violet;
+    flex: 1;
+  }
+
+  @include from(4) {
+    display: grid;
+    grid-template-areas: (
+      "short-coc long-coc"
+      "boxes long-coc"
+      "license long-coc"
+    );
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto 1fr auto;
+
+    &__short-coc {
+      grid-area: short-coc;
+    }
+
+    &__boxes-outer {
+      grid-area: boxes;
+    }
+
+    &__boxes-left {
+      padding: 0;
+    }
+
+    &__license {
+      grid-area: license;
+    }
+
+    &__long-coc {
+      border-left: 0;
+      grid-area: long-coc;
+    }
+  }
+
+  @include breakpoint($container + vr(8)) {
+    &__short-coc,
+    &__license {
+      padding-left: calc((100vw - #{$container} - 20px) / 2);
+    }
+
+    &__long-coc {
+      padding-right: calc((100vw - #{$container} - 20px) / 2);
+    }
+  }
+}
