@@ -165,6 +165,10 @@ a.btn{
   border-bottom: .25rem solid black;
 }
 
+.margin-l{
+  margin-left: 2rem;
+}
+
 .margin-top-half {
   margin-top: 1.15rem;
 }
@@ -180,4 +184,8 @@ a.btn{
 
 .bg-yellow {
   background-color: yellow;
+}
+
+.font-blue {
+  color: #007acc;
 }
