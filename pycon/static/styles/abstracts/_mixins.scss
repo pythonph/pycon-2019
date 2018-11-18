@@ -1,0 +1,17 @@
+/// Adds a constant amount of space to the left and right of an element, until
+/// it reaches container-width.
+
+@mixin container($container-width: $container, $outer-padding: vr(1)) {
+  margin: 0 auto;
+  max-width: calc(100vw - #{$outer-padding * 2});
+  width: $container-width;
+}
+
+@mixin popup-border {
+  border: 5px solid $woodsmoke;
+  border-bottom: 0;
+
+  @include from(3) {
+    border-width: 10px;
+  }
+}

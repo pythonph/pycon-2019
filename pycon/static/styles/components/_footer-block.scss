@@ -1,0 +1,93 @@
+.footer-block {
+  align-items: center;
+  background-color: $woodsmoke;
+  display: flex;
+  flex-direction: column;
+  padding: vr(3) vr(1);
+
+  &__logo {
+    margin-bottom: vr(1.5);
+
+    svg {
+      display: block;
+      height: auto;
+      width: vr(6);
+
+      .pycon-logo__path {
+        fill: $white;
+      }
+    }
+  }
+
+  &__social-links {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    list-style-type: none;
+    margin: 0;
+    margin-bottom: vr(1.5);
+    padding: 0;
+  }
+
+  &__social-link {
+    &:not(:last-child) {
+      margin-right: vr(1.5);
+    }
+
+    a {
+      text-decoration: none;
+    }
+
+    svg {
+      display: block;
+      fill: $white;
+      height: vr(1);
+      transform-origin: center center;
+      transition: fill $transition, transform $transition;
+      width: vr(1);
+    }
+
+    &:hover {
+      svg {
+        fill: $selective-yellow;
+        transform: translate(0, -5px) rotate(-7deg);
+      }
+    }
+  }
+
+  &__copyright {
+    @include typi("small");
+
+    align-items: center;
+    color: $white;
+    display: flex;
+    flex-direction: row;
+
+    svg {
+      display: block;
+      height: ms(-1);
+      margin-left: 4px;
+      width: auto;
+    }
+  }
+
+  @include from(4) {
+    &__logo {
+      margin-bottom: vr(2);
+
+      svg {
+        width: vr(10);
+      }
+    }
+
+    &__social-links {
+      margin-bottom: vr(2);
+    }
+
+    &__social-link {
+      &:not(:last-child) {
+        margin-right: vr(2);
+      }
+    }
+  }
+}

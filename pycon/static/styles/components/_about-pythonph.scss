@@ -1,0 +1,95 @@
+.about-pythonph {
+  &__content {
+    @include popup-border;
+
+    display: flex;
+    flex-direction: row;
+
+    // Right decorative box
+    &::after {
+      background-color: $pizazz;
+      border-left: 5px solid $woodsmoke;
+      content: "";
+      flex: 0 vr(2);
+    }
+  }
+
+  &__content-wrapper {
+    display: flex;
+    flex-direction: column;
+
+    // Bottom decorative box
+    &::after {
+      border-top: 5px solid $woodsmoke;
+      content: "";
+      flex: 0 vr(1);
+    }
+  }
+
+  &__content-main {
+    background-color: $pomegranate;
+    color: $white;
+    padding: vr(2) vr(1);
+  }
+
+  &__image {
+    @include popup-border;
+
+    background-image: url("/static/images/about-pythonph.jpg");
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding-top: percentage(3 / 4);
+    position: relative;
+  }
+
+  @include breakpoint($hidpi) {
+    &__image {
+      background-image: url("/static/images/about-pythonph@2x.jpg");
+    }
+  }
+
+  @include from(3) {
+    &__content,
+    &__content-wrapper {
+      &::after {
+        border-width: 10px;
+      }
+    }
+  }
+
+  @include from(4) {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+
+    &__content {
+      flex: 0;
+      flex-basis: 54%;
+      order: 2;
+    }
+
+    &__content-main {
+      > h3 {
+        @include typi("h2");
+      }
+
+      > p {
+        @include typi("h4");
+      }
+    }
+
+    &__image {
+      border-right: 0;
+      flex: 1;
+      order: 1;
+      padding: 0;
+    }
+  }
+
+  @include breakpoint($container + vr(8)) {
+    &__content-main {
+      padding-right: calc((100vw - #{$container} - 20px - #{vr(2)}) / 2);
+    }
+  }
+}

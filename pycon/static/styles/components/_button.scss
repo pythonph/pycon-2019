@@ -1,0 +1,36 @@
+.button {
+  @include typi("h4");
+
+  background-color: $pomegranate;
+  border: 4px solid $woodsmoke;
+  box-shadow: none;
+  color: $white;
+  cursor: pointer;
+  display: inline-block;
+  font-weight: $medium;
+  outline: 0;
+  padding: vr(0.5) vr(1);
+  text-align: center;
+  text-decoration: none;
+  transform-origin: right bottom;
+  transition: background-color $transition, transform $transition;
+  width: 100%;
+
+  #{$hover} {
+    background-color: mix($pomegranate, $woodsmoke, 90%);
+    transform: translateY(vr(-0.3)) rotate(-0.75deg);
+  }
+
+  &--borderless {
+    border: 0;
+  }
+
+  &--green {
+    background-color: $la-rioja;
+    color: $black;
+
+    #{$hover} {
+      background-color: mix($la-rioja, $white, 90%);
+    }
+  }
+}
