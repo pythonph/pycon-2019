@@ -20,7 +20,7 @@
     }
   }
 
-  @include from(4) {
+  @include from(5) {
     &__container {
       display: flex;
       flex-direction: row;

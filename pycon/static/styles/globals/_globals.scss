@@ -36,6 +36,8 @@ h3 {
 
 h4 {
   @include typi("h4");
+
+  font-weight: $medium;
 }
 
 p {
