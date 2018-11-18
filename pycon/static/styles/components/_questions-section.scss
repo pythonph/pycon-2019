@@ -1,33 +1,61 @@
 .questions-section {
   @include popup-border;
 
-  background-color: $selective-yellow;
+  background-color: #ffc100; // sass-lint:disable-line no-color-literals
+  overflow: hidden;
   padding: vr(2) vr(1);
+  position: relative;
   text-align: center;
 
-  > p {
-    @include typi("h4");
-
-    margin: 0;
+  &::before {
+    background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg width='626' height='688' xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M293.62 178.367L206.732 8.814 223.917 0l91.404 178.367-84.741 165.365 84.741 165.364-91.404 178.367-17.185-8.814 86.888-169.553-84.742-165.364 84.742-165.365zm103.366 0L310.098 8.814 327.283 0l91.404 178.367-84.741 165.365 84.741 165.364-91.404 178.367-17.185-8.814 86.888-169.553-84.742-165.364 84.742-165.365zm-310.098 0L0 8.814 17.185 0l91.404 178.367-84.742 165.365 84.742 165.364-91.404 178.367L0 678.65l86.888-169.553L2.146 343.732l84.742-165.365zM103.366 8.814L120.551 0l91.404 178.367-84.742 165.365 84.742 165.364-91.404 178.367-17.185-8.814 86.888-169.553-84.742-165.364 84.742-165.365L103.366 8.814zm396.986 169.553L413.464 8.814 430.65 0l91.404 178.367-84.741 165.365 84.741 165.364-91.404 178.367-17.185-8.814 86.888-169.553-84.742-165.364 84.742-165.365zm103.366 0L516.83 8.814 534.015 0l91.404 178.367-84.741 165.365 84.741 165.364-91.404 178.367-17.185-8.814 86.888-169.553-84.742-165.364 84.742-165.365z' fill='%23F5B900' fill-rule='nonzero'/%3e%3c/svg%3e");
+    background-size: contain;
+    content: "";
+    height: 250%;
+    left: 0;
+    position: absolute;
+    top: 0;
+    transform: rotate(15deg);
+    width: 200%;
   }
 
-  a {
-    color: $woodsmoke;
-    font-family: $futura-pt-bold;
-    text-decoration: none;
+  &__wrapper {
+    position: relative;
+    z-index: 1;
+
+    > p {
+      @include typi("h4");
+
+      margin: 0;
+    }
+
+    a {
+      color: $woodsmoke;
+      display: inline-block;
+      font-family: $futura-pt-bold;
+      text-decoration: none;
+      transform-origin: left top;
+      transition: transform $transition;
+
+      #{$hover} {
+        transform: translateY(-2px) rotate(-0.5deg);
+      }
+    }
   }
 
   @include from(4) {
     padding: vr(2.5) vr(1) vr(3.25);
 
-    > h3 {
-      @include typi("h1");
+    &__wrapper {
+      > h3 {
+        @include typi("h1");
 
-      margin-bottom: vr(1.5);
-    }
+        margin-bottom: vr(1.5);
+      }
 
-    > p {
-      @include typi("h3");
+      > p {
+        @include typi("h3");
+      }
     }
   }
 }

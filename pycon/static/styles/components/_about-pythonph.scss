@@ -10,7 +10,7 @@
       background-color: $pizazz;
       border-left: 5px solid $woodsmoke;
       content: "";
-      flex: 0 vr(2);
+      flex: 0 vr(4);
     }
   }
 
@@ -58,6 +58,10 @@
       flex: 0;
       flex-basis: 54%;
       order: 2;
+
+      &::after {
+        flex-basis: vr(8);
+      }
     }
 
     &__content,
