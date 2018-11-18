@@ -1,0 +1,33 @@
+.questions-section {
+  @include popup-border;
+
+  background-color: $selective-yellow;
+  padding: vr(2) vr(1);
+  text-align: center;
+
+  > p {
+    @include typi("h4");
+
+    margin: 0;
+  }
+
+  a {
+    color: $woodsmoke;
+    font-family: $futura-pt-bold;
+    text-decoration: none;
+  }
+
+  @include from(4) {
+    padding: vr(2.5) vr(1) vr(3.25);
+
+    > h3 {
+      @include typi("h1");
+
+      margin-bottom: vr(1.5);
+    }
+
+    > p {
+      @include typi("h3");
+    }
+  }
+}
