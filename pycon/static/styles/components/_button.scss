@@ -33,4 +33,13 @@
       background-color: mix($la-rioja, $white, 90%);
     }
   }
+
+  &--yellow {
+    background-color: $selective-yellow;
+    color: $black;
+
+    #{$hover} {
+      background-color: mix($selective-yellow, $black, 90%);
+    }
+  }
 }

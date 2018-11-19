@@ -11,7 +11,7 @@
   border: 5px solid $woodsmoke;
   border-bottom: 0;
 
-  @include from(3) {
+  @include from(4) {
     border-width: 10px;
   }
 }

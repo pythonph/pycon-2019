@@ -51,6 +51,7 @@
     "modularscale-sass": "^3.0.8",
     "normalize-scss": "^7.0.1",
     "npm-check-updates": "^2.14.2",
+    "parallax-js": "^3.1.0",
     "picturefill": "^3.0.3",
     "susy": "^3.0.5",
     "typi": "^3.2.0",

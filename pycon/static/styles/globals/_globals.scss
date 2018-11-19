@@ -36,12 +36,20 @@ h3 {
 
 h4 {
   @include typi("h4");
+
+  font-weight: $medium;
 }
 
 p {
   @include typi("p");
+
+  font-weight: $light;
 }
 
 small {
   @include typi("small");
+}
+
+strong {
+  font-family: $futura-pt-bold;
 }

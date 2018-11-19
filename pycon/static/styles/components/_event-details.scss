@@ -1,0 +1,81 @@
+.event-details {
+  display: flex;
+  flex-direction: column;
+
+  &__image {
+    @include popup-border;
+
+    background-image: url("/static/images/nexus-campus.jpg");
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    order: 1;
+    padding-top: percentage(3 / 4);
+    position: relative;
+  }
+
+  // Decorative box
+  &::before {
+    @include popup-border;
+
+    background-color: $pizazz;
+    content: "";
+    height: vr(1);
+    order: 2;
+  }
+
+  &__content {
+    @include popup-border;
+
+    background-color: $electric-violet;
+    color: $white;
+    order: 3;
+    padding: vr(2) vr(1);
+
+    > h4 + h3 {
+      margin-top: vr(2);
+    }
+
+    .button {
+      margin-top: vr(1.5);
+      max-width: vr(12);
+    }
+  }
+
+  @include breakpoint($hidpi) {
+    &__image {
+      background-image: url("/static/images/nexus-campus@2x.jpg");
+    }
+  }
+
+  @include from(4) {
+    flex-direction: row;
+
+    &__image {
+      flex: 1;
+      padding: 0;
+    }
+
+    &::before {
+      border-left: 0;
+      border-right: 0;
+      height: auto;
+      width: vr(1);
+    }
+
+    &__content {
+      flex: 0;
+      flex-basis: 45%;
+
+      > h3 {
+        @include typi("h2");
+      }
+    }
+  }
+
+  @include breakpoint($container + vr(8)) {
+    &__content {
+      padding-right: calc((100vw - #{$container} - 20px - #{vr(2)}) / 2);
+    }
+  }
+}
