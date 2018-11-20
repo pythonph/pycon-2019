@@ -35,6 +35,62 @@ services:
     depends_on:
       - django
 
+# PROD
+  redis:
+    restart: always
+    image: redis:latest
+    volumes:
+      - ./db/redis:/data
+    container_name: pycon-redis
+  web:
+    restart: always
+    build:
+      context: .
+      dockerfile: Dockerfile.pycon
+    image: pycon-web
+    env_file:
+      - django.env
+    volumes:
+      - .:/srv/funny/pycon
+    container_name: pycon-web
+    working_dir: "/srv/funny/pycon"
+    command: scripts/docker_startup.sh
+    ports:
+      - "2329:22"
+  pycon-nginx:
+    restart: always
+    build:
+      context: .
+      dockerfile: Dockerfile.nginx
+    image: pycon-nginx
+    container_name: pycon-nginx
+    volumes:
+      - .:/app
+    links:
+      - web
+      - db
+      - redis
+      - pycon-gulp
+    depends_on:
+      - web
+      - db
+      - redis
+      - pycon-gulp
+    ports:
+      - "80:80"
+      - "443:443"
+  pycon-gulp:
+    build:
+      context: .
+      dockerfile: Dockerfile.gulp
+    command: gulp
+    environment:
+      - NODE_ENV=development
+    volumes:
+      - .:/app
+      - node_modules:/app/node_modules
+    depends_on:
+      - web
 volumes:
   pgdata:
   node_modules:
