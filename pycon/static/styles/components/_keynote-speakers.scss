@@ -1,0 +1,48 @@
+.keynote-speakers {
+  @include popup-border;
+
+  background-color: $selective-yellow;
+  padding: vr(2) 0;
+  position: relative;
+
+  &__heading {
+    height: vr(1.5);
+    margin-bottom: vr(1);
+    text-align: center;
+  }
+
+  &__container {
+    @include container;
+
+    position: relative;
+    z-index: 2;
+  }
+
+  .keynote-speaker-card {
+    margin: 0 auto;
+
+    &:not(:last-child) {
+      margin: 0 auto vr(2);
+    }
+  }
+
+  @include to(4) {
+    .keynote-speaker-card {
+      max-width: vr(18);
+    }
+  }
+
+  @include from(5) {
+    padding-top: vr(3);
+
+    &__heading {
+      @include typi("h1");
+
+      height: vr(3);
+    }
+
+    .keynote-speaker-card {
+      width: span(15);
+    }
+  }
+}

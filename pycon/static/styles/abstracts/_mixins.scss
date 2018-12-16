@@ -7,9 +7,12 @@
   width: $container-width;
 }
 
-@mixin popup-border {
+@mixin popup-border($with-bottom-border: false) {
   border: 5px solid $woodsmoke;
-  border-bottom: 0;
+
+  @if not $with-bottom-border {
+    border-bottom: 0;
+  }
 
   @include from(4) {
     border-width: 10px;

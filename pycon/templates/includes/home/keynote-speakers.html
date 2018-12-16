@@ -1,0 +1,45 @@
+{% load svg %}
+
+{% block content %}
+<section class="keynote-speakers">
+  <div class="keynote-speakers__container">
+    <h3 class="keynote-speakers__heading">Keynote Speakers</h3>
+
+    <div class="keynote-speakers__cards">
+
+      {% for x in "xxxx" %}
+      <div class="keynote-speaker-card">
+        <style>
+          #keynote_speaker_{{ forloop.counter }} {
+            background-image: url('https://placehold.it/540/540');
+          }
+        </style>
+        <div class="keynote-speaker-card__photo" id="keynote_speaker_{{ forloop.counter }}"></div>
+        <div class="keynote-speaker-card__info">
+          <h3 class="keynote-speaker-card__name">Angela Pascua</h3>
+          <h4 class="keynote-speaker-card__title">ABCoding, Technical Director</h4>
+          <p>
+            Dolor cumque nihil eaque iste est Assumenda libero ducimus delectus
+            fugiat repudiandae iusto recusandae eum adipisci id, nesciunt.
+            Incidunt neque veritatis dolorum aliquid optio suscipit quos eaque
+            Perspiciatis minus quis.
+          </p>
+          <p>
+            Consectetur praesentium reiciendis reiciendis odit ut. Sed
+            asperiores non saepe ea reiciendis voluptatibus? Atque molestias
+            itaque est magni molestias? Incidunt quam odio mollitia ipsa quae.
+            Libero recusandae in nam enim.
+          </p>
+
+          <ul class="keynote-speaker-card__social-links">
+            <li><a href="#">{% svg "icons/github" %}</a></li>
+            <li><a href="#">{% svg "icons/twitter" %}</a></li>
+          </ul>
+        </div>
+      </div>
+      {% endfor %}
+
+    </div>
+  </div>
+</section>
+{% endblock content %}

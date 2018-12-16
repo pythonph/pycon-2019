@@ -77,6 +77,7 @@ LOCAL_APPS = [
     'pycon.proposals.apps.ProposalsConfig',
     'pycon.core.apps.CoreConfig',
     'pycon.speakers.apps.SpeakersConfig',
+    'pycon.sponsors',
     # Your stuff: custom apps go here
 ]
 # https://docs.djangoproject.com/en/dev/ref/settings/#installed-apps
