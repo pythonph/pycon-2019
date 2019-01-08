@@ -21,6 +21,7 @@ urlpatterns = [
     ),
     path("accounts/", include("allauth.urls")),
     path('proposal/', include('pycon.proposals.urls', namespace='proposal')),
+    path('api/v1/', include('pycon.apiv1.urls', namespace='api')),
     # Your stuff: custom urls includes go here
 ] + static(
     settings.MEDIA_URL, document_root=settings.MEDIA_ROOT

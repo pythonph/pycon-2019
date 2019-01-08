@@ -1,6 +1,6 @@
 from django.db import models
 
-from core.models import UserAudit
+from pycon.core.models import UserAudit
 
 # Create your models here.
 
