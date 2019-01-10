@@ -72,9 +72,11 @@ THIRD_PARTY_APPS = [
     'widget_tweaks',
 ]
 LOCAL_APPS = [
+    'pycon.apiv1.apps.Apiv1Config',
     'pycon.users.apps.UsersAppConfig',
     'pycon.proposals.apps.ProposalsConfig',
     'pycon.core.apps.CoreConfig',
+    'pycon.speakers.apps.SpeakersConfig',
     # Your stuff: custom apps go here
 ]
 # https://docs.djangoproject.com/en/dev/ref/settings/#installed-apps
