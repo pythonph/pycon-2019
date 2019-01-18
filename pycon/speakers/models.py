@@ -23,5 +23,9 @@ class Speaker(Audit):
         choices=CHOICES
     )
 
+    github = models.URLField(default=None, null=True, blank=True)
+    facebook = models.URLField(default=None, null=True, blank=True)
+    twitter = models.URLField(default=None, null=True, blank=True)
+
     def __str__(self):
         return self.name
