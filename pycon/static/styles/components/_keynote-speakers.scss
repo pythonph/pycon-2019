@@ -5,17 +5,17 @@
   padding: vr(2) 0;
   position: relative;
 
-  &__heading {
-    height: vr(1.5);
-    margin-bottom: vr(1);
-    text-align: center;
-  }
-
   &__container {
     @include container;
 
     position: relative;
     z-index: 2;
+  }
+
+  &__heading {
+    height: vr(1.5);
+    margin-bottom: vr(1);
+    text-align: center;
   }
 
   .keynote-speaker-card {

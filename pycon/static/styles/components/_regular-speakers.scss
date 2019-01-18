@@ -1,0 +1,46 @@
+.regular-speakers {
+  @include popup-border;
+
+  background-color: $electric-violet;
+  padding: vr(2) 0;
+
+  &__container {
+    @include container;
+  }
+
+  &__heading {
+    color: $white;
+    height: vr(1.5);
+    margin-bottom: vr(1);
+    text-align: center;
+  }
+
+  .regular-speaker-card {
+    &:not(:last-child) {
+      margin-bottom: vr(2);
+    }
+  }
+
+  @include from(3) {
+    &__cards {
+      column-count: 2;
+      column-gap: vr(1);
+    }
+
+    .regular-speaker-card {
+      break-inside: avoid;
+    }
+  }
+
+  @include from(5) {
+    &__heading {
+      @include typi("h1");
+
+      height: vr(3);
+    }
+
+    &__cards {
+      column-count: 3;
+    }
+  }
+}
