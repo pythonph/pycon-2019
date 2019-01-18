@@ -16,6 +16,9 @@ class SpeakerSerializer(serializers.ModelSerializer):
             'job_title',
             'description',
             'image',
+            'github',
+            'facebook',
+            'twitter',
         )
 
     def get_image(self, obj):
