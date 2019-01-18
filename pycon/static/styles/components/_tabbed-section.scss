@@ -1,0 +1,66 @@
+.tabbed-section {
+  $root: &;
+
+  @include popup-border(true);
+
+  background-color: $white;
+
+  &__left-tab,
+  &__right-tab {
+    display: none;
+  }
+
+  &__label {
+    background-color: $la-rioja;
+    border-bottom-style: solid;
+    border-color: $woodsmoke;
+    border-width: 5px;
+    cursor: pointer;
+    display: inline-block;
+    font-family: $futura-pt-bold;
+    padding: vr(1);
+    text-align: center;
+    width: 50%;
+
+    &:first-of-type {
+      border-right-style: solid;
+    }
+
+    &:not(:first-of-type) {
+      border-left-style: solid;
+    }
+  }
+
+  &__radio {
+    display: none;
+
+    &:checked + #{$root}__label {
+      background-color: $white;
+      border: 0;
+      cursor: default;
+    }
+  }
+
+  // Handles toggling the tabs
+  #tab_left:checked ~ &__left-tab { // sass-lint:disable-line force-pseudo-nesting no-ids
+    display: block;
+  }
+
+  #tab_right:checked ~ &__right-tab { // sass-lint:disable-line force-pseudo-nesting no-ids
+    display: block;
+  }
+
+  @include from(4) {
+    &__label {
+      @include typi("h4");
+
+      border-width: 10px;
+    }
+  }
+
+  @include from(5) {
+    &__label {
+      @include typi("h3");
+    }
+  }
+}

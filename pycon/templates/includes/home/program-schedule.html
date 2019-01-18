@@ -1,0 +1,76 @@
+<div class="program-schedule">
+  <div class="program-schedule__container">
+    <h3 class="program-schedule__heading">Program Schedule</h3>
+
+    <div class="tabbed-section">
+      {% spaceless %}
+      <input id="tab_left" type="radio" name="tabbed_section" class="tabbed-section__radio" checked>
+      <label for="tab_left" class="tabbed-section__label">Day 1 (February 23)</label>
+
+      <input id="tab_right" type="radio" name="tabbed_section" class="tabbed-section__radio">
+      <label for="tab_right" class="tabbed-section__label">Day 2 (February 24)</label>
+      {% endspaceless %}
+
+      <div class="tabbed-section__left-tab schedule-list">
+        {% for x in "xxxxyxyxyxxx" %}
+          <div class="schedule-list__time-block">
+            <div class="schedule-list__dot">
+              <div class="schedule-list__dot-circle"></div>
+              <div class="schedule-list__dot-line"></div>
+            </div>
+            <div class="schedule-list__time">
+              <span>11:45 AM&nbsp;</span><span>– 12:05 PM</span>
+            </div>
+
+            {% if x == "y" %}
+              <div class="schedule-list__event-venue schedule-list__event-venue--first">Auditorium</div>
+            {% endif %}
+
+            <h4 class="schedule-list__event-title">{% lorem 5 w random %}</h4>
+            <div class="schedule-list__event-speaker">{% lorem 2 w random %}</div>
+            <div class="schedule-list__event-description">{% lorem 1 p random %}</div>
+
+            {% if x == "y" %}
+              {% for y in "yyy" %}
+                <div class="schedule-list__event-venue">Auditorium</div>
+                <h4 class="schedule-list__event-title">{% lorem 5 w random %}</h4>
+                <div class="schedule-list__event-speaker">{% lorem 2 w random %}</div>
+                <div class="schedule-list__event-description">{% lorem 1 p random %}</div>
+              {% endfor %}
+            {% endif %}
+          </div>
+        {% endfor %}
+      </div>
+      <div class="tabbed-section__right-tab schedule-list">
+        {% for x in "xyxyxy" %}
+          <div class="schedule-list__time-block">
+            <div class="schedule-list__dot">
+              <div class="schedule-list__dot-circle"></div>
+              <div class="schedule-list__dot-line"></div>
+            </div>
+            <div class="schedule-list__time">
+              <span>11:45 AM&nbsp;</span><span>– 12:05 PM</span>
+            </div>
+
+            {% if x == "y" %}
+              <div class="schedule-list__event-venue schedule-list__event-venue--first">Auditorium</div>
+            {% endif %}
+
+            <h4 class="schedule-list__event-title">{% lorem 5 w random %}</h4>
+            <div class="schedule-list__event-speaker">{% lorem 2 w random %}</div>
+            <div class="schedule-list__event-description">{% lorem 1 p random %}</div>
+
+            {% if x == "y" %}
+              {% for y in "yyy" %}
+                <div class="schedule-list__event-venue">Auditorium</div>
+                <h4 class="schedule-list__event-title">{% lorem 5 w random %}</h4>
+                <div class="schedule-list__event-speaker">{% lorem 2 w random %}</div>
+                <div class="schedule-list__event-description">{% lorem 1 p random %}</div>
+              {% endfor %}
+            {% endif %}
+          </div>
+        {% endfor %}
+      </div>
+    </div>
+  </div>
+</div>
