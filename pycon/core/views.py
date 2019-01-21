@@ -1,3 +1,20 @@
-from django.shortcuts import render
+from django.views.generic import TemplateView
 
-# Create your views here.
+from pycon.speakers.models import Speaker
+
+
+class HomePageView(TemplateView):
+    template_name = 'pages/home.html'
+
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+        context['keynote_speakers'] = Speaker.objects.filter(
+            speaker_type=Speaker.KEYNOTE,
+        )
+        context['regular_speakers'] = Speaker.objects.filter(
+            speaker_type=Speaker.NORMAL,
+        )
+        return context
+
+
+home_page_view = HomePageView.as_view()

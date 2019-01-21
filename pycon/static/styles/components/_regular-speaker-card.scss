@@ -1,0 +1,39 @@
+.regular-speaker-card {
+  &__photo {
+    @include popup-border;
+
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding-top: 100%;
+  }
+
+  &__info {
+    @include popup-border;
+
+    background-color: $white;
+    border-bottom: 5px solid $woodsmoke;
+    padding: vr(1);
+  }
+
+  &__social-links {
+    display: flex;
+    flex-direction: row;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+
+    > li {
+      &:not(:last-child) {
+        margin-right: vr(1);
+      }
+    }
+
+    svg {
+      display: block;
+      fill: $woodsmoke;
+      height: vr(1.5);
+      width: vr(1.5);
+    }
+  }
+}

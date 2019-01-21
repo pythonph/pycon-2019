@@ -1,0 +1,41 @@
+{% load svg %}
+
+{% if keynote_speakers %}
+<section class="keynote-speakers">
+  <div class="keynote-speakers__container">
+    <h3 class="keynote-speakers__heading">Keynote Speakers</h3>
+
+    <div class="keynote-speakers__cards">
+
+      {% for speaker in keynote_speakers %}
+      <div class="keynote-speaker-card">
+        <style>
+          #keynote_speaker_{{ forloop.counter }} {
+            background-image: url('{{ speaker.image.url }}');
+          }
+        </style>
+        <div class="keynote-speaker-card__photo" id="keynote_speaker_{{ forloop.counter }}"></div>
+        <div class="keynote-speaker-card__info">
+          <h3 class="keynote-speaker-card__name">{{ speaker.name }}</h3>
+          <h4 class="keynote-speaker-card__title">{{ speaker.company_name }}, {{ speaker.job_title }}</h4>
+          {{ speaker.description|linebreaks }}
+
+          <ul class="keynote-speaker-card__social-links">
+            {% if speaker.github %}
+              <li><a href="{{ speaker.github }}" target="_blank" rel="noopener noreferrer">{% svg "icons/github" %}</a></li>
+            {% endif %}
+            {% if speaker.facebook %}
+              <li><a href="{{ speaker.facebook }}" target="_blank" rel="noopener noreferrer">{% svg "icons/facebook" %}</a></li>
+            {% endif %}
+            {% if speaker.twitter %}
+              <li><a href="{{ speaker.twitter }}" target="_blank" rel="noopener noreferrer">{% svg "icons/twitter" %}</a></li>
+            {% endif %}
+          </ul>
+        </div>
+      </div>
+      {% endfor %}
+
+    </div>
+  </div>
+</section>
+{% endif %}

@@ -1,0 +1,75 @@
+.keynote-speaker-card {
+  &__photo {
+    @include popup-border;
+
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+  &__info {
+    @include popup-border;
+
+    background-color: $white;
+    border-bottom: 5px solid $woodsmoke;
+    padding: vr(1);
+  }
+
+  &__social-links {
+    display: flex;
+    flex-direction: row;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+
+    > li {
+      &:not(:last-child) {
+        margin-right: vr(1);
+      }
+    }
+
+    svg {
+      display: block;
+      fill: $woodsmoke;
+      height: vr(1.5);
+      width: vr(1.5);
+    }
+  }
+
+  @include to(4) {
+    &__photo {
+      padding-top: 100%;
+    }
+  }
+
+  @include from(4) {
+    &__info {
+      border-bottom: 10px solid $woodsmoke;
+    }
+  }
+
+  @include from(5) {
+    display: flex;
+    flex-direction: row;
+    position: relative;
+
+    &__photo {
+      @include popup-border(true);
+
+      border-right: 0;
+      flex: 0;
+      flex-basis: vr(15);
+    }
+
+    &__info {
+      flex: 1;
+      padding: vr(2);
+    }
+
+    &__social-links {
+      position: absolute;
+      right: vr(2);
+      top: vr(2);
+    }
+  }
+}
