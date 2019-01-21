@@ -5,8 +5,10 @@ from django.contrib import admin
 from django.views.generic import TemplateView
 from django.views import defaults as default_views
 
+from pycon.core.views import home_page_view
+
 urlpatterns = [
-    path("", TemplateView.as_view(template_name="pages/home.html"), name="home"),
+    path("", home_page_view, name="home"),
     path(
         "about/",
         TemplateView.as_view(template_name="pages/about.html"),
