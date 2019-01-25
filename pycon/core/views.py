@@ -10,10 +10,12 @@ class HomePageView(TemplateView):
         context = super().get_context_data(**kwargs)
         context['keynote_speakers'] = Speaker.objects.filter(
             speaker_type=Speaker.KEYNOTE,
-        )
+            is_active=True,
+        ).distinct()
         context['regular_speakers'] = Speaker.objects.filter(
             speaker_type=Speaker.NORMAL,
-        )
+            is_active=True,
+        ).distinct()
         return context
 
 

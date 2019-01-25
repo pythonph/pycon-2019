@@ -9,11 +9,11 @@
       {% for speaker in regular_speakers %}
         <div class="regular-speaker-card">
           <style>
-            #keynote_speaker_{{ forloop.counter }} {
+            #regular_speaker_{{ forloop.counter }} {
               background-image: url('{{ speaker.image.url }}');
             }
           </style>
-          <div class="regular-speaker-card__photo" id="keynote_speaker_{{ forloop.counter }}"></div>
+          <div class="regular-speaker-card__photo" id="regular_speaker_{{ forloop.counter }}"></div>
           <div class="regular-speaker-card__info">
             <h3 class="regular-speaker-card__name">{{ speaker.name }}</h3>
             <h4 class="regular-speaker-card__title">{{ speaker.company_name }}, {{ speaker.job_title }}</h4>
