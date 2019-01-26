@@ -1,7 +1,12 @@
+/* autoprefixer grid: on */ // sass-lint:disable-line no-css-comments
+
 .program-schedule {
   @include popup-border;
 
   background-color: $pomegranate;
+  background-image: url($arrowheads);
+  background-position: center;
+  background-size: vr(4);
   padding: vr(2) 0;
 
   &__container {

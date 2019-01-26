@@ -2,6 +2,8 @@
   @include popup-border;
 
   background-color: $electric-violet;
+  background-image: url($slanted-lines);
+  background-position: center;
   padding: vr(2) 0;
 
   &__container {
