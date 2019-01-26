@@ -11,66 +11,8 @@
       <label for="tab_right" class="tabbed-section__label">Day 2 (February 24)</label>
       {% endspaceless %}
 
-      <div class="tabbed-section__left-tab schedule-list">
-        {% for x in "xxxxyxyxyxxx" %}
-          <div class="schedule-list__time-block">
-            <div class="schedule-list__dot">
-              <div class="schedule-list__dot-circle"></div>
-              <div class="schedule-list__dot-line"></div>
-            </div>
-            <div class="schedule-list__time">
-              <span>11:45 AM&nbsp;</span><span>– 12:05 PM</span>
-            </div>
-
-            {% if x == "y" %}
-              <div class="schedule-list__event-venue schedule-list__event-venue--first">Auditorium</div>
-            {% endif %}
-
-            <h4 class="schedule-list__event-title">{% lorem 5 w random %}</h4>
-            <div class="schedule-list__event-speaker">{% lorem 2 w random %}</div>
-            <div class="schedule-list__event-description">{% lorem 1 p random %}</div>
-
-            {% if x == "y" %}
-              {% for y in "yyy" %}
-                <div class="schedule-list__event-venue">Auditorium</div>
-                <h4 class="schedule-list__event-title">{% lorem 5 w random %}</h4>
-                <div class="schedule-list__event-speaker">{% lorem 2 w random %}</div>
-                <div class="schedule-list__event-description">{% lorem 1 p random %}</div>
-              {% endfor %}
-            {% endif %}
-          </div>
-        {% endfor %}
-      </div>
-      <div class="tabbed-section__right-tab schedule-list">
-        {% for x in "xyxyxy" %}
-          <div class="schedule-list__time-block">
-            <div class="schedule-list__dot">
-              <div class="schedule-list__dot-circle"></div>
-              <div class="schedule-list__dot-line"></div>
-            </div>
-            <div class="schedule-list__time">
-              <span>11:45 AM&nbsp;</span><span>– 12:05 PM</span>
-            </div>
-
-            {% if x == "y" %}
-              <div class="schedule-list__event-venue schedule-list__event-venue--first">Auditorium</div>
-            {% endif %}
-
-            <h4 class="schedule-list__event-title">{% lorem 5 w random %}</h4>
-            <div class="schedule-list__event-speaker">{% lorem 2 w random %}</div>
-            <div class="schedule-list__event-description">{% lorem 1 p random %}</div>
-
-            {% if x == "y" %}
-              {% for y in "yyy" %}
-                <div class="schedule-list__event-venue">Auditorium</div>
-                <h4 class="schedule-list__event-title">{% lorem 5 w random %}</h4>
-                <div class="schedule-list__event-speaker">{% lorem 2 w random %}</div>
-                <div class="schedule-list__event-description">{% lorem 1 p random %}</div>
-              {% endfor %}
-            {% endif %}
-          </div>
-        {% endfor %}
-      </div>
+      {% include "includes/home/schedule-list.html" with program=program_left_tab class="tabbed-section__left-tab" %}
+      {% include "includes/home/schedule-list.html" with program=program_right_tab class="tabbed-section__right-tab" %}
     </div>
   </div>
 </div>

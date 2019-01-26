@@ -1,0 +1,37 @@
+<div class="{{ class }} schedule-list">
+  {% with all_events=program.events.all %}
+    {% if all_events %}
+
+      {% regroup all_events by time_display as events %}
+
+      {% for time_block in events %}
+        <div class="schedule-list__time-block">
+          <div class="schedule-list__dot">
+            <div class="schedule-list__dot-circle"></div>
+            <div class="schedule-list__dot-line"></div>
+          </div>
+
+          {% with event=time_block.list.0 %}
+            <div class="schedule-list__time">
+              <span>{{ event.start_time|date:"g:i A" }}&nbsp;</span><span>– {{ event.end_time|date:"g:i A" }}</span>
+            </div>
+          {% endwith %}
+
+          {% for event in time_block.list %}
+            {% if event.venue %}
+            <div class="schedule-list__event-venue{% if forloop.first %} schedule-list__event-venue--first{% endif %}">{{ event.venue }}</div>
+            {% endif %}
+
+            <h4 class="schedule-list__event-title">{{ event.title }}</h4>
+            {% if event.subtitle %}
+              <div class="schedule-list__event-speaker">{{ event.subtitle }}</div>
+            {% endif %}
+            {% if event.description %}
+              <div class="schedule-list__event-description">{{ event.description|linebreaks }}</div>
+            {% endif %}
+          {% endfor %}
+        </div>
+      {% endfor %}
+    {% endif %}
+  {% endwith %}
+</div>
