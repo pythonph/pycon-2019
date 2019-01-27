@@ -1,7 +1,9 @@
 .keynote-speakers {
   @include popup-border;
 
-  background-color: $selective-yellow;
+  background-color: #ffc100; // sass-lint:disable-line no-color-literals
+  background-image: url($hollow-circles-yellow);
+  background-size: vr(25);
   padding: vr(2) 0;
   position: relative;
 

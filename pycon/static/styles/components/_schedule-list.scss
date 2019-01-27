@@ -1,0 +1,129 @@
+.schedule-list {
+  $root: &;
+
+  padding: vr(1) vr(1) vr(1) 0;
+
+  &__time-block {
+    display: grid;
+    margin-bottom: vr(-0.5);
+    overflow: hidden;
+    padding-bottom: vr(1.5);
+
+    &:last-child {
+      #{$root}__dot-line {
+        display: none;
+      }
+    }
+  }
+
+  &__dot {
+    justify-self: center;
+    padding-top: vr(0.4);
+  }
+
+  &__dot-circle {
+    background-color: $selective-yellow;
+    border-radius: 50%;
+    height: vr(0.5);
+    width: vr(0.5);
+  }
+
+  &__dot-line {
+    background-color: mix($woodsmoke, $white, 10%);
+    height: 9999%;
+    margin: 0 auto;
+    width: 2px;
+  }
+
+  &__time {
+    @include typi("h3");
+
+    font-family: $futura-pt-bold;
+
+    > span {
+      display: inline-block;
+      white-space: nowrap;
+    }
+  }
+
+  &__event-venue {
+    @include typi("h4");
+
+    color: $pomegranate;
+    font-weight: $demi;
+    margin-bottom: vr(0.25);
+  }
+
+  &__event-title {
+    margin-bottom: vr(0.25);
+  }
+
+  &__event-speaker {
+    @include typi("h4");
+
+    margin-bottom: vr(0.5);
+  }
+
+  &__event-description {
+    > p {
+      margin: 0 0 vr(1);
+    }
+  }
+
+  @include to(4) {
+    &__time-block {
+      grid-template-columns: vr(1.5) auto;
+    }
+
+    &__time,
+    &__event-venue,
+    &__event-title,
+    &__event-speaker,
+    &__event-description {
+      grid-column-start: 2;
+    }
+
+    &__time {
+      & + * {
+        margin-top: vr(0.5);
+      }
+    }
+  }
+
+  @include from(5) {
+    padding: vr(2);
+
+    &__time-block {
+      grid-template-columns: span(6) span(1) span(8);
+    }
+
+    &__dot {
+      grid-column-start: 2;
+      grid-row-start: 1;
+    }
+
+    &__time,
+    &__event-venue {
+      grid-column-start: 1;
+      text-align: right;
+    }
+
+    &__event-venue--first {
+      grid-row-start: 2;
+    }
+
+    &__event-title,
+    &__event-speaker,
+    &__event-description {
+      grid-column-start: 3;
+    }
+
+    &__event-title {
+      @include typi("h3");
+    }
+
+    &__event-venue {
+      align-self: center;
+    }
+  }
+}

@@ -64,6 +64,7 @@ DJANGO_APPS = [
 ]
 THIRD_PARTY_APPS = [
     'crispy_forms',
+    'adminsortable',
     'allauth',
     'allauth.account',
     'allauth.socialaccount',
@@ -73,11 +74,12 @@ THIRD_PARTY_APPS = [
 ]
 LOCAL_APPS = [
     'pycon.apiv1.apps.Apiv1Config',
-    'pycon.users.apps.UsersAppConfig',
-    'pycon.proposals.apps.ProposalsConfig',
     'pycon.core.apps.CoreConfig',
+    'pycon.proposals.apps.ProposalsConfig',
+    'pycon.schedule',
     'pycon.speakers.apps.SpeakersConfig',
     'pycon.sponsors',
+    'pycon.users.apps.UsersAppConfig',
     # Your stuff: custom apps go here
 ]
 # https://docs.djangoproject.com/en/dev/ref/settings/#installed-apps
