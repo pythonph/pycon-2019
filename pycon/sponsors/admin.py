@@ -1,3 +1,4 @@
+from adminsortable.admin import SortableAdmin, SortableTabularInline
 from django.contrib import admin
 
 # Register your models here.
@@ -6,11 +7,15 @@ from .models import (
     SponsorType,
 )
 
-class SponsorAdmin(admin.ModelAdmin):
-    list_display = ('id', 'name', 'sponsor_type')
 
-class SponsorTypeAdmin(admin.ModelAdmin):
-    list_display = ('id', 'name')
+class SponsorInline(SortableTabularInline):
+    model = Sponsor
+    extra = 1
 
-admin.site.register(Sponsor, SponsorAdmin)
+
+class SponsorTypeAdmin(SortableAdmin):
+    list_display = ('name',)
+    inlines = [SponsorInline]
+
+
 admin.site.register(SponsorType, SponsorTypeAdmin)

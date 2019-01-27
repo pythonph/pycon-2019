@@ -1,0 +1,21 @@
+<section class="sponsors-section">
+  <div class="sponsors-section__container">
+    <h3 class="sponsors-section__heading">Sponsors</h3>
+
+    {% for group in sponsor_types %}
+      {% if group.sponsors %}
+        <div class="sponsors-section__group">
+          <h4 class="sponsors-section__subheading">{{ group }}</h4>
+
+          <ul class="sponsors-list">
+            {% for sponsor in group.sponsors %}
+              <li class="sponsors-list__sponsor">
+                <img src="{{ sponsor.image.url }}">
+              </li>
+            {% endfor %}
+          </ul>
+        </div>
+      {% endif %}
+    {% endfor %}
+  </div>
+</section>

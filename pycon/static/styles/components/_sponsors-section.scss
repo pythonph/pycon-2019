@@ -1,0 +1,48 @@
+.sponsors-section {
+  @include popup-border;
+
+  background-image: url($noodle-waves);
+  background-position: left center;
+  background-size: vr(30);
+  padding: vr(2) 0;
+
+  &__container {
+    @include container;
+  }
+
+  &__heading {
+    color: $pizazz;
+    text-align: center;
+  }
+
+  &__subheading {
+    @include typi("h3");
+
+    font-family: $futura-pt-bold;
+    text-align: center;
+  }
+
+  &__group {
+    margin-bottom: vr(3);
+  }
+
+  @include from(4) {
+    background-size: vr(50);
+  }
+
+  @include from(5) {
+    padding-top: vr(3);
+
+    &__heading {
+      @include typi("h1");
+    }
+
+    &__subheading {
+      @include typi("h2");
+    }
+
+    &__group {
+      margin-bottom: vr(4);
+    }
+  }
+}

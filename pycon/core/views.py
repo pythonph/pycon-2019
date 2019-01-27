@@ -1,7 +1,9 @@
+from django.db.models import Prefetch
 from django.views.generic import TemplateView
 
 from pycon.schedule.models import ProgramSchedule
 from pycon.speakers.models import Speaker
+from pycon.sponsors.models import Sponsor, SponsorType
 
 
 class HomePageView(TemplateView):
@@ -32,6 +34,18 @@ class HomePageView(TemplateView):
             schedule.get(tab_position=ProgramSchedule.RIGHT)
             if schedule.filter(tab_position=ProgramSchedule.RIGHT).exists()
             else None
+        )
+
+        context['sponsor_types'] = (
+            SponsorType.objects
+            .filter(is_active=True)
+            .prefetch_related(
+                Prefetch(
+                    'sponsor_set',
+                    queryset=Sponsor.objects.filter(is_active=True),
+                    to_attr='sponsors',
+                )
+            )
         )
 
         return context
