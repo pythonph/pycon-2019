@@ -1,5 +1,29 @@
 {% extends "base.html" %}
 
+{% load staticfiles %}
+
+{% block title %}PyCon APAC 2019{% endblock %}
+
+{% block meta %}
+{# Primary Meta Tags #}
+<meta name="title" content="PyCon APAC 2019">
+<meta name="description" content="Join us at PyCon APAC 2019 in Makati, Philippines. PyCon is a volunteer-run, not-for-profit annual conference centered around the Python Programming language.">
+
+{# Open Graph / Facebook #}
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://pycon.python.ph/">
+<meta property="og:title" content="PyCon APAC 2019">
+<meta property="og:description" content="Join us at PyCon APAC 2019 in Makati, Philippines. PyCon is a volunteer-run, not-for-profit annual conference centered around the Python Programming language.">
+<meta property="og:image" content="https://{{ request.site }}{% static "images/seo-image.png" %}">
+
+{# Twitter #}
+<meta property="twitter:card" content="summary_large_image">
+<meta property="twitter:url" content="https://pycon.python.ph/">
+<meta property="twitter:title" content="PyCon APAC 2019">
+<meta property="twitter:description" content="Join us at PyCon APAC 2019 in Makati, Philippines. PyCon is a volunteer-run, not-for-profit annual conference centered around the Python Programming language.">
+<meta property="twitter:image" content="https://{{ request.site }}{% static "images/seo-image.png" %}">
+{% endblock %}
+
 {% block content %}
 {% include "includes/home/home-hero.html" %}
 {% include "includes/home/about-pycon.html" %}
