@@ -16,7 +16,11 @@
           <div class="regular-speaker-card__photo" id="regular_speaker_{{ forloop.counter }}"></div>
           <div class="regular-speaker-card__info">
             <h3 class="regular-speaker-card__name">{{ speaker.name }}</h3>
-            <h4 class="regular-speaker-card__title">{{ speaker.company_name }}, {{ speaker.job_title }}</h4>
+            <h4 class="regular-speaker-card__title">{{ speaker.company_name }}
+                {% if speaker.job_title %}
+                    , {{ speaker.job_title }}
+                {% endif %}
+            </h4>
 
             {{ speaker.description|linebreaks }}
 
