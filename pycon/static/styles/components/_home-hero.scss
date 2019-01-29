@@ -1,3 +1,4 @@
+// sass-lint:disable no-ids
 .home-hero {
   height: 100vh;
   min-height: vr(24);
@@ -20,6 +21,7 @@
     top: 0;
     transition: height linear 9999s;
     width: 100vw;
+    z-index: 4;
   }
 
   &__logo-area {
@@ -30,7 +32,7 @@
     position: absolute;
     top: 0;
     transform: translateX(-50%);
-
+    z-index: 3;
 
     .button {
       display: block;
@@ -75,6 +77,18 @@
     }
   }
 
+  &__circle {
+    $size: 170vh;
+    background-color: scale-color($bondi-blue, $lightness: 85%);
+    border-radius: 50%;
+    height: $size * 1;
+    left: 50%;
+    position: absolute;
+    top: vr(6.25);
+    transform: translateX(-50%);
+    width: $size * 1;
+  }
+
   &__cloud1,
   &__cloud2 {
     height: auto;
@@ -105,6 +119,7 @@
     position: absolute;
     transform: translateX(-50%);
     width: 100%;
+    z-index: 2;
 
     > svg {
       bottom: 0;
@@ -132,6 +147,14 @@
       left: percentage(19px / $total-width);
       width: percentage(1472px / $total-width);
     }
+  }
+
+  #scene_1 {
+    z-index: 3;
+  }
+
+  #scene_2 {
+    z-index: 1;
   }
 
   // Fix overlapping date and city
