@@ -2,7 +2,7 @@
   {% with all_events=program.events.all %}
     {% if all_events %}
 
-      {% regroup all_events by time_display as events %}
+      {% regroup all_events by start_time as events %}
 
       {% for time_block in events %}
         <div class="schedule-list__time-block">

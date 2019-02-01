@@ -74,4 +74,6 @@ class Event(SortableMixin):
         time_format = '%-I:%M %p'
         start_time = self.start_time.strftime(time_format)
         end_time = self.end_time.strftime(time_format)
-        return f'{start_time} – {end_time}'
+        return '{start_time} – {end_time}'.format(
+            start_time=start_time, end_time=end_time
+        )

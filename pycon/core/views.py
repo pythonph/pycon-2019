@@ -23,8 +23,16 @@ class HomePageView(TemplateView):
         # There will always only be two instances of this model
         schedule = ProgramSchedule.objects.all()
 
-        context['program_left_tab'] = schedule.get(tab_position=ProgramSchedule.LEFT)
-        context['program_right_tab'] = schedule.get(tab_position=ProgramSchedule.RIGHT)
+        context['program_left_tab'] = (
+            schedule.get(tab_position=ProgramSchedule.LEFT)
+            if schedule.filter(tab_position=ProgramSchedule.LEFT).exists()
+            else None
+        )
+        context['program_right_tab'] = (
+            schedule.get(tab_position=ProgramSchedule.RIGHT)
+            if schedule.filter(tab_position=ProgramSchedule.RIGHT).exists()
+            else None
+        )
 
         return context
 

@@ -1,18 +1,20 @@
-<div class="program-schedule">
-  <div class="program-schedule__container">
-    <h3 class="program-schedule__heading">Program Schedule</h3>
+{% if program_left_tab or program_right_tab %}
+  <div class="program-schedule">
+    <div class="program-schedule__container">
+      <h3 class="program-schedule__heading">Program Schedule</h3>
 
-    <div class="tabbed-section">
-      {% spaceless %}
-      <input id="tab_left" type="radio" name="tabbed_section" class="tabbed-section__radio" checked>
-      <label for="tab_left" class="tabbed-section__label">Day 1 (February 23)</label>
+      <div class="tabbed-section">
+        {% spaceless %}
+        <input id="tab_left" type="radio" name="tabbed_section" class="tabbed-section__radio" checked>
+        <label for="tab_left" class="tabbed-section__label">Day 1 (February 23)</label>
 
-      <input id="tab_right" type="radio" name="tabbed_section" class="tabbed-section__radio">
-      <label for="tab_right" class="tabbed-section__label">Day 2 (February 24)</label>
-      {% endspaceless %}
+        <input id="tab_right" type="radio" name="tabbed_section" class="tabbed-section__radio">
+        <label for="tab_right" class="tabbed-section__label">Day 2 (February 24)</label>
+        {% endspaceless %}
 
-      {% include "includes/home/schedule-list.html" with program=program_left_tab class="tabbed-section__left-tab" %}
-      {% include "includes/home/schedule-list.html" with program=program_right_tab class="tabbed-section__right-tab" %}
+        {% include "includes/home/schedule-list.html" with program=program_left_tab class="tabbed-section__left-tab" %}
+        {% include "includes/home/schedule-list.html" with program=program_right_tab class="tabbed-section__right-tab" %}
+      </div>
     </div>
   </div>
-</div>
+{% endif %}
