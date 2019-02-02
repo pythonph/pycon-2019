@@ -54,6 +54,7 @@
     "parallax-js": "^3.1.0",
     "picturefill": "^3.0.3",
     "susy": "^3.0.5",
+    "tippy.js": "^3.4.1",
     "typi": "^3.2.0",
     "uglifyify": "^5.0.1",
     "vinyl-buffer": "^1.0.1",

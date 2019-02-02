@@ -10,7 +10,24 @@
           <ul class="sponsors-list">
             {% for sponsor in group.sponsors %}
               <li class="sponsors-list__sponsor">
-                <img src="{{ sponsor.image.url }}">
+                <img src="{{ sponsor.image.url }}" data-tippy="test tooltip">
+                <div class="tooltip-box">
+                  <div class="tooltip-box__wrapper">
+                    <div class="tooltip-box__name">{{ sponsor.name }}</div>
+
+                    {% if sponsor.description %}
+                      <div class="tooltip-box__description">
+                        {{ sponsor.description|linebreaks }}
+                      </div>
+                    {% endif %}
+
+                    {% if sponsor.link %}
+                      <a href="{{ sponsor.link }}" class="tooltip-box__link" target="_blank" rel="noopener noreferrer">
+                        Learn more
+                      </a>
+                    {% endif %}
+                  </div>
+                </div>
               </li>
             {% endfor %}
           </ul>

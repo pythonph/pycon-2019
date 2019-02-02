@@ -1,0 +1,28 @@
+.tooltip-box {
+  display: none;
+
+  &__wrapper {
+    text-align: left;
+  }
+
+  &__name {
+    font-weight: 600;
+    margin-bottom: vr(0.5);
+  }
+
+  &__description {
+    margin-bottom: vr(0.5);
+
+    p {
+      margin: 0;
+
+      &:not(:last-child) {
+        margin-bottom: vr(1);
+      }
+    }
+  }
+
+  &__link {
+    color: $white;
+  }
+}
