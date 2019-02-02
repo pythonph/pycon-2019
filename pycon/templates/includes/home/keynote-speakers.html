@@ -1,4 +1,4 @@
-{% load svg %}
+{% load core_tags svg %}
 
 {% if keynote_speakers %}
 <section class="keynote-speakers">
@@ -14,7 +14,9 @@
             background-image: url('{{ speaker.image.url }}');
           }
         </style>
-        <div class="keynote-speaker-card__photo" id="keynote_speaker_{{ forloop.counter }}"></div>
+        <div class="{% blend_class forloop.counter1 'yellow' %} keynote-speaker-card__photo">
+          <div class="keynote-speaker-card__photo-image" id="keynote_speaker_{{ forloop.counter }}"></div>
+        </div>
         <div class="keynote-speaker-card__info">
           <h3 class="keynote-speaker-card__name">{{ speaker.name }}</h3>
           <h4 class="keynote-speaker-card__title">{{ speaker.company_name }}, {{ speaker.job_title }}</h4>

@@ -1,4 +1,4 @@
-{% load svg %}
+{% load core_tags svg %}
 
 {% if regular_speakers %}
 <section class="regular-speakers">
@@ -13,7 +13,9 @@
               background-image: url('{{ speaker.image.url }}');
             }
           </style>
-          <div class="regular-speaker-card__photo" id="regular_speaker_{{ forloop.counter }}"></div>
+          <div class="{% blend_class forloop.counter1 'purple' %} regular-speaker-card__photo">
+            <div class="regular-speaker-card__photo-image" id="regular_speaker_{{ forloop.counter }}"></div>
+          </div>
           <div class="regular-speaker-card__info">
             <h3 class="regular-speaker-card__name">{{ speaker.name }}</h3>
             <h4 class="regular-speaker-card__title">{{ speaker.company_name }}

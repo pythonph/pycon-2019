@@ -6,6 +6,7 @@
 @import "normalize-scss/sass/normalize"; // sass-lint:disable-line clean-import-paths
 
 @import "tippy.js/dist/tippy";
+@import "vendor/*";
 
 @import "variables/*";
 @import "abstracts/*";
