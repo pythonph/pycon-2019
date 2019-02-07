@@ -23,4 +23,5 @@ def blend_class(seed=None, *exclude):
         # 'red-blue',
     }
     colors = list(all_colors - exclude)
-    return f'blend-{random.choice(colors)}'
+    color = random.choice(colors)
+    return 'blend-{}'.format(color)
