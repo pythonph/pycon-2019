@@ -42,7 +42,7 @@ gulp.task('bs-reload', function () {
 })
 
 gulp.task('copy', function () {
-  return gulp.src([], {base: config.src})
+  return gulp.src([`${config.src}/favicons/*`], {base: config.src})
     .pipe(gulp.dest(config.dest))
 })
 
