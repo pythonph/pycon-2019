@@ -43,7 +43,7 @@
   }
 
   @include to(4) {
-    &__photo {
+    &__photo-image {
       padding-top: 100%;
     }
   }
