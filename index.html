@@ -1,0 +1,1592 @@
+<!DOCTYPE html>
+<!-- saved from url=(0024)https://pycon.python.ph/ -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><style type="text/css">.tippy-iOS{cursor:pointer!important}.tippy-notransition{transition:none!important}.tippy-popper{-webkit-perspective:700px;perspective:700px;z-index:9999;outline:0;transition-timing-function:cubic-bezier(.165,.84,.44,1);pointer-events:none;line-height:1.4;max-width:calc(100% - 10px)}.tippy-popper[x-placement^=top] .tippy-backdrop{border-radius:40% 40% 0 0}.tippy-popper[x-placement^=top] .tippy-roundarrow{bottom:-8px;-webkit-transform-origin:50% 0;transform-origin:50% 0}.tippy-popper[x-placement^=top] .tippy-roundarrow svg{position:absolute;left:0;-webkit-transform:rotate(180deg);transform:rotate(180deg)}.tippy-popper[x-placement^=top] .tippy-arrow{border-top:8px solid #333;border-right:8px solid transparent;border-left:8px solid transparent;bottom:-7px;margin:0 6px;-webkit-transform-origin:50% 0;transform-origin:50% 0}.tippy-popper[x-placement^=top] .tippy-backdrop{-webkit-transform-origin:0 25%;transform-origin:0 25%}.tippy-popper[x-placement^=top] .tippy-backdrop[data-state=visible]{-webkit-transform:scale(1) translate(-50%,-55%);transform:scale(1) translate(-50%,-55%)}.tippy-popper[x-placement^=top] .tippy-backdrop[data-state=hidden]{-webkit-transform:scale(.2) translate(-50%,-45%);transform:scale(.2) translate(-50%,-45%);opacity:0}.tippy-popper[x-placement^=top] [data-animation=shift-toward][data-state=visible]{-webkit-transform:translateY(-10px);transform:translateY(-10px)}.tippy-popper[x-placement^=top] [data-animation=shift-toward][data-state=hidden]{opacity:0;-webkit-transform:translateY(-20px);transform:translateY(-20px)}.tippy-popper[x-placement^=top] [data-animation=perspective]{-webkit-transform-origin:bottom;transform-origin:bottom}.tippy-popper[x-placement^=top] [data-animation=perspective][data-state=visible]{-webkit-transform:translateY(-10px) rotateX(0);transform:translateY(-10px) rotateX(0)}.tippy-popper[x-placement^=top] [data-animation=perspective][data-state=hidden]{opacity:0;-webkit-transform:translateY(0) rotateX(60deg);transform:translateY(0) rotateX(60deg)}.tippy-popper[x-placement^=top] [data-animation=fade][data-state=visible]{-webkit-transform:translateY(-10px);transform:translateY(-10px)}.tippy-popper[x-placement^=top] [data-animation=fade][data-state=hidden]{opacity:0;-webkit-transform:translateY(-10px);transform:translateY(-10px)}.tippy-popper[x-placement^=top] [data-animation=shift-away][data-state=visible]{-webkit-transform:translateY(-10px);transform:translateY(-10px)}.tippy-popper[x-placement^=top] [data-animation=shift-away][data-state=hidden]{opacity:0;-webkit-transform:translateY(0);transform:translateY(0)}.tippy-popper[x-placement^=top] [data-animation=scale][data-state=visible]{-webkit-transform:translateY(-10px) scale(1);transform:translateY(-10px) scale(1)}.tippy-popper[x-placement^=top] [data-animation=scale][data-state=hidden]{opacity:0;-webkit-transform:translateY(0) scale(.5);transform:translateY(0) scale(.5)}.tippy-popper[x-placement^=bottom] .tippy-backdrop{border-radius:0 0 30% 30%}.tippy-popper[x-placement^=bottom] .tippy-roundarrow{top:-8px;-webkit-transform-origin:50% 100%;transform-origin:50% 100%}.tippy-popper[x-placement^=bottom] .tippy-roundarrow svg{position:absolute;left:0;-webkit-transform:rotate(0);transform:rotate(0)}.tippy-popper[x-placement^=bottom] .tippy-arrow{border-bottom:8px solid #333;border-right:8px solid transparent;border-left:8px solid transparent;top:-7px;margin:0 6px;-webkit-transform-origin:50% 100%;transform-origin:50% 100%}.tippy-popper[x-placement^=bottom] .tippy-backdrop{-webkit-transform-origin:0 -50%;transform-origin:0 -50%}.tippy-popper[x-placement^=bottom] .tippy-backdrop[data-state=visible]{-webkit-transform:scale(1) translate(-50%,-45%);transform:scale(1) translate(-50%,-45%)}.tippy-popper[x-placement^=bottom] .tippy-backdrop[data-state=hidden]{-webkit-transform:scale(.2) translate(-50%);transform:scale(.2) translate(-50%);opacity:0}.tippy-popper[x-placement^=bottom] [data-animation=shift-toward][data-state=visible]{-webkit-transform:translateY(10px);transform:translateY(10px)}.tippy-popper[x-placement^=bottom] [data-animation=shift-toward][data-state=hidden]{opacity:0;-webkit-transform:translateY(20px);transform:translateY(20px)}.tippy-popper[x-placement^=bottom] [data-animation=perspective]{-webkit-transform-origin:top;transform-origin:top}.tippy-popper[x-placement^=bottom] [data-animation=perspective][data-state=visible]{-webkit-transform:translateY(10px) rotateX(0);transform:translateY(10px) rotateX(0)}.tippy-popper[x-placement^=bottom] [data-animation=perspective][data-state=hidden]{opacity:0;-webkit-transform:translateY(0) rotateX(-60deg);transform:translateY(0) rotateX(-60deg)}.tippy-popper[x-placement^=bottom] [data-animation=fade][data-state=visible]{-webkit-transform:translateY(10px);transform:translateY(10px)}.tippy-popper[x-placement^=bottom] [data-animation=fade][data-state=hidden]{opacity:0;-webkit-transform:translateY(10px);transform:translateY(10px)}.tippy-popper[x-placement^=bottom] [data-animation=shift-away][data-state=visible]{-webkit-transform:translateY(10px);transform:translateY(10px)}.tippy-popper[x-placement^=bottom] [data-animation=shift-away][data-state=hidden]{opacity:0;-webkit-transform:translateY(0);transform:translateY(0)}.tippy-popper[x-placement^=bottom] [data-animation=scale][data-state=visible]{-webkit-transform:translateY(10px) scale(1);transform:translateY(10px) scale(1)}.tippy-popper[x-placement^=bottom] [data-animation=scale][data-state=hidden]{opacity:0;-webkit-transform:translateY(0) scale(.5);transform:translateY(0) scale(.5)}.tippy-popper[x-placement^=left] .tippy-backdrop{border-radius:50% 0 0 50%}.tippy-popper[x-placement^=left] .tippy-roundarrow{right:-16px;-webkit-transform-origin:33.33333333% 50%;transform-origin:33.33333333% 50%}.tippy-popper[x-placement^=left] .tippy-roundarrow svg{position:absolute;left:0;-webkit-transform:rotate(90deg);transform:rotate(90deg)}.tippy-popper[x-placement^=left] .tippy-arrow{border-left:8px solid #333;border-top:8px solid transparent;border-bottom:8px solid transparent;right:-7px;margin:3px 0;-webkit-transform-origin:0 50%;transform-origin:0 50%}.tippy-popper[x-placement^=left] .tippy-backdrop{-webkit-transform-origin:50% 0;transform-origin:50% 0}.tippy-popper[x-placement^=left] .tippy-backdrop[data-state=visible]{-webkit-transform:scale(1) translate(-50%,-50%);transform:scale(1) translate(-50%,-50%)}.tippy-popper[x-placement^=left] .tippy-backdrop[data-state=hidden]{-webkit-transform:scale(.2) translate(-75%,-50%);transform:scale(.2) translate(-75%,-50%);opacity:0}.tippy-popper[x-placement^=left] [data-animation=shift-toward][data-state=visible]{-webkit-transform:translateX(-10px);transform:translateX(-10px)}.tippy-popper[x-placement^=left] [data-animation=shift-toward][data-state=hidden]{opacity:0;-webkit-transform:translateX(-20px);transform:translateX(-20px)}.tippy-popper[x-placement^=left] [data-animation=perspective]{-webkit-transform-origin:right;transform-origin:right}.tippy-popper[x-placement^=left] [data-animation=perspective][data-state=visible]{-webkit-transform:translateX(-10px) rotateY(0);transform:translateX(-10px) rotateY(0)}.tippy-popper[x-placement^=left] [data-animation=perspective][data-state=hidden]{opacity:0;-webkit-transform:translateX(0) rotateY(-60deg);transform:translateX(0) rotateY(-60deg)}.tippy-popper[x-placement^=left] [data-animation=fade][data-state=visible]{-webkit-transform:translateX(-10px);transform:translateX(-10px)}.tippy-popper[x-placement^=left] [data-animation=fade][data-state=hidden]{opacity:0;-webkit-transform:translateX(-10px);transform:translateX(-10px)}.tippy-popper[x-placement^=left] [data-animation=shift-away][data-state=visible]{-webkit-transform:translateX(-10px);transform:translateX(-10px)}.tippy-popper[x-placement^=left] [data-animation=shift-away][data-state=hidden]{opacity:0;-webkit-transform:translateX(0);transform:translateX(0)}.tippy-popper[x-placement^=left] [data-animation=scale][data-state=visible]{-webkit-transform:translateX(-10px) scale(1);transform:translateX(-10px) scale(1)}.tippy-popper[x-placement^=left] [data-animation=scale][data-state=hidden]{opacity:0;-webkit-transform:translateX(0) scale(.5);transform:translateX(0) scale(.5)}.tippy-popper[x-placement^=right] .tippy-backdrop{border-radius:0 50% 50% 0}.tippy-popper[x-placement^=right] .tippy-roundarrow{left:-16px;-webkit-transform-origin:66.66666666% 50%;transform-origin:66.66666666% 50%}.tippy-popper[x-placement^=right] .tippy-roundarrow svg{position:absolute;left:0;-webkit-transform:rotate(-90deg);transform:rotate(-90deg)}.tippy-popper[x-placement^=right] .tippy-arrow{border-right:8px solid #333;border-top:8px solid transparent;border-bottom:8px solid transparent;left:-7px;margin:3px 0;-webkit-transform-origin:100% 50%;transform-origin:100% 50%}.tippy-popper[x-placement^=right] .tippy-backdrop{-webkit-transform-origin:-50% 0;transform-origin:-50% 0}.tippy-popper[x-placement^=right] .tippy-backdrop[data-state=visible]{-webkit-transform:scale(1) translate(-50%,-50%);transform:scale(1) translate(-50%,-50%)}.tippy-popper[x-placement^=right] .tippy-backdrop[data-state=hidden]{-webkit-transform:scale(.2) translate(-25%,-50%);transform:scale(.2) translate(-25%,-50%);opacity:0}.tippy-popper[x-placement^=right] [data-animation=shift-toward][data-state=visible]{-webkit-transform:translateX(10px);transform:translateX(10px)}.tippy-popper[x-placement^=right] [data-animation=shift-toward][data-state=hidden]{opacity:0;-webkit-transform:translateX(20px);transform:translateX(20px)}.tippy-popper[x-placement^=right] [data-animation=perspective]{-webkit-transform-origin:left;transform-origin:left}.tippy-popper[x-placement^=right] [data-animation=perspective][data-state=visible]{-webkit-transform:translateX(10px) rotateY(0);transform:translateX(10px) rotateY(0)}.tippy-popper[x-placement^=right] [data-animation=perspective][data-state=hidden]{opacity:0;-webkit-transform:translateX(0) rotateY(60deg);transform:translateX(0) rotateY(60deg)}.tippy-popper[x-placement^=right] [data-animation=fade][data-state=visible]{-webkit-transform:translateX(10px);transform:translateX(10px)}.tippy-popper[x-placement^=right] [data-animation=fade][data-state=hidden]{opacity:0;-webkit-transform:translateX(10px);transform:translateX(10px)}.tippy-popper[x-placement^=right] [data-animation=shift-away][data-state=visible]{-webkit-transform:translateX(10px);transform:translateX(10px)}.tippy-popper[x-placement^=right] [data-animation=shift-away][data-state=hidden]{opacity:0;-webkit-transform:translateX(0);transform:translateX(0)}.tippy-popper[x-placement^=right] [data-animation=scale][data-state=visible]{-webkit-transform:translateX(10px) scale(1);transform:translateX(10px) scale(1)}.tippy-popper[x-placement^=right] [data-animation=scale][data-state=hidden]{opacity:0;-webkit-transform:translateX(0) scale(.5);transform:translateX(0) scale(.5)}.tippy-tooltip{position:relative;color:#fff;border-radius:4px;font-size:.9rem;padding:.3rem .6rem;max-width:350px;text-align:center;will-change:transform;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;background-color:#333}.tippy-tooltip[data-size=small]{padding:.2rem .4rem;font-size:.75rem}.tippy-tooltip[data-size=large]{padding:.4rem .8rem;font-size:1rem}.tippy-tooltip[data-animatefill]{overflow:hidden;background-color:transparent}.tippy-tooltip[data-interactive],.tippy-tooltip[data-interactive] path{pointer-events:auto}.tippy-tooltip[data-inertia][data-state=visible]{transition-timing-function:cubic-bezier(.54,1.5,.38,1.11)}.tippy-tooltip[data-inertia][data-state=hidden]{transition-timing-function:ease}.tippy-arrow,.tippy-roundarrow{position:absolute;width:0;height:0}.tippy-roundarrow{width:24px;height:8px;fill:#333;pointer-events:none}.tippy-backdrop{position:absolute;will-change:transform;background-color:#333;border-radius:50%;width:calc(110% + 2rem);left:50%;top:50%;z-index:-1;transition:all cubic-bezier(.46,.1,.52,.98);-webkit-backface-visibility:hidden;backface-visibility:hidden}.tippy-backdrop:after{content:"";float:left;padding-top:100%}.tippy-backdrop+.tippy-content{transition-property:opacity;will-change:opacity}.tippy-backdrop+.tippy-content[data-state=visible]{opacity:1}.tippy-backdrop+.tippy-content[data-state=hidden]{opacity:0}</style>
+
+<meta http-equiv="x-ua-compatible" content="ie=edge">
+<title>PyCon APAC 2019</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!--[if lt IE 9]>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js"></script>
+    <![endif]-->
+<meta name="title" content="PyCon APAC 2019">
+<meta name="description" content="Join us at PyCon APAC 2019 in Makati, Philippines. PyCon is a volunteer-run, not-for-profit annual conference centered around the Python Programming language.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://pycon.python.ph/">
+<meta property="og:title" content="PyCon APAC 2019">
+<meta property="og:description" content="Join us at PyCon APAC 2019 in Makati, Philippines. PyCon is a volunteer-run, not-for-profit annual conference centered around the Python Programming language.">
+<meta property="og:image" content="https://pycon.python.ph/static/images/seo-image.png">
+<meta property="twitter:card" content="summary_large_image">
+<meta property="twitter:url" content="https://pycon.python.ph/">
+<meta property="twitter:title" content="PyCon APAC 2019">
+<meta property="twitter:description" content="Join us at PyCon APAC 2019 in Makati, Philippines. PyCon is a volunteer-run, not-for-profit annual conference centered around the Python Programming language.">
+<meta property="twitter:image" content="https://pycon.python.ph/static/images/seo-image.png">
+<link rel="apple-touch-icon" sizes="180x180" href="https://pycon.python.ph/static/favicons/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="https://pycon.python.ph/static/favicons/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="https://pycon.python.ph/static/favicons/favicon-16x16.png">
+<link rel="manifest" href="https://pycon.python.ph/static/favicons/site.webmanifest">
+<link rel="mask-icon" href="https://pycon.python.ph/static/favicons/safari-pinned-tab.svg" color="#f5b900">
+<link rel="shortcut icon" href="https://pycon.python.ph/static/favicons/favicon.ico">
+<meta name="msapplication-TileColor" content="#ffc40d">
+<meta name="msapplication-config" content="/static/favicons/browserconfig.xml">
+<meta name="theme-color" content="#ffffff">
+
+
+<link rel="stylesheet" href="./PyCon APAC 2019_files/vym6wuv.css">
+<link href="./PyCon APAC 2019_files/main.css" rel="stylesheet">
+</head>
+<body>
+<div class="container">
+<main class="home-hero">
+<div class="home-hero__logo-area">
+<div class="home-hero__logo-wrapper">
+<div class="home-hero__logo">
+<svg viewBox="0 0 406 68" xmlns="http://www.w3.org/2000/svg"><path class="pycon-logo__path" d="M0 1.4h25.521c7.147 0 12.792 1.756 16.935 5.27 4.143 3.513 6.214 8.503 6.214 14.97 0 6.592-2.055 11.583-6.166 14.972-4.112 3.389-9.772 5.083-16.983 5.083h-7.535v24.906H0V1.399zm74.205 40.482L55.312 1.399h57.873L93.391 41.882v24.719H74.205V41.882zM156.827 68c-6.83 0-12.903-1.4-18.216-4.198-5.313-2.798-9.456-6.762-12.428-11.893-2.973-5.13-4.46-11.084-4.46-17.862 0-6.779 1.487-12.748 4.46-17.91 2.972-5.161 7.115-9.141 12.428-11.94C143.924 1.4 149.996 0 156.827 0c9.108 0 16.73 2.27 22.865 6.81L156.827 34l23.719 27.004C174.853 65.668 166.947 68 156.827 68zm67.171 0c-6.578 0-12.523-1.415-17.836-4.244-5.313-2.83-9.488-6.825-12.524-11.986-3.036-5.162-4.554-11.07-4.554-17.723 0-6.654 1.518-12.562 4.554-17.723 3.036-5.162 7.21-9.173 12.524-12.033C211.475 1.43 217.42 0 223.998 0c6.578 0 12.523 1.43 17.836 4.29 5.313 2.861 9.488 6.872 12.524 12.034 3.036 5.161 4.554 11.069 4.554 17.723 0 6.654-1.518 12.561-4.554 17.723-3.036 5.161-7.21 9.156-12.524 11.986-5.313 2.83-11.258 4.244-17.836 4.244zm45.35-66.6l52.75 65.2h-52.75V1.4zM335 67.724v-3.45l5.862-8.942a64.992 64.992 0 0 1 1.426-2.137 8.307 8.307 0 0 0 .899-1.608 7.313 7.313 0 0 0 .469-1.823c.091-.68.137-1.608.137-2.785 0-1.202-.248-2.19-.743-2.96-.495-.772-1.355-1.157-2.579-1.157-.834 0-1.687.078-2.56.235-.872.157-1.608.3-2.208.431v-2.862c.105-.026.313-.072.626-.138.312-.065.69-.137 1.133-.215.443-.079.925-.15 1.446-.216A12.547 12.547 0 0 1 340.47 40c2.319 0 4.006.608 5.06 1.824 1.056 1.215 1.583 3.052 1.583 5.51 0 1.019-.052 1.901-.156 2.646-.104.745-.28 1.451-.527 2.118a13.155 13.155 0 0 1-.977 2.04 55.602 55.602 0 0 1-1.505 2.411l-5.432 8.275h8.988v2.901H335zm32.912-14.039c0 2.406-.078 4.504-.234 6.294-.157 1.791-.482 3.281-.977 4.471s-1.199 2.078-2.11 2.667c-.913.588-2.124.882-3.635.882-1.511 0-2.722-.294-3.634-.882-.912-.589-1.616-1.477-2.11-2.667-.496-1.19-.821-2.68-.978-4.47-.156-1.791-.234-3.89-.234-6.295 0-2.3.078-4.307.234-6.02.157-1.712.482-3.137.977-4.274s1.199-1.987 2.11-2.549c.913-.562 2.124-.843 3.635-.843 1.537 0 2.762.281 3.673.843.912.562 1.61 1.412 2.091 2.55.482 1.136.801 2.561.958 4.274.156 1.712.234 3.719.234 6.02zm-3.322.196c0-2.17-.045-3.96-.136-5.372-.092-1.412-.267-2.536-.528-3.373-.26-.836-.625-1.425-1.094-1.764-.47-.34-1.094-.51-1.876-.51-.782 0-1.407.17-1.876.51-.469.34-.833.928-1.094 1.764-.26.837-.436 1.961-.528 3.373-.09 1.412-.136 3.202-.136 5.372 0 2.118.045 3.89.136 5.314.092 1.425.261 2.582.508 3.47.248.89.613 1.524 1.095 1.903s1.113.568 1.895.568 1.413-.19 1.895-.568c.482-.38.847-1.013 1.095-1.902.247-.89.416-2.046.508-3.47.09-1.426.136-3.197.136-5.315zm9.8 13.843v-2.94h4.73V43.372l-5.12 2.04v-3.177l4.729-1.96h3.712v24.51h3.869v2.94h-11.92zM392 48.235c0-1.516.176-2.797.528-3.843.351-1.046.84-1.895 1.465-2.549a5.454 5.454 0 0 1 2.188-1.412 8.214 8.214 0 0 1 2.697-.431c1.276 0 2.345.196 3.204.588.86.392 1.55 1.105 2.071 2.137.522 1.033.893 2.458 1.114 4.275.222 1.817.332 4.15.332 7 0 3.163-.162 5.667-.488 7.51-.326 1.843-.814 3.248-1.466 4.215-.65.968-1.458 1.589-2.422 1.863-.964.275-2.085.412-3.361.412-.313 0-.652-.02-1.016-.059a13.763 13.763 0 0 1-1.075-.157c-.352-.065-.677-.13-.977-.196a7.025 7.025 0 0 1-.684-.176v-2.863c.521.13 1.134.268 1.837.412.703.144 1.472.215 2.306.215.677 0 1.263-.098 1.758-.294.495-.196.899-.594 1.212-1.196.312-.601.553-1.477.723-2.627.169-1.15.267-2.667.293-4.55-.417.262-.964.524-1.642.785-.677.262-1.498.392-2.462.392-1.328 0-2.396-.202-3.204-.608a4.18 4.18 0 0 1-1.856-1.823c-.43-.81-.717-1.804-.86-2.98-.143-1.177-.215-2.523-.215-4.04zm5.81 6.628c.99 0 1.817-.144 2.481-.432a31.415 31.415 0 0 0 1.387-.627c0-2.431-.071-4.373-.215-5.824-.143-1.45-.351-2.562-.625-3.333-.273-.771-.632-1.268-1.075-1.49-.442-.222-.977-.333-1.602-.333-1.198 0-2.07.49-2.618 1.47-.547.98-.82 2.399-.82 4.255 0 1.098.025 2.046.077 2.843.053.798.19 1.451.41 1.96.222.51.535.89.939 1.138.403.249.957.373 1.66.373zm-53.993-52l-3.174 14.98h6.388l-3.214-14.98zm5.33 24.862l-1.49-6.94h-7.64l-1.53 6.94H335l6.623-27.45h4.506l6.506 27.45h-3.488zm18.86-18.94c0-1.961-.268-3.445-.804-4.452-.535-1.006-1.509-1.51-2.92-1.51-1.097 0-1.985.04-2.664.118-.392.052-.732.092-1.019.118v11.45h3.684c.548 0 1.051-.097 1.508-.293a2.84 2.84 0 0 0 1.176-.961c.327-.445.581-1.033.764-1.765.183-.732.275-1.634.275-2.706zm3.487-.275c0 1.49-.137 2.79-.411 3.902-.274 1.11-.712 2.032-1.313 2.764-.6.733-1.385 1.282-2.351 1.648-.967.366-2.143.549-3.527.549H360.6v10.352h-3.41V.275c.654-.053 1.346-.105 2.078-.157a32.342 32.342 0 0 1 2.135-.098c.797-.013 1.6-.02 2.41-.02 1.49 0 2.73.216 3.723.647.993.431 1.783 1.033 2.371 1.804.588.771 1 1.673 1.235 2.706a15.09 15.09 0 0 1 .352 3.353zm10.434-5.647l-3.174 14.98h6.388l-3.214-14.98zm5.33 24.862l-1.49-6.94h-7.64l-1.53 6.94h-3.487l6.623-27.45h4.507l6.505 27.45h-3.488zM406 27.333a27.602 27.602 0 0 1-2.018.412 35.05 35.05 0 0 1-1.235.177 8.983 8.983 0 0 1-1.097.078c-1.41 0-2.612-.203-3.605-.608-.993-.405-1.81-1.144-2.45-2.216-.64-1.071-1.11-2.542-1.41-4.411-.3-1.87-.451-4.268-.451-7.196 0-2.902.17-5.236.51-7 .34-1.765.855-3.138 1.547-4.118.693-.98 1.561-1.634 2.606-1.96C399.442.162 400.683 0 402.12 0c.627 0 1.3.059 2.019.176.718.118 1.338.242 1.861.373v2.902a18.109 18.109 0 0 0-2.214-.373 21.473 21.473 0 0 0-2.371-.137c-.705 0-1.326.124-1.861.373-.536.248-.974.758-1.313 1.53-.34.77-.595 1.868-.764 3.293-.17 1.425-.255 3.327-.255 5.706 0 2.458.091 4.425.274 5.902.183 1.477.45 2.608.803 3.392.353.785.79 1.3 1.313 1.55.523.248 1.137.372 1.842.372.81 0 1.646-.066 2.508-.196.862-.131 1.542-.262 2.038-.392v2.862z"></path><ellipse fill="#FFC100" cx="310.977" cy="10.364" rx="10.542" ry="10.364"></ellipse></svg>
+</div>
+<div class="home-hero__meta">
+<span>February 23–24, 2019</span>
+<span>Makati, Philippines</span>
+</div>
+<a class="button" target="_blank" href="https://pycon-tickets.python.ph/">
+Buy tickets
+</a>
+</div>
+</div>
+<div class="home-hero__layers" id="scene_1" data-selector=".parallax-layer" data-relative-input="" data-hover-only="" style="transform: translate3d(0px, 0px, 0px) rotate(0.0001deg); transform-style: preserve-3d; backface-visibility: hidden; pointer-events: none;">
+<div class="parallax-layer" data-depth="0.9" style="transform: translate3d(-49.9px, -23.6px, 0px); transform-style: preserve-3d; backface-visibility: hidden; position: relative; display: block; left: 0px; top: 0px;">
+<div class="home-hero__cloud1"><svg viewBox="0 0 164 108" xmlns="http://www.w3.org/2000/svg"><g fill="none"><path d="M68.817 99.131l1.222-.574 1.278.436a44.134 44.134 0 0 0 14.27 2.353c13.14 0 25.33-5.762 33.64-15.563l1.635-1.927 2.302 1.05a23.419 23.419 0 0 0 9.75 2.108c12.932 0 23.413-10.428 23.413-23.289 0-7.07-3.182-13.616-8.575-18.016l-1.784-1.456.734-2.179a26.71 26.71 0 0 0 1.395-8.548c0-14.84-12.094-26.872-27.015-26.872a26.99 26.99 0 0 0-19.393 8.164l-1.414 1.45-1.941-.584a44.202 44.202 0 0 0-12.747-1.864c-6.78 0-13.333 1.524-19.286 4.418l-1.758.854-1.607-1.112a23.374 23.374 0 0 0-13.36-4.16c-12.932 0-23.413 10.428-23.413 23.289 0 .475.014.949.043 1.42l.149 2.473-2.333.851c-9.145 3.338-15.35 12.023-15.35 21.872 0 12.86 10.482 23.29 23.414 23.29.864 0 1.722-.047 2.571-.14l2.28-.247 1.048 2.035a23.424 23.424 0 0 0 20.851 12.683c3.502 0 6.888-.763 9.98-2.215z" fill="#FFF"></path><path d="M155.702 58.36a3.447 3.447 0 0 1-5.125-1.708 3.446 3.446 0 0 1 2.62-4.572 23.4 23.4 0 0 0-5.445-6.371l-1.784-1.456.182-.543a4.299 4.299 0 0 1-1.824-2.219 4.308 4.308 0 0 1 3.682-5.768c.059-.727.089-1.46.089-2.197a26.74 26.74 0 0 0-1.345-8.396 5.145 5.145 0 0 1-2.968 2.794 5.17 5.17 0 0 1-6.622-3.096 5.17 5.17 0 0 1 3.083-6.628 5.133 5.133 0 0 1 2.9-.185 27.094 27.094 0 0 0-6.009-6.103 6.034 6.034 0 0 1-6.715-3.609 27.089 27.089 0 0 0-9.34-1.649c-1.503 0-2.986.123-4.438.361a6.038 6.038 0 0 1 5.59 3.976 6.03 6.03 0 0 1-3.597 7.733 6.03 6.03 0 0 1-7.726-3.612 6.032 6.032 0 0 1 3.106-7.53 26.976 26.976 0 0 0-12.327 7.236l-.659.676a6.017 6.017 0 0 1 1.792 2.562 6.03 6.03 0 0 1-3.597 7.733 6.03 6.03 0 0 1-7.727-3.612 6.033 6.033 0 0 1 2.973-7.465 44.427 44.427 0 0 0-8.884-.892c-6.78 0-13.333 1.524-19.286 4.418l-1.758.854-1.607-1.112a23.374 23.374 0 0 0-4.658-2.5 6.89 6.89 0 0 1-4.526 6.671c-3.574 1.3-7.527-.547-8.83-4.127a6.876 6.876 0 0 1-.29-3.684 23.35 23.35 0 0 0-7.969 3.34 6.88 6.88 0 0 1 1.788 2.699c1.303 3.58-.537 7.537-4.11 8.837a6.876 6.876 0 0 1-6.44-.93 23.114 23.114 0 0 0-1.738 8.823c0 .475.014.949.043 1.42l.149 2.473-2.333.851c-.762.278-1.503.593-2.222.943a6.026 6.026 0 0 1 3.376 3.52 6.03 6.03 0 0 1-3.597 7.733 6.03 6.03 0 0 1-7.995-4.6 23.178 23.178 0 0 0-4.911 14.276c0 1.567.155 3.098.452 4.578a5.157 5.157 0 0 1 1.863 2.449 5.157 5.157 0 0 1 .092 3.27 23.426 23.426 0 0 0 21.006 12.992c.864 0 1.722-.046 2.571-.138l2.28-.248 1.048 2.035a23.424 23.424 0 0 0 20.851 12.683c3.502 0 6.888-.763 9.98-2.215l1.223-.574 1.278.436a44.134 44.134 0 0 0 14.27 2.353c13.14 0 25.33-5.762 33.64-15.563l.035-.04a2.583 2.583 0 0 1-1.524-1.539 2.585 2.585 0 0 1 1.542-3.314 2.585 2.585 0 0 1 3.311 1.548c.266.73.183 1.502-.163 2.132l.736.336a23.419 23.419 0 0 0 9.75 2.108c12.932 0 23.413-10.428 23.413-23.289 0-1.833-.214-3.63-.625-5.365zM58.836 108a30.104 30.104 0 0 1-25.69-14.35c-.352.012-.706.018-1.06.018C15.472 93.668 2 80.264 2 63.725c0-11.847 6.977-22.38 17.496-27.203.314-16.268 13.663-29.356 30.08-29.356a30.07 30.07 0 0 1 15.528 4.29 50.708 50.708 0 0 1 20.483-4.29c4.35 0 8.63.547 12.765 1.615A33.666 33.666 0 0 1 121.082 0c18.603 0 33.687 15.008 33.687 33.526 0 2.906-.372 5.764-1.099 8.523 5.895 5.588 9.33 13.355 9.33 21.676 0 16.539-13.472 29.943-30.086 29.943-3.525 0-6.968-.605-10.21-1.769C113.208 102.072 99.879 108 85.587 108a50.871 50.871 0 0 1-15.17-2.3 30.128 30.128 0 0 1-11.58 2.3zm-35.06-47.41a5.17 5.17 0 0 1 6.623 3.096 5.17 5.17 0 0 1-3.083 6.629 5.17 5.17 0 0 1-6.622-3.096 5.17 5.17 0 0 1 3.083-6.628zm6.651 17.769a4.308 4.308 0 0 1 5.519 2.58 4.308 4.308 0 0 1-2.57 5.523 4.308 4.308 0 0 1-5.518-2.58 4.308 4.308 0 0 1 2.57-5.523zm6.434-42.72a6.03 6.03 0 0 1 7.727 3.612 6.03 6.03 0 0 1-3.597 7.733 6.03 6.03 0 0 1-7.727-3.611 6.03 6.03 0 0 1 3.597-7.733zm6.327 17.887a5.17 5.17 0 0 1 6.623 3.095 5.17 5.17 0 0 1-3.084 6.628 5.17 5.17 0 0 1-6.622-3.095 5.17 5.17 0 0 1 3.083-6.628zm6.65 17.768a4.308 4.308 0 0 1 5.52 2.58 4.308 4.308 0 0 1-2.57 5.523 4.308 4.308 0 0 1-5.519-2.58 4.308 4.308 0 0 1 2.57-5.523zm5.737 16.265a3.446 3.446 0 0 1 4.415 2.064 3.446 3.446 0 0 1-2.055 4.418 3.446 3.446 0 0 1-4.415-2.063 3.446 3.446 0 0 1 2.055-4.42zm.698-58.984a6.03 6.03 0 0 1 7.726 3.611 6.03 6.03 0 0 1-3.597 7.733 6.03 6.03 0 0 1-7.726-3.611 6.03 6.03 0 0 1 3.597-7.733zM62.6 46.46a5.17 5.17 0 0 1 6.622 3.095 5.17 5.17 0 0 1-3.083 6.628 5.17 5.17 0 0 1-6.623-3.095A5.17 5.17 0 0 1 62.6 46.46zm6.65 17.768a4.308 4.308 0 0 1 5.518 2.58 4.308 4.308 0 0 1-2.569 5.523 4.308 4.308 0 0 1-5.519-2.58 4.308 4.308 0 0 1 2.57-5.523zm5.737 16.265a3.446 3.446 0 0 1 4.415 2.063 3.446 3.446 0 0 1-2.056 4.42 3.446 3.446 0 0 1-4.415-2.064 3.446 3.446 0 0 1 2.056-4.42zm5.47 14.527a2.585 2.585 0 0 1 3.311 1.547 2.585 2.585 0 0 1-1.541 3.314 2.585 2.585 0 0 1-3.311-1.547 2.585 2.585 0 0 1 1.541-3.314zm-4.773-73.51a6.03 6.03 0 0 1 7.726 3.611 6.03 6.03 0 0 1-3.597 7.733 6.03 6.03 0 0 1-7.726-3.612 6.03 6.03 0 0 1 3.597-7.732zm6.327 17.885a5.17 5.17 0 0 1 6.622 3.096 5.17 5.17 0 0 1-3.083 6.628 5.17 5.17 0 0 1-6.622-3.095 5.17 5.17 0 0 1 3.083-6.629zm6.65 17.768a4.308 4.308 0 0 1 5.519 2.58 4.308 4.308 0 0 1-2.57 5.524 4.308 4.308 0 0 1-5.518-2.58 4.308 4.308 0 0 1 2.57-5.524zm5.737 16.266a3.446 3.446 0 0 1 4.415 2.063 3.446 3.446 0 0 1-2.056 4.42 3.446 3.446 0 0 1-4.415-2.065 3.446 3.446 0 0 1 2.056-4.418zm5.47 14.526a2.585 2.585 0 0 1 3.312 1.548 2.585 2.585 0 0 1-1.542 3.314 2.585 2.585 0 0 1-3.311-1.548 2.585 2.585 0 0 1 1.542-3.314zm1.554-55.625a5.17 5.17 0 0 1 6.623 3.096 5.17 5.17 0 0 1-3.084 6.628 5.17 5.17 0 0 1-6.622-3.096 5.17 5.17 0 0 1 3.083-6.628zm6.65 17.768a4.308 4.308 0 0 1 5.52 2.58 4.308 4.308 0 0 1-2.57 5.523 4.308 4.308 0 0 1-5.519-2.58 4.308 4.308 0 0 1 2.57-5.523zm5.737 16.265a3.446 3.446 0 0 1 4.415 2.064 3.446 3.446 0 0 1-2.055 4.419 3.446 3.446 0 0 1-4.415-2.064 3.446 3.446 0 0 1 2.055-4.419zm7.025-41.098a5.17 5.17 0 0 1 6.622 3.096 5.17 5.17 0 0 1-3.083 6.628 5.17 5.17 0 0 1-6.623-3.096 5.17 5.17 0 0 1 3.084-6.628zm6.65 17.768a4.308 4.308 0 0 1 5.519 2.58 4.308 4.308 0 0 1-2.57 5.523 4.308 4.308 0 0 1-5.519-2.58 4.308 4.308 0 0 1 2.57-5.523zm5.737 16.265a3.446 3.446 0 0 1 4.415 2.064 3.446 3.446 0 0 1-2.056 4.419 3.446 3.446 0 0 1-4.415-2.064 3.446 3.446 0 0 1 2.056-4.419zm5.47 14.527a2.585 2.585 0 0 1 3.311 1.548 2.585 2.585 0 0 1-1.541 3.314 2.585 2.585 0 0 1-3.311-1.548 2.585 2.585 0 0 1 1.541-3.314z" fill="#131515"></path></g></svg></div>
+</div>
+<div class="parallax-layer" data-depth="1.0" style="transform: translate3d(-55.4px, -26.2px, 0px); transform-style: preserve-3d; backface-visibility: hidden; position: absolute; display: block; left: 0px; top: 0px;">
+<div class="home-hero__cloud2"><svg viewBox="0 0 164 108" xmlns="http://www.w3.org/2000/svg"><g fill="none" fill-rule="evenodd"><path d="M68.817 99.131l1.222-.574 1.278.436a44.134 44.134 0 0 0 14.27 2.353c13.14 0 25.33-5.762 33.64-15.563l1.635-1.927 2.302 1.05a23.419 23.419 0 0 0 9.75 2.108c12.932 0 23.413-10.428 23.413-23.289 0-7.07-3.182-13.616-8.575-18.016l-1.784-1.456.734-2.179a26.71 26.71 0 0 0 1.395-8.548c0-14.84-12.094-26.872-27.015-26.872a26.99 26.99 0 0 0-19.393 8.164l-1.414 1.45-1.941-.584a44.202 44.202 0 0 0-12.747-1.864c-6.78 0-13.333 1.524-19.286 4.418l-1.758.854-1.607-1.112a23.374 23.374 0 0 0-13.36-4.16c-12.932 0-23.413 10.428-23.413 23.289 0 .475.014.949.043 1.42l.149 2.473-2.333.851c-9.145 3.338-15.35 12.023-15.35 21.872 0 12.86 10.482 23.29 23.414 23.29.864 0 1.722-.047 2.571-.14l2.28-.247 1.048 2.035a23.424 23.424 0 0 0 20.851 12.683c3.502 0 6.888-.763 9.98-2.215z" fill="#FFF" fill-rule="nonzero"></path><path d="M68.817 99.131l1.222-.574 1.278.436a44.134 44.134 0 0 0 14.27 2.353c13.14 0 25.33-5.762 33.64-15.563l1.635-1.927 2.302 1.05a23.419 23.419 0 0 0 9.75 2.108c12.932 0 23.413-10.428 23.413-23.289 0-7.07-3.182-13.616-8.575-18.016l-1.784-1.456.734-2.179a26.71 26.71 0 0 0 1.395-8.548c0-14.84-12.094-26.872-27.015-26.872a26.99 26.99 0 0 0-19.393 8.164l-1.414 1.45-1.941-.584a44.202 44.202 0 0 0-12.747-1.864c-6.78 0-13.333 1.524-19.286 4.418l-1.758.854-1.607-1.112a23.374 23.374 0 0 0-13.36-4.16c-12.932 0-23.413 10.428-23.413 23.289 0 .475.014.949.043 1.42l.149 2.473-2.333.851c-9.145 3.338-15.35 12.023-15.35 21.872 0 12.86 10.482 23.29 23.414 23.29.864 0 1.722-.047 2.571-.14l2.28-.247 1.048 2.035a23.424 23.424 0 0 0 20.851 12.683c3.502 0 6.888-.763 9.98-2.215zM58.837 108a30.104 30.104 0 0 1-25.69-14.35c-.353.012-.707.018-1.06.018C15.471 93.668 2 80.264 2 63.725c0-11.847 6.977-22.38 17.496-27.203.314-16.268 13.663-29.356 30.08-29.356a30.07 30.07 0 0 1 15.528 4.29 50.708 50.708 0 0 1 20.483-4.29c4.35 0 8.63.547 12.765 1.615A33.666 33.666 0 0 1 121.082 0c18.603 0 33.687 15.008 33.687 33.526 0 2.906-.372 5.764-1.099 8.523 5.895 5.588 9.33 13.355 9.33 21.676 0 16.539-13.472 29.943-30.086 29.943-3.525 0-6.968-.605-10.21-1.769C113.208 102.072 99.879 108 85.587 108a50.871 50.871 0 0 1-15.17-2.3 30.128 30.128 0 0 1-11.58 2.3z" fill="#131515" fill-rule="nonzero"></path><path d="M37.344 11.135a5.17 5.17 0 0 1 3.083 6.628 5.17 5.17 0 0 1-6.623 3.095c-2.68-.975-2.612-2.176-1.635-4.861.977-2.686 2.494-5.838 5.175-4.862z" fill="#131515"></path><ellipse fill="#131515" transform="scale(1 -1) rotate(-20 -158.019 0)" cx="29.542" cy="33.072" rx="4.304" ry="4.312"></ellipse><ellipse fill="#131515" transform="scale(1 -1) rotate(-20 -250.765 0)" cx="23.777" cy="48.409" rx="3.443" ry="3.449"></ellipse><ellipse fill="#131515" transform="scale(1 -1) rotate(-20 -334.075 0)" cx="18.925" cy="62.243" rx="2.582" ry="2.587"></ellipse><ellipse fill="#131515" transform="scale(1 -1) rotate(-20 -407.26 0)" cx="14.339" cy="74.339" rx="1.721" ry="1.725"></ellipse><ellipse fill="#131515" transform="scale(1 -1) rotate(-20 -75.804 0)" cx="54.985" cy="23.062" rx="5.164" ry="5.174"></ellipse><ellipse fill="#131515" transform="scale(1 -1) rotate(-20 -178.676 0)" cx="48.954" cy="40.137" rx="4.304" ry="4.312"></ellipse><ellipse fill="#131515" transform="scale(1 -1) rotate(-20 -271.422 0)" cx="43.188" cy="55.474" rx="3.443" ry="3.449"></ellipse><ellipse fill="#131515" transform="scale(1 -1) rotate(-20 -354.732 0)" cx="38.336" cy="69.309" rx="2.582" ry="2.587"></ellipse><ellipse fill="#131515" transform="scale(1 -1) rotate(-20 -427.917 0)" cx="33.75" cy="81.404" rx="1.721" ry="1.725"></ellipse><ellipse fill="#131515" transform="scale(1 -1) rotate(-20 -491.665 0)" cx="30.078" cy="91.997" rx="1" ry="1"></ellipse><path d="M82 10c3.127 1.138 5.554 2.097 4.414 5.23a6.03 6.03 0 0 1-7.726 3.611 6.03 6.03 0 0 1-3.598-7.732C76.23 7.976 78.873 8.862 82 10z" fill="#131515"></path><ellipse fill="#131515" transform="scale(1 -1) rotate(-20 -96.461 0)" cx="74.397" cy="30.127" rx="5.164" ry="5.174"></ellipse><ellipse fill="#131515" transform="scale(1 -1) rotate(-20 -199.333 0)" cx="68.365" cy="47.202" rx="4.304" ry="4.312"></ellipse><ellipse fill="#131515" transform="scale(1 -1) rotate(-20 -292.08 0)" cx="62.6" cy="62.539" rx="3.443" ry="3.449"></ellipse><ellipse fill="#131515" transform="scale(1 -1) rotate(-20 -375.39 0)" cx="57.747" cy="76.374" rx="2.582" ry="2.587"></ellipse><ellipse fill="#131515" transform="scale(1 -1) rotate(-20 -448.574 0)" cx="53.162" cy="88.47" rx="1.721" ry="1.725"></ellipse><ellipse fill="#131515" transform="scale(1 -1) rotate(-20 -512.322 0)" cx="49.489" cy="99.063" rx="1" ry="1"></ellipse><ellipse fill="#131515" transform="scale(1 -1) rotate(-20 -14.591 0)" cx="100.163" cy="20.234" rx="6.025" ry="6.036"></ellipse><ellipse fill="#131515" transform="scale(1 -1) rotate(-20 -117.119 0)" cx="93.808" cy="37.192" rx="5.164" ry="5.174"></ellipse><ellipse fill="#131515" transform="scale(1 -1) rotate(-20 -219.99 0)" cx="87.776" cy="54.268" rx="4.304" ry="4.312"></ellipse><ellipse fill="#131515" transform="scale(1 -1) rotate(-20 -312.737 0)" cx="82.011" cy="69.605" rx="3.443" ry="3.449"></ellipse><ellipse fill="#131515" transform="scale(1 -1) rotate(-20 -396.047 0)" cx="77.159" cy="83.439" rx="2.582" ry="2.587"></ellipse><ellipse fill="#131515" transform="scale(1 -1) rotate(-20 -469.231 0)" cx="72.573" cy="95.535" rx="1.721" ry="1.725"></ellipse><ellipse fill="#131515" transform="scale(1 -1) rotate(-20 -35.248 0)" cx="119.575" cy="27.299" rx="6.025" ry="6.036"></ellipse><ellipse fill="#131515" transform="scale(1 -1) rotate(-20 -137.776 0)" cx="113.219" cy="44.257" rx="5.164" ry="5.174"></ellipse><ellipse fill="#131515" transform="scale(1 -1) rotate(-20 -240.647 0)" cx="107.188" cy="61.333" rx="4.304" ry="4.312"></ellipse><ellipse fill="#131515" transform="scale(1 -1) rotate(-20 -333.394 0)" cx="101.422" cy="76.67" rx="3.443" ry="3.449"></ellipse><ellipse fill="#131515" transform="scale(1 -1) rotate(-20 -416.704 0)" cx="96.57" cy="90.504" rx="2.582" ry="2.587"></ellipse><ellipse fill="#131515" transform="scale(1 -1) rotate(-20 -489.888 0)" cx="91.985" cy="102.6" rx="1.721" ry="1.725"></ellipse><ellipse fill="#131515" transform="scale(1 -1) rotate(-20 77.404 0)" cx="126.196" cy="8.603" rx="6.886" ry="6.899"></ellipse><ellipse fill="#131515" transform="scale(1 -1) rotate(-20 -55.905 0)" cx="138.986" cy="34.365" rx="6.025" ry="6.036"></ellipse><ellipse fill="#131515" transform="scale(1 -1) rotate(-20 -158.433 0)" cx="132.631" cy="51.322" rx="5.164" ry="5.174"></ellipse><ellipse fill="#131515" transform="scale(1 -1) rotate(-20 -261.305 0)" cx="126.599" cy="68.398" rx="4.304" ry="4.312"></ellipse><ellipse fill="#131515" transform="scale(1 -1) rotate(-20 -354.051 0)" cx="120.834" cy="83.735" rx="3.443" ry="3.449"></ellipse><path d="M145.608 13.313c3.573 1.301 5.092 5.107 3.789 8.687-1.303 3.58-2.575 1.452-6.149.151-3.573-1.3-5.414-5.257-4.11-8.838 1.302-3.58 2.896-1.3 6.47 0z" fill="#131515"></path><ellipse fill="#131515" transform="scale(1 -1) rotate(-20 -179.09 0)" cx="152.042" cy="58.388" rx="5.164" ry="5.174"></ellipse><ellipse fill="#131515" transform="scale(1 -1) rotate(-20 -281.962 0)" cx="146.01" cy="75.463" rx="4.304" ry="4.312"></ellipse></g></svg></div>
+</div>
+</div>
+<div class="home-hero__layers" id="scene_2" data-selector=".parallax-layer" data-limit-y="0" data-relative-input="" data-hover-only="" style="transform: translate3d(0px, 0px, 0px) rotate(0.0001deg); transform-style: preserve-3d; backface-visibility: hidden; pointer-events: none;">
+<div class="parallax-layer" data-depth="0.2" style="transform: translate3d(-11.1px, 0px, 0px); transform-style: preserve-3d; backface-visibility: hidden; position: relative; display: block; left: 0px; top: 0px;">
+<div class="home-hero__circle"></div>
+</div>
+<div class="parallax-layer" data-depth="0.6" style="transform: translate3d(-33.3px, 0px, 0px); transform-style: preserve-3d; backface-visibility: hidden; position: absolute; display: block; left: 0px; top: 0px;">
+<div class="home-hero__building-layer3"><svg viewBox="0 0 1472 276"><g stroke="#131515" stroke-width="6.5" fill="none" fill-rule="evenodd"><path fill="#F99400" d="M449.25 30.25h118.5v242.5h-118.5z"></path><path fill="#9013FE" d="M554.25 76.25h216.5v196.5h-216.5z"></path><path fill="#FFC100" d="M841.25 47.25h84.5v225.5h-84.5z"></path><path fill="#9013FE" d="M1022.25 3.25h190.5v269.5h-190.5z"></path><path fill="#BDD80C" d="M1252.25 129.25h216.5v143.5h-216.5z"></path><path d="M1176.25 78.603V272.75h145.473l-.931-111.469-144.542-82.678z" fill="#F99400"></path><path fill="#0096D0" d="M742.25 159.25h216.5v113.5h-216.5z"></path><path fill="#BDD80C" d="M162.25 108.25h279.5v164.5h-279.5z"></path><path fill="#0096D0" d="M120.25 47.25h118.5v225.5h-118.5z"></path><path fill="#EF3E36" d="M3.25 108.25h152.5v164.5H3.25z"></path><path d="M386.25 139.973V272.75h118.5V78.353l-118.5 61.62z" fill="#FFC100"></path></g></svg></div>
+</div>
+<div class="parallax-layer" data-depth="0.8" style="transform: translate3d(-44.4px, 0px, 0px); transform-style: preserve-3d; backface-visibility: hidden; position: absolute; display: block; left: 0px; top: 0px;">
+<div class="home-hero__building-layer2"><svg viewBox="0 0 1366 310"><g fill="none" fill-rule="evenodd"><path d="M1362.75 65.843l-145.5 59.588V306.75h145.5V65.843z" stroke="#131515" stroke-width="6.5" fill="#0096D0"></path><path stroke="#131515" stroke-width="6.5" fill="#EF3E36" d="M1044.25 163.25h145.5v143.5h-145.5z"></path><path d="M906.603 142.25L797.25 226.103v80.647h216.5v-164.5H906.603z" stroke="#131515" stroke-width="6.5" fill="#E27"></path><path stroke="#131515" stroke-width="6.5" fill="#FFC100" d="M942.25 223.25h145.5v83.5h-145.5z"></path><path stroke="#131515" stroke-width="6.5" fill="#BDD80C" d="M885 77.691v227.736h79.904V77.69h-39.952V11h-5.826v26.788h-12.674v39.903z"></path><path stroke="#131515" stroke-width="6.5" fill="#0096D0" d="M460.939 45h60.253v56.197h6.816v208.588H444v-122.22h7.78v-86.368h9.159z"></path><path d="M562.51 5h24.204a1 1 0 0 1 1 1v11.724h37.478a6 6 0 0 1 6 6v286.061H554V169.103h7.78L562.51 5z" stroke="#131515" stroke-width="6.5" fill="#FFC100"></path><path d="M246.25 177.25v129.5h311.5v-129.5h-73.598v41.08l-29.296.051-.869-.651c-16.772-12.577-32.85-18.794-48.263-18.767-15.405.027-31.28 6.292-47.664 18.915l-.874.674-29.324.051V177.25H246.25z" stroke="#131515" stroke-width="6.5" fill="#9013FE"></path><path d="M617.034 166.035l-11.507 140.743h81.182l-27.296-150.822-42.379 10.08z" stroke="#131515" stroke-width="6.5" fill="#0096D0"></path><path stroke="#131515" stroke-width="6.5" fill="#E27" d="M146.25 230.25h117.5v76.5h-117.5z"></path><g fill-rule="nonzero"><path fill="#0096D0" d="M6.5 268.5v35h66v-35z"></path><path d="M6.5 268.5v35h66v-35h-66zM0 262h79v48H0v-48z" fill="#131515"></path><path d="M9.55 274.554a7.147 7.147 0 0 1-7.15-7.145c0-3.946 3.201-3.658 7.15-3.658 3.949 0 7.15-.288 7.15 3.658a7.147 7.147 0 0 1-7.15 7.145zm0-2.598a4.548 4.548 0 0 0 4.55-4.547c0-2.51-2.037-1.06-4.55-1.06S5 264.899 5 267.409a4.548 4.548 0 0 0 4.55 4.547zm28.6 2.598a7.147 7.147 0 0 1-7.15-7.145c0-3.946 3.201-3.658 7.15-3.658 3.949 0 7.15-.288 7.15 3.658a7.147 7.147 0 0 1-7.15 7.145zm0-2.598a4.548 4.548 0 0 0 4.55-4.547c0-2.51-2.037-1.06-4.55-1.06s-4.55-1.45-4.55 1.06a4.548 4.548 0 0 0 4.55 4.547zm-14.3 14.29a7.147 7.147 0 0 1-7.15-7.146 7.147 7.147 0 0 1 7.15-7.144A7.147 7.147 0 0 1 31 279.1a7.147 7.147 0 0 1-7.15 7.145zm0-2.599a4.548 4.548 0 0 0 4.55-4.547 4.548 4.548 0 0 0-4.55-4.546 4.548 4.548 0 0 0-4.55 4.546 4.548 4.548 0 0 0 4.55 4.547zm28.6 2.598a7.147 7.147 0 0 1-7.15-7.145 7.147 7.147 0 0 1 7.15-7.144c3.949 0 5.735 3.199 5.735 7.144 0 3.946-1.786 7.145-5.735 7.145zm0-2.598c2.513 0 3.135-2.036 3.135-4.547 0-2.51-.622-4.546-3.135-4.546a4.548 4.548 0 0 0-4.55 4.546 4.548 4.548 0 0 0 4.55 4.547zm-42.9 16.907a7.147 7.147 0 0 1-7.15-7.145 7.147 7.147 0 0 1 7.15-7.144 7.147 7.147 0 0 1 7.15 7.144 7.147 7.147 0 0 1-7.15 7.145zm0-2.598a4.548 4.548 0 0 0 4.55-4.547 4.548 4.548 0 0 0-4.55-4.546A4.548 4.548 0 0 0 5 293.409a4.548 4.548 0 0 0 4.55 4.547zm28.6 2.598a7.147 7.147 0 0 1-7.15-7.145 7.147 7.147 0 0 1 7.15-7.144 7.147 7.147 0 0 1 7.15 7.144 7.147 7.147 0 0 1-7.15 7.145zm0-2.598a4.548 4.548 0 0 0 4.55-4.547 4.548 4.548 0 0 0-4.55-4.546 4.548 4.548 0 0 0-4.55 4.546 4.548 4.548 0 0 0 4.55 4.547zm-14.3 10.759c-3.949 0-7.15.331-7.15-3.615a7.147 7.147 0 0 1 7.15-7.144A7.147 7.147 0 0 1 31 305.1c0 3.946-3.201 3.615-7.15 3.615zm0-2.598c2.513 0 4.55 1.494 4.55-1.017a4.548 4.548 0 0 0-4.55-4.546 4.548 4.548 0 0 0-4.55 4.546c0 2.511 2.037 1.017 4.55 1.017zm28.6 2.598c-3.949 0-7.15.331-7.15-3.615a7.147 7.147 0 0 1 7.15-7.144 7.147 7.147 0 0 1 7.15 7.144c0 3.946-3.201 3.615-7.15 3.615zm0-2.598c2.513 0 4.55 1.494 4.55-1.017a4.548 4.548 0 0 0-4.55-4.546 4.548 4.548 0 0 0-4.55 4.546c0 2.511 2.037 1.017 4.55 1.017z" fill="#131515"></path></g><path stroke="#131515" stroke-width="6.5" fill="#9013FE" d="M56.25 201.25h105.5v105.5H56.25z"></path></g></svg></div>
+</div>
+<div class="parallax-layer" data-depth="1.0" style="transform: translate3d(-55.4px, 0px, 0px); transform-style: preserve-3d; backface-visibility: hidden; position: absolute; display: block; left: 0px; top: 0px;">
+<div class="home-hero__building-layer1"><svg viewBox="0 0 1492 266" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><defs><path id="a" d="M0 0h112v112H0z"></path><path id="c" d="M0 10.864L54 0v77H0z"></path></defs><g fill="none" fill-rule="evenodd"><path d="M413.25 262.5h79.3V119.093l-79.3-46.424V262.5z" stroke="#131515" stroke-width="6.5" fill="#E27"></path><path d="M556.25 88.066v174.61h50.7V45.938l-30.852 42.128H556.25z" stroke="#131515" stroke-width="6.5" fill="#F99400"></path><path d="M675.75 58.748V262.75h-58.5V8.112l58.5 50.636z" stroke="#131515" stroke-width="6.5" fill="#EF3E36"></path><path stroke="#131515" stroke-width="6.5" fill="#BDD80C" d="M493.25 178.25h75.1v84.431h-75.1z"></path><path d="M649.25 99.25v163.672h113.1V99.25h-113.1z" stroke="#131515" stroke-width="6.5" fill="#0096D0"></path><path d="M705.35 202.515v60.235h191.1v-60.235h-191.1z" stroke="#131515" stroke-width="6.5" fill="#FFC100"></path><path fill="#9013FE" fill-rule="nonzero" d="M708.6 186.765v12.98h184.6v-12.98z"></path><path d="M708.6 191.985a7.147 7.147 0 0 1 7.771 7.76h14.358a7.147 7.147 0 0 1 7.121-7.79 7.147 7.147 0 0 1 7.121 7.79h14.358a7.147 7.147 0 0 1 7.121-7.79 7.147 7.147 0 0 1 7.121 7.79h14.358a7.147 7.147 0 0 1 7.121-7.79 7.147 7.147 0 0 1 7.121 7.79h14.358a7.147 7.147 0 0 1 7.121-7.79 7.147 7.147 0 0 1 7.121 7.79h14.358a7.147 7.147 0 0 1 7.121-7.79 7.147 7.147 0 0 1 7.121 7.79h14.358a7.147 7.147 0 0 1 7.121-7.79 7.147 7.147 0 0 1 7.121 7.79h5.229v-5.46a7.149 7.149 0 0 1-5.171-7.52H873.67a7.147 7.147 0 0 1-7.121 7.79 7.147 7.147 0 0 1-7.121-7.79H845.07a7.147 7.147 0 0 1-7.121 7.79 7.147 7.147 0 0 1-7.121-7.79H816.47a7.147 7.147 0 0 1-7.121 7.79 7.147 7.147 0 0 1-7.121-7.79H787.87a7.147 7.147 0 0 1-7.121 7.79 7.147 7.147 0 0 1-7.121-7.79H759.27a7.147 7.147 0 0 1-7.121 7.79 7.147 7.147 0 0 1-7.121-7.79H730.67a7.147 7.147 0 0 1-7.121 7.79 7.147 7.147 0 0 1-7.121-7.79H708.6v5.22zm0 2.615v5.145h5.155a4.548 4.548 0 0 0-5.155-5.145zm24.745 5.145h9.01a4.548 4.548 0 0 0-4.505-5.191 4.548 4.548 0 0 0-4.505 5.191zm28.6 0h9.01a4.548 4.548 0 0 0-4.505-5.191 4.548 4.548 0 0 0-4.505 5.191zm28.6 0h9.01a4.548 4.548 0 0 0-4.505-5.191 4.548 4.548 0 0 0-4.505 5.191zm28.6 0h9.01a4.548 4.548 0 0 0-4.505-5.191 4.548 4.548 0 0 0-4.505 5.191zm28.6 0h9.01a4.548 4.548 0 0 0-4.505-5.191 4.548 4.548 0 0 0-4.505 5.191zm28.6 0h9.01a4.548 4.548 0 0 0-4.505-5.191 4.548 4.548 0 0 0-4.505 5.191zm16.855-8.227v-4.753h-2.555a4.547 4.547 0 0 0 2.555 4.754zm-22.145-4.753h-9.01a4.548 4.548 0 0 0 4.505 5.191 4.548 4.548 0 0 0 4.505-5.191zm-28.6 0h-9.01a4.548 4.548 0 0 0 4.505 5.191 4.548 4.548 0 0 0 4.505-5.191zm-28.6 0h-9.01a4.548 4.548 0 0 0 4.505 5.191 4.548 4.548 0 0 0 4.505-5.191zm-28.6 0h-9.01a4.548 4.548 0 0 0 4.505 5.191 4.548 4.548 0 0 0 4.505-5.191zm-28.6 0h-9.01a4.548 4.548 0 0 0 4.505 5.191 4.548 4.548 0 0 0 4.505-5.191zm-28.6 0h-9.01a4.548 4.548 0 0 0 4.505 5.191 4.548 4.548 0 0 0 4.505-5.191zm-25.955-6.5h197.6v25.98H702.1v-25.98z" fill="#131515" fill-rule="nonzero"></path><path d="M851.6 262.103c-4.224-31.177-19.824-46.765-46.8-46.765-26.976 0-42.576 15.588-46.8 46.765h93.6z" stroke="#131515" stroke-width="6.5" fill="#FAFAFA"></path><path stroke="#131515" stroke-width="6.5" fill="#BDD80C" d="M1169.25 233.25h142.5v29.5h-142.5z"></path><path d="M133.25 207.25v55.5h217.5v-55.5h-51.313l.175-3.416c1.633-31.884-11.095-49.857-38.7-55.027l-2.072-.388-.49-2.05c-1.829-7.654-4.645-12.808-8.307-15.57l-1.293-.975v-6.187h-4.26l-2.124-12.916-1.784 12.916h-4.332v5.648l-1.496.96c-4.087 2.62-7.192 8.003-9.15 16.316l-.478 2.03-2.044.411c-26.9 5.415-39.308 23.33-37.694 54.832l.175 3.416H133.25z" stroke="#131515" stroke-width="6.5" fill="#EF3E36"></path><path stroke="#131515" stroke-width="6.5" fill="#F99400" d="M867.25 221.25h72.5v41.5h-72.5zm202-28h105.5v69.5h-105.5z"></path><path d="M1010.25 187.762v74.988h72.5v-46.61l-72.5-28.378z" stroke="#131515" stroke-width="6.5" fill="#EF3E36"></path><g transform="translate(929 154)"><path fill="#0096D0" fill-rule="nonzero" d="M6.5 6.5v99h99v-99z"></path><path d="M6.5 6.5v99h99v-99h-99zM0 0h112v112H0V0z" fill="#131515" fill-rule="nonzero"></path><mask id="b" fill="#fff"><use xlink:href="#a"></use></mask><path stroke="#131515" stroke-width="6.5" d="M3.25 3.25h105.5v105.5H3.25z"></path><path d="M81.25 33.716v75.05l27.5.14V44.191l-27.5-10.476z" stroke="#131515" stroke-width="6.5" fill="#BDD80C" mask="url(#b)"></path><path stroke="#131515" stroke-width="6.5" d="M3.25 3.25h105.5v105.5H3.25z"></path></g><path d="M116.25 197.167v65.583h110.5v-87.782l-110.5 22.2z" stroke="#131515" stroke-width="6.5" fill="#F99400"></path><path d="M1163.25 171.538v91.212h53.5V158.163l-53.5 13.375z" stroke="#131515" stroke-width="6.5" fill="#9013FE"></path><g transform="translate(113 184)"><mask id="d" fill="#fff"><use xlink:href="#c"></use></mask><use fill="#FFC100" xlink:href="#c"></use><path fill="#FFC100" fill-rule="nonzero" mask="url(#d)" d="M47.5 7.938l-41 8.249V70.5h41z"></path><path d="M46 22a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm-16 0a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm-16 0a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm32 16a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm-16 0a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm-16 0a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm0 16a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm16 0a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm16 0a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm0 16a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm-16 0a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm-16 0a4 4 0 1 1 0-8 4 4 0 0 1 0 8z" fill="#131515" mask="url(#d)"></path><path d="M47.5 7.938l-41 8.249V70.5h41V7.938zM0 10.864L54 0v77H0V10.864z" fill="#131515" fill-rule="nonzero" mask="url(#d)"></path></g><path d="M3.25 213.25v49.5h142.5v-29.5H34v-20H3.25z" stroke="#131515" stroke-width="6.5" fill="#BDD80C"></path><g fill="#FFC100" stroke="#131515" stroke-width="6.5"><path d="M344.067 232.114l28.942 24.544-4.732-16.897-4.116-2.816h-11.218l1.977-29.584-2.32-7.074a4.412 4.412 0 0 0-4.192-3.037 3.99 3.99 0 0 0-3.853 2.954l-1.964 7.307 1.476 24.603z"></path><path d="M371.933 232.114l-28.942 24.544 4.732-16.897 4.116-2.816h11.218l-1.978-29.584 2.32-7.074a4.412 4.412 0 0 1 4.193-3.037 3.99 3.99 0 0 1 3.853 2.954l1.964 7.307-1.476 24.603z"></path><path d="M338.673 236.717L333.9 262.75h49.916l-6.594-25.838-4.14-3.108h-11.119l1.963-32.22-2.491-8.335a4.202 4.202 0 0 0-4.027-2.999 3.825 3.825 0 0 0-3.714 2.914l-2.107 8.6 1.751 32.04h-11.27l-3.395 2.913z"></path></g><g fill-rule="nonzero"><path fill="#FFF" d="M652.1 101.328V258.5h20.8V101.328z"></path><path d="M652.1 101.328V258.5h20.8V101.328h-20.8zm-6.5-6.5h33.8V265h-33.8V94.828z" fill="#131515"></path><path d="M673.93 98.456l1.84 1.838-24.862 24.842-.291-3.383 23.314-23.297zm1.84 1.838l-26.89 26.868-1.838-1.837 26.889-26.869 1.838 1.838zm.508 19.865l-1.839-1.837-24.82 24.802.278 3.396 26.38-26.36zm-7.925-22.847l-18.765 18.75-2.008 2.007 1.09-4.763 17.88-17.866 1.803 1.872zm6.625 13.754l-1.839-1.837-23.84 23.822.514 3.16 25.165-25.145zm-1.047 28.96l1.838 1.836-24.91 24.892-.565-3.11 23.637-23.619zm1.838 1.836l-26.889 26.87-1.838-1.838 26.889-26.869 1.838 1.837zm.509 19.866l-1.839-1.837-23.953 23.935.114 3.56 25.678-25.658zm-3.647-30.796l1.838 1.837L650 157.221l-2.419 2.417 1.816-5.49 23.235-23.216zm1.838 1.837l-1.838-1.837 1.838 1.837zm.509 19.866l-1.839-1.837-22.832 22.815-.221 3.895 24.892-24.873zm-1.047 28.959l1.838 1.837-25.05 25.032-.355-3.32 23.567-23.55zm1.838 1.837L648.88 210.3l-1.838-1.837 26.889-26.87 1.838 1.838zm.509 19.866l-1.839-1.838-24.612 24.594.555 3.12 25.896-25.876zM672.63 172.5l1.838 1.837-23.87 23.851-.299-3.375 22.33-22.313zm1.838 1.837l-26.889 26.869 25.05-28.706 1.84 1.837zm.509 19.865l-1.839-1.837-23.312 23.295.197 3.477 24.954-24.935zm-1.047 28.96l1.838 1.836-25.388 25.37-.507-3.168 24.057-24.039zm1.838 1.836l-26.889 26.87-1.838-1.838 26.889-26.869 1.838 1.837zm.509 19.866l-1.839-1.837-18.29 18.276 2.097 1.58 18.032-18.019zm-3.647-30.796l1.838 1.837-24.852 24.834.039-3.713 22.975-22.958zm1.838 1.837l-26.889 26.87 25.05-28.707 1.84 1.837zm.509 19.866l-1.839-1.837-23.882 23.864.232 3.442 25.489-25.469z" fill="#131515"></path></g><g fill-rule="nonzero"><path fill="#FFC100" d="M458.5 181.5v77.931h31.2V181.5z"></path><path d="M458.5 181.5v77.931h31.2V181.5h-31.2zM452 175h44.2v90.931H452V175z" fill="#131515"></path><path d="M455.742 177.384c3.137-.937 6.295-1.085 9.471-1.085 4.164 0 6.291-1.3 9.865 2.337 3.13 3.184 4.726 4.158 8.01 4.158 3.285 0 4.882-.974 8.01-4.158 3.575-3.636 4.984-1.362 1.855 1.82-3.574 3.637-5.701 4.936-9.865 4.936-4.163 0-6.29-1.299-9.865-4.935-3.128-3.183-4.725-1.457-8.01-1.457-3.128 0-6.28.054-9.458 1.135-2.48.843-3.145-1.815-.013-2.75zm.237 10.276c3.06-1.508 6.138-2.268 9.234-2.268 4.164 0 6.291 1.299 9.865 4.936 3.13 3.183 4.726 4.157 8.01 4.157 3.285 0 4.882-.974 8.01-4.157 3.575-3.637 4.984-1.363 1.855 1.82-3.574 3.637-5.701 4.935-9.865 4.935-4.163 0-6.29-1.298-9.865-4.935-3.128-3.183-4.725-4.158-8.01-4.158-3.015 0-6.052.842-9.113 2.539-2.594 1.438-3.332-1.286-.12-2.87zm1.033 11.21c2.72-1.189 5.453-1.787 8.201-1.787 4.164 0 6.291 1.3 9.865 4.936 3.13 3.183 4.726 4.157 8.01 4.157 3.285 0 4.882-.974 8.01-4.157 3.575-3.637 4.984-1.363 1.855 1.82-3.574 3.637-5.701 4.936-9.865 4.936-4.163 0-6.29-1.3-9.865-4.936-3.128-3.183-4.725-4.158-8.01-4.158-2.869 0-5.757.762-8.668 2.298-2.74 1.446-3.093-1.551.467-3.108zm-.513 11.915c2.888-1.337 5.793-2.01 8.714-2.01 4.162 0 6.29 1.293 9.863 4.913 3.13 3.17 4.726 4.14 8.012 4.14 3.287 0 4.883-.97 8.012-4.14 3.575-3.62 4.98-1.345 1.851 1.825-3.574 3.62-5.701 4.913-9.863 4.913-4.161 0-6.288-1.293-9.863-4.913-3.129-3.17-4.725-4.14-8.012-4.14-2.923 0-5.867.787-8.833 2.375-2.687 1.437-3.267-1.395.119-2.963zm-.67 12.023c3.108-1.558 6.237-2.342 9.384-2.342 4.164 0 6.291 1.298 9.865 4.935 3.13 3.183 4.726 4.158 8.01 4.158 3.285 0 4.882-.975 8.01-4.158 3.575-3.637 4.984-1.363 1.855 1.82-3.574 3.637-5.701 4.936-9.865 4.936-4.163 0-6.29-1.299-9.865-4.935-3.128-3.184-4.725-4.158-8.01-4.158-3.05 0-6.125.862-9.223 2.6-2.558 1.435-3.322-1.271-.162-2.856zm.233 11.576c3.032-1.481 6.083-2.227 9.151-2.227 4.164 0 6.291 1.299 9.865 4.935 3.13 3.183 4.726 4.158 8.01 4.158 3.285 0 4.882-.975 8.01-4.158 3.575-3.636 4.984-1.363 1.855 1.82-3.574 3.637-5.701 4.936-9.865 4.936-4.163 0-6.29-1.299-9.865-4.935-3.128-3.184-4.725-4.158-8.01-4.158-3.08 0-6.183.878-9.312 2.65-2.528 1.432-3.079-1.438.16-3.02zm.568 11.422c2.845-1.302 5.706-1.958 8.583-1.958 4.164 0 6.291 1.299 9.865 4.935 3.13 3.184 4.726 4.158 8.01 4.158 3.285 0 4.882-.974 8.01-4.158 3.575-3.636 4.984-1.362 1.855 1.82-3.574 3.637-5.701 4.936-9.865 4.936-4.163 0-6.29-1.299-9.865-4.935-3.128-3.183-4.725-4.158-8.01-4.158-2.809 0-5.638.73-8.487 2.203-2.8 1.447-3.527-1.271-.096-2.843zm.175 11.604c2.788-1.244 5.59-1.87 8.408-1.87 4.162 0 6.29 1.292 9.863 4.913 3.13 3.17 1.724 5.445-1.85 1.824-3.13-3.17-4.726-4.14-8.013-4.14-2.847 0-5.713.747-8.601 2.253-2.763 1.44-3.296-1.42.193-2.98z" fill="#131515"></path></g><path stroke="#131515" stroke-width="6.5" fill="#EF3E36" d="M1227.25 196.25h261.5v66.5h-261.5z"></path><path fill="#FFC100" fill-rule="nonzero" d="M1279.5 190.668V259.5h104v-92.365z"></path><path d="M1279.5 190.668V259.5h104v-92.365l-104 23.533zm-6.5-5.194L1390 159v107h-117v-80.526z" fill="#131515" fill-rule="nonzero"></path><path d="M1284 183h3v83h-3v-83zm7 0h3v83h-3v-83zm7 0h3v83h-3v-83zm7 0h3v83h-3v-83zm7-2h3v85h-3v-85zm7-2h3v87h-3v-87zm7-3h3v90h-3v-90z" fill="#131515"></path></g></svg></div>
+</div>
+</div>
+</main>
+<div class="about-pycon">
+<div class="about-pycon__image"></div>
+<div class="about-pycon__content">
+<h3>What is PyCon APAC?</h3>
+<p>
+PyCon APAC is a volunteer-run, not-for-profit annual conference centered around the Python
+Programming language. The goal of the conference is to provide a venue where the Python
+programming language and surrounding technologies can be explored, discussed and exercised.
+</p>
+<p>
+PyCon APAC is the regional counterpart of PyCon in Asia-Pacific. It is hosted in one (1) of the
+following countries every year: Singapore, Malaysia, Indonesia, Philippines, Thailand, South
+Korea, Hong Kong, Vietnam, Japan, Taiwan, India and Bangladesh.
+</p>
+<p>
+This 2019, PyCon APAC will be hosted in the Philippines for the very first time.
+</p>
+<p>
+Learn something new, teach something new, find opportunities, build cool things, make friends,
+geek out! Come celebrate and enjoy this event with us!
+</p>
+</div>
+</div>
+<div class="about-pythonph">
+<div class="about-pythonph__content">
+<div class="about-pythonph__content-wrapper">
+<div class="about-pythonph__content-main">
+<h3>Why Python?</h3>
+<p>
+We truly believe and support the impact and innovation that Python has brought in the whole
+technology industry as it continues to power systems, products, and services of companies
+such as Google, YouTube, NASA, Disney, Instagram, Disqus, Pinterest and Bitbucket.
+</p>
+<p>
+Python is also used as a business solution for Web Development, Automation, Monitoring,
+Artificial Intelligence, Data Science, Cloud Computing, and more.
+</p>
+</div>
+</div>
+</div>
+<div class="about-pythonph__image"></div>
+</div>
+<section class="keynote-speakers">
+<div class="keynote-speakers__container">
+<h3 class="keynote-speakers__heading">Keynote Speakers</h3>
+<div class="keynote-speakers__cards">
+<div class="keynote-speaker-card">
+<style>
+          #keynote_speaker_1 {
+            background-image: url('/media/uploads/speaker/beng-keat.jpeg');
+          }
+        </style>
+<div class="blend-green keynote-speaker-card__photo">
+<div class="keynote-speaker-card__photo-image" id="keynote_speaker_1"></div>
+</div>
+<div class="keynote-speaker-card__info">
+<h3 class="keynote-speaker-card__name">Beng Keat Liew</h3>
+<h4 class="keynote-speaker-card__title">Republic Polytechnic Singapore, Assistant Director</h4>
+<p>Dr Liew Beng Keat is the Deputy Director at the School of Infocomm at Republic Polytechnic (RP). He was in one of the earliest teams that introduced Python for introductory programming at an institution of higher learning in Singapore. He founded the Python User Group in Singapore in 2009 and was also the founding organizer for PyCon Asia Pacific when it started in 2010.</p>
+<ul class="keynote-speaker-card__social-links">
+</ul>
+</div>
+</div>
+<div class="keynote-speaker-card">
+<style>
+          #keynote_speaker_2 {
+            background-image: url('/media/uploads/speaker/me-as-a-baby_400x400.jpg');
+          }
+        </style>
+<div class="blend-blue keynote-speaker-card__photo">
+<div class="keynote-speaker-card__photo-image" id="keynote_speaker_2"></div>
+</div>
+<div class="keynote-speaker-card__info">
+<h3 class="keynote-speaker-card__name">Jacob Kaplan-Moss</h3>
+<h4 class="keynote-speaker-card__title">Revolution Systems, Co-owner</h4>
+<p>Jacob has over a decade of experience in engineering leadership roles, including as a functional lead, architect, manager, and director. He's been a security lead and an engineering manager at 18F, and prior to that was Director of Security at Heroku. He is also the co-owner of Revolution Systems, and a core developer and co-creator of Django, an open-source Python-based web framework used by thousands of companies and developers across the Internet.</p>
+<ul class="keynote-speaker-card__social-links">
+</ul>
+</div>
+</div>
+<div class="keynote-speaker-card">
+<style>
+          #keynote_speaker_3 {
+            background-image: url('/media/uploads/speaker/Suzy_Lee.jpg');
+          }
+        </style>
+<div class="blend-green keynote-speaker-card__photo">
+<div class="keynote-speaker-card__photo-image" id="keynote_speaker_3"></div>
+</div>
+<div class="keynote-speaker-card__info">
+<h3 class="keynote-speaker-card__name">Suzy Lee</h3>
+<h4 class="keynote-speaker-card__title">Bridge Southeast Asia, CTO</h4>
+<p>Suzy is the CTO at Bridge Southeast Asia and the Data Scientist at Analytiks, Inc.</p>
+<ul class="keynote-speaker-card__social-links">
+</ul>
+</div>
+</div>
+<div class="keynote-speaker-card">
+<style>
+          #keynote_speaker_4 {
+            background-image: url('/media/uploads/speaker/tom-dyson_-_Tom_Dyson.jpg');
+          }
+        </style>
+<div class="blend-pink-yellow keynote-speaker-card__photo">
+<div class="keynote-speaker-card__photo-image" id="keynote_speaker_4"></div>
+</div>
+<div class="keynote-speaker-card__info">
+<h3 class="keynote-speaker-card__name">Tom Dyson</h3>
+<h4 class="keynote-speaker-card__title">Torchbox, Co-founder and Technical Director</h4>
+<p>Tom is the technical director of Torchbox, a UK software company which uses Python to make the world a better place. He runs the open source Wagtail project, designing and maintaining the leading Python CMS, used by NASA, Google, Mozilla and Apple. His current interests include serverless architectures, headless content management and practical machine learning.</p>
+<ul class="keynote-speaker-card__social-links">
+</ul>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section class="regular-speakers">
+<div class="regular-speakers__container">
+<h3 class="regular-speakers__heading">Speakers</h3>
+<div class="regular-speakers__cards">
+<div class="regular-speaker-card">
+<style>
+            #regular_speaker_1 {
+              background-image: url('/media/uploads/speaker/avatar_20140530_-_Eric_Lagasca.jpg');
+            }
+          </style>
+<div class="blend-yellow regular-speaker-card__photo">
+<div class="regular-speaker-card__photo-image" id="regular_speaker_1"></div>
+</div>
+<div class="regular-speaker-card__info">
+<h3 class="regular-speaker-card__name">Eric Lagasca</h3>
+<h4 class="regular-speaker-card__title">Innovuze Solutions Inc.
+, Back End Web Developer
+</h4>
+<p>Eric is a back-end web developer who learned about the Django web framework when he found and bought a used book of "The Definitive Guide to Django -- Web Development Done Right" by Adrian Holovaty and Jacob Kaplan-Moss from a local used books bookshop. He was instantly hooked to Django and eventually the Python programming language. Since then, he used other tools based on Python but Django was what started his journey into becoming a Pythonista</p>
+<ul class="regular-speaker-card__social-links">
+</ul>
+</div>
+</div>
+ <div class="regular-speaker-card">
+<style>
+            #regular_speaker_2 {
+              background-image: url('/media/uploads/speaker/49508001_483510575388846_2751514211988275200_n_-_Lee_Jen-1.png');
+            }
+          </style>
+<div class="blend-red regular-speaker-card__photo">
+<div class="regular-speaker-card__photo-image" id="regular_speaker_2"></div>
+</div>
+<div class="regular-speaker-card__info">
+<h3 class="regular-speaker-card__name">Keisha Louise Vivien Berondo</h3>
+<h4 class="regular-speaker-card__title">Innovuze Solutions, Inc.
+, Web Developer
+</h4>
+<p>Keisha is currently a Web Developer at Innovuze Solutions, Inc. A graduate with the degree of Computer Engineering at the University of Science and Technology of Southern Philippines. She likes to explore, gain and develop skills for character development. She is also an active participant in career development activities as well as being involved in community organizations and activities.</p>
+<ul class="regular-speaker-card__social-links">
+</ul>
+</div>
+</div>
+<div class="regular-speaker-card">
+<style>
+            #regular_speaker_3 {
+              background-image: url('/media/uploads/speaker/lai-man-sung.png');
+            }
+          </style>
+<div class="blend-blue-yellow regular-speaker-card__photo">
+<div class="regular-speaker-card__photo-image" id="regular_speaker_3"></div>
+</div>
+<div class="regular-speaker-card__info">
+<h3 class="regular-speaker-card__name">Lai-Man Sung</h3>
+<h4 class="regular-speaker-card__title">Accenture
+, Data Professsional
+</h4>
+<p>I am a data professional with experience in data engineering and data analytics. My background is in data architecture in both RDBMS and Big Data, across many industries such as telecoms, insurance and utilities. At Accenture, I run the Data Studio, dealing with Data In The New, which are the future data technologies and systems that will start appearing at scale over the next few years.</p>
+<ul class="regular-speaker-card__social-links">
+</ul>
+</div>
+</div>
+<div class="regular-speaker-card">
+<style>
+            #regular_speaker_4 {
+              background-image: url('/media/uploads/speaker/orden.png');
+            }
+          </style>
+<div class="blend-green regular-speaker-card__photo">
+<div class="regular-speaker-card__photo-image" id="regular_speaker_4"></div>
+</div>
+<div class="regular-speaker-card__info">
+<h3 class="regular-speaker-card__name">Argeo Alecha</h3>
+<h4 class="regular-speaker-card__title">Oil and gas company in Malaysia
+, Upstream Operations and Production Specialist
+</h4>
+<p>Argeo is an Electrical Engineer by training, a Process Instrumentation and Control Engineer by experience and currently as an Upstream Operations and Production Specialist of an Oil and gas company in Malaysia. In my job, there is an enormous amount of data but the tools we have are mostly engineering based, ie, based on the natural laws of physics or nature and mathematics. I became a data science and machine learning enthusiast as soon as I realised that not all data can be explained by proven engineering theories and probabilities but also can be predicted through continuous learning by machines.</p>
+<ul class="regular-speaker-card__social-links">
+</ul>
+</div>
+</div>
+<div class="regular-speaker-card">
+<style>
+            #regular_speaker_5 {
+              background-image: url('/media/uploads/speaker/me2_-_Ted_Mathew_dela_Cruz.jpg');
+            }
+          </style>
+<div class="blend-orange regular-speaker-card__photo">
+<div class="regular-speaker-card__photo-image" id="regular_speaker_5"></div>
+</div>
+<div class="regular-speaker-card__info">
+<h3 class="regular-speaker-card__name">Ted Mathew dela Cruz</h3>
+<h4 class="regular-speaker-card__title">TRIBE
+, Software Engineer
+</h4>
+<p>Ted is a software engineer at TRIBE, an influencer marketing platform based in Melbourne. He's a former software engineer of Freelancer.com, Galleon.ph, and YOYO Philippines.</p>
+<ul class="regular-speaker-card__social-links">
+</ul>
+</div>
+</div>
+<div class="regular-speaker-card">
+<style>
+            #regular_speaker_6 {
+              background-image: url('/media/uploads/speaker/sun_zhu.png');
+            }
+          </style>
+<div class="blend-pink-yellow regular-speaker-card__photo">
+<div class="regular-speaker-card__photo-image" id="regular_speaker_6"></div>
+</div>
+<div class="regular-speaker-card__info">
+<h3 class="regular-speaker-card__name">Zhu Sun</h3>
+<h4 class="regular-speaker-card__title">Shopee, Singapore
+, Data Scientist
+</h4>
+<p>Zhu Sun is a data scientist in Shopee, Singapore. She obtained her Ph.D. degree from Nanyang Technological Univeristy in 2018. Her research is highly related to artificial intelligence. Specifically, she mainly focus on applying data mining and machine learning techniques to design effective recommender systems. She is interested in leveraging side information to address data sparsity and cold start problems of recommender systems.</p>
+<ul class="regular-speaker-card__social-links">
+</ul>
+</div>
+</div>
+<div class="regular-speaker-card">
+<style>
+            #regular_speaker_7 {
+              background-image: url('/media/uploads/speaker/IMG_20190125_222751.jpg');
+            }
+          </style>
+<div class="blend-blue-yellow regular-speaker-card__photo">
+<div class="regular-speaker-card__photo-image" id="regular_speaker_7"></div>
+</div>
+<div class="regular-speaker-card__info">
+<h3 class="regular-speaker-card__name">Caren Divinagracia</h3>
+<h4 class="regular-speaker-card__title">Rushmedia Solutions
+, Web Developer
+</h4>
+<p>Caren is a Web Developer at Rushmedia Solutions. She is a member of Women Who Code Manila and one of the organizers of Django Girls Cagayan de Oro.</p>
+<ul class="regular-speaker-card__social-links">
+</ul>
+</div>
+</div>
+<div class="regular-speaker-card">
+<style>
+            #regular_speaker_8 {
+              background-image: url('/media/uploads/speaker/photo6294131236800669778_-_Doni_Rubiagatra.jpg');
+            }
+          </style>
+<div class="blend-yellow regular-speaker-card__photo">
+<div class="regular-speaker-card__photo-image" id="regular_speaker_8"></div>
+</div>
+<div class="regular-speaker-card__info">
+<h3 class="regular-speaker-card__name">Doni Rubiagatra</h3>
+<h4 class="regular-speaker-card__title">Kumparan
+, Back End Engineer
+</h4>
+<p>Doni Rubiagatra is currently working at Kumparan as Back End Engineer. He is also the Co-Founder of surabaya.py (Python User Group of Surabaya). He also loves to teach Python.</p>
+<ul class="regular-speaker-card__social-links">
+</ul>
+</div>
+</div>
+<div class="regular-speaker-card">
+<style>
+            #regular_speaker_9 {
+              background-image: url('/media/uploads/speaker/jairus-jimenez.png');
+            }
+          </style>
+<div class="blend-red regular-speaker-card__photo">
+<div class="regular-speaker-card__photo-image" id="regular_speaker_9"></div>
+</div>
+<div class="regular-speaker-card__info">
+<h3 class="regular-speaker-card__name">Jairus Jimenez</h3>
+<h4 class="regular-speaker-card__title">Accenture Advanced Technology Centers in the Philippines
+, AI Engineer
+</h4>
+<p>Jairus is an AI Engineer at the Accenture Advanced Technology Centers in the Philippines. He currently works at the at Accenture Liquid Studio Manila.</p>
+<p>He graduated with a degree in Bachelor of Science, Major in Information Technology at Bulacan State University.</p>
+<p>He has worked on multiple Android, Python, and Microprocessor side projects. He is currently working with NLU and Computer Vision applications.</p>
+<p>He is a "freshman" in the IT field, but his passion for learning enables him to learn and work with the new technologies emerging from the industry.</p>
+<ul class="regular-speaker-card__social-links">
+</ul>
+</div>
+</div>
+<div class="regular-speaker-card">
+<style>
+            #regular_speaker_10 {
+              background-image: url('/media/uploads/speaker/IMG_5821_-_Vaibhav_Srivastava.jpg');
+            }
+          </style>
+<div class="blend-pink-yellow regular-speaker-card__photo">
+<div class="regular-speaker-card__photo-image" id="regular_speaker_10"></div>
+</div>
+<div class="regular-speaker-card__info">
+<h3 class="regular-speaker-card__name">Vaibhav Srivastav</h3>
+<h4 class="regular-speaker-card__title">Deloitte Consulting LLP
+, Data Scientist
+</h4>
+<p>Vaibhav, also known as the "Product Guy", is a Data Scientist at Deloitte Consulting LLP.<br>He currently consults with Fortune Technology 10 clients to co-provide Cognitive and Data Transformation solutions on Cloud.<br>Prior to this, he worked with startups across India to help them be more Data Savvy by implementing strong Data Foundation.<br>His core interest lies in Natural Language Processing, Chatbots, Forecasting, and Dashboards.<br>If Python's what floats your boat, then Coffee is on him!</p>
+<ul class="regular-speaker-card__social-links">
+</ul>
+</div>
+</div>
+<div class="regular-speaker-card">
+<style>
+            #regular_speaker_11 {
+              background-image: url('/media/uploads/speaker/24958810_10156126756017189_5345746442551828910_o_-_Marte_Soliza.jpg');
+            }
+          </style>
+<div class="blend-pink-yellow regular-speaker-card__photo">
+<div class="regular-speaker-card__photo-image" id="regular_speaker_11"></div>
+</div>
+<div class="regular-speaker-card__info">
+<h3 class="regular-speaker-card__name">Marte Soliza</h3>
+<h4 class="regular-speaker-card__title">Insync
+, CTO
+</h4>
+<p>Marte Soliza is the CTO of Insync with more than 10 years experience in Python. He also loves outdoor rock climbing.</p>
+<ul class="regular-speaker-card__social-links">
+</ul>
+</div>
+</div>
+<div class="regular-speaker-card">
+<style>
+            #regular_speaker_12 {
+              background-image: url('/media/uploads/speaker/36373153_2243465185665487_1550629012290666496_n_-_Nicole_Tibay.jpg');
+            }
+          </style>
+<div class="blend-green regular-speaker-card__photo">
+<div class="regular-speaker-card__photo-image" id="regular_speaker_12"></div>
+</div>
+<div class="regular-speaker-card__info">
+<h3 class="regular-speaker-card__name">Nicole Tibay</h3>
+<h4 class="regular-speaker-card__title">Mathspace
+, Software Engineer
+</h4>
+<p>Nicole is currently a Software Engineer at Mathspace, a Maths digital platform for schools. She got enchanted under the spell of PEP 20 - The Zen of Python and decided to dump her 2-year SAP career to venture on as a Python developer. She previously volunteers as a member of Women Who Code Manila, advocating women empowerment in the tech scene. Two fun facts about her - a tea drinker and consider herself as Totoro's neighbour.</p>
+<ul class="regular-speaker-card__social-links">
+</ul>
+</div>
+</div>
+<div class="regular-speaker-card">
+<style>
+            #regular_speaker_13 {
+              background-image: url('/media/uploads/speaker/48369810_2446159058759199_4516297350288769024_n_-_Valerie_Bantilan.jpg');
+            }
+          </style>
+<div class="blend-yellow regular-speaker-card__photo">
+<div class="regular-speaker-card__photo-image" id="regular_speaker_13"></div>
+</div>
+<div class="regular-speaker-card__info">
+<h3 class="regular-speaker-card__name">Valerie Quenesen Bantilan</h3>
+<h4 class="regular-speaker-card__title">Rushmedia Solutions
+, Web Developer
+</h4>
+<p>Valerie Quenesen Bantilan is currently working as a Web Developer at Rushmedia Solutions. She graduated at the University of Science and Technology of Southern Philippines with a Bachelor of Science in Information Technology degree. She is one of the organizers of Django Girls Cagayan de Oro.</p>
+<ul class="regular-speaker-card__social-links">
+</ul>
+</div>
+</div>
+<div class="regular-speaker-card">
+<style>
+            #regular_speaker_14 {
+              background-image: url('/media/uploads/speaker/Selection_127_-_Taihsiang_Ho.png');
+            }
+          </style>
+<div class="blend-red regular-speaker-card__photo">
+<div class="regular-speaker-card__photo-image" id="regular_speaker_14"></div>
+</div>
+<div class="regular-speaker-card__info">
+<h3 class="regular-speaker-card__name">Taihsiang Ho</h3>
+<h4 class="regular-speaker-card__title">Canonical Ltd.
+, Software Engineer
+</h4>
+<p>Taihsiang Ho is a software engineer of Canonical Ltd. Amateur researcher of computational fluid dynamics. Climber, pianist, and cellist. PyConTW 2019 Chairperson.</p>
+<ul class="regular-speaker-card__social-links">
+</ul>
+</div>
+</div>
+<div class="regular-speaker-card">
+<style>
+            #regular_speaker_15 {
+              background-image: url('/media/uploads/speaker/aravind.png');
+            }
+          </style>
+<div class="blend-red regular-speaker-card__photo">
+<div class="regular-speaker-card__photo-image" id="regular_speaker_15"></div>
+</div>
+<div class="regular-speaker-card__info">
+<h3 class="regular-speaker-card__name">Aravind Putrevu</h3>
+<h4 class="regular-speaker-card__title">Elastic
+, Developer Advocate
+</h4>
+<p>Aravind is passionate about evangelising technology, meeting developers and helping in solving their problems. He is a backend developer and has seven years of development experience.</p>
+<p>Currently he works at Elastic as Developer Advocate and looks after the Developer Relation function of India. Previously, He worked at McAfee Antivirus as a Sr. Software Engineer in Cloud Security Domain. He has deep interest in Search, Machine Learning, Security Incident Analysis and IoT tech. In his free time, he plays around Raspi or a Arduino.</p>
+<ul class="regular-speaker-card__social-links">
+</ul>
+</div>
+</div>
+<div class="regular-speaker-card">
+<style>
+            #regular_speaker_16 {
+              background-image: url('/media/uploads/speaker/37033755_1983913421653463_592064102201819136_n_-_Phillip_Andrew_Espina.jpg');
+            }
+          </style>
+<div class="blend-yellow regular-speaker-card__photo">
+<div class="regular-speaker-card__photo-image" id="regular_speaker_16"></div>
+</div>
+<div class="regular-speaker-card__info">
+<h3 class="regular-speaker-card__name">Phillip Espina</h3>
+<h4 class="regular-speaker-card__title">MSU-IIT
+, Student
+</h4>
+<p>Philip started as a web developer in 2014 into becoming a full-time software engineer specializing in data science with 3 years of experience in the field. He is currently a 4'th year BS Computer Science student from MSU-IIT. A true pythonista at heart, that will proudly bring the flag of WaterPy - Iligan City's Python community to PyCon APAC 2019. He is a 20-year old "young man" who loves to experiment/research things as he builds the craziest ideas into reality!</p>
+<ul class="regular-speaker-card__social-links">
+</ul>
+</div>
+</div>
+<div class="regular-speaker-card">
+<style>
+            #regular_speaker_17 {
+              background-image: url('/media/uploads/speaker/anthony_khong_-_Anthony_Khong.jpeg');
+            }
+          </style>
+<div class="blend-blue-yellow regular-speaker-card__photo">
+<div class="regular-speaker-card__photo-image" id="regular_speaker_17"></div>
+</div>
+<div class="regular-speaker-card__info">
+<h3 class="regular-speaker-card__name">Anthony Khong</h3>
+<h4 class="regular-speaker-card__title">Arithmox
+, Co-Founder
+</h4>
+<p>Anthony Khong is the Co-Founder of Arithmox, a startup offering optimisation services using rigorous statistics and machine learning. He was the former lead data scientist for the experiment platform in Agoda. His first experience with Python was in 2013 when he left university to do algorithmic trading. He is also a functional programming enthusiast with experience in Scala, Haskell and Clojure. His other interests include Bayesian statistics, high-performance computing and Vim.</p>
+<ul class="regular-speaker-card__social-links">
+</ul>
+</div>
+</div>
+<div class="regular-speaker-card">
+<style>
+            #regular_speaker_18 {
+              background-image: url('/media/uploads/speaker/profile_-_Yohei_Onishi.jpg');
+            }
+          </style>
+<div class="blend-orange regular-speaker-card__photo">
+<div class="regular-speaker-card__photo-image" id="regular_speaker_18"></div>
+</div>
+<div class="regular-speaker-card__info">
+<h3 class="regular-speaker-card__name">Yohei Onishi</h3>
+<h4 class="regular-speaker-card__title">Airflow User Group
+, Data Engineer
+</h4>
+<p>Yohei Onishi is a Data Engineer who works for a Japanese retail company. He is currently working on an analytics data pipeline using Airflow, Spark, and Hive.</p>
+<ul class="regular-speaker-card__social-links">
+</ul>
+</div>
+</div>
+<div class="regular-speaker-card">
+<style>
+            #regular_speaker_19 {
+              background-image: url('/media/uploads/speaker/Ronen_Baram_-_Ronen_Baram.jpg');
+            }
+          </style>
+<div class="blend-blue regular-speaker-card__photo">
+<div class="regular-speaker-card__photo-image" id="regular_speaker_19"></div>
+</div>
+<div class="regular-speaker-card__info">
+<h3 class="regular-speaker-card__name">Ronen Baran</h3>
+<h4 class="regular-speaker-card__title">MySQL / Oracle
+</h4>
+<p>With more then 25 years in the IT industry, with strong focus on open source solutions, for the last 9 years acting as a MySQL technical consultant for many APAC companies and organisations.<br>Based in Melbourne and serves ANZ as a core territory.<br>Have a great passion to talk, learn and share knowledge.<br>Overall nice person, given the morning coffee was reasonable.</p>
+<ul class="regular-speaker-card__social-links">
+</ul>
+</div>
+</div>
+<div class="regular-speaker-card">
+<style>
+            #regular_speaker_20 {
+              background-image: url('/media/uploads/speaker/paul.jpg');
+            }
+          </style>
+<div class="blend-red regular-speaker-card__photo">
+<div class="regular-speaker-card__photo-image" id="regular_speaker_20"></div>
+</div>
+<div class="regular-speaker-card__info">
+<h3 class="regular-speaker-card__name">Paul Harriet Asiñero</h3>
+<h4 class="regular-speaker-card__title">Innovuze Solutions Inc.
+, Web Developer
+</h4>
+<p>Paul Harriet Asiñero (aka harriebird), 22, is a Web Developer at Innovuze Solutions Inc., a Web Development and Information Technology company based in Cagayan de Oro City. He is currently taking up Master of Science in Computer Applications at Iligan Institute of Technology of the Mindanao State University. He advocates the use of Free and Open Source Software. He loves to share his knowledge and skills on the events organized by some Tech Communities and Schools in Northern Mindanao. He is an active member of PineapplePy, a Python community based in Bukidnon.</p>
+<ul class="regular-speaker-card__social-links">
+</ul>
+</div>
+</div>
+<div class="regular-speaker-card">
+<style>
+            #regular_speaker_21 {
+              background-image: url('/media/uploads/speaker/neil_ibo.jpg');
+            }
+          </style>
+<div class="blend-green regular-speaker-card__photo">
+<div class="regular-speaker-card__photo-image" id="regular_speaker_21"></div>
+</div>
+<div class="regular-speaker-card__info">
+<h3 class="regular-speaker-card__name">Gyenn Neil Ibo</h3>
+<h4 class="regular-speaker-card__title">Trends
+, Data Science Team Lead
+</h4>
+<p>Neil currently leads the Data Science team of the Business Analytics Group at Trends (trends.com.ph). He also worked as a Researcher/Data Scientist at Savvysherpa, accumulating 4 years of experience in Data Science, Machine Learning, Neural Networks, and other related fields.</p>
+<ul class="regular-speaker-card__social-links">
+</ul>
+</div>
+</div>
+<div class="regular-speaker-card">
+<style>
+            #regular_speaker_22 {
+              background-image: url('/media/uploads/speaker/sokidan_waifu2x_photo_noise2_scale_tta_1_-_Takanori_Suzuki.png');
+            }
+          </style>
+<div class="blend-orange regular-speaker-card__photo">
+<div class="regular-speaker-card__photo-image" id="regular_speaker_22"></div>
+</div>
+<div class="regular-speaker-card__info">
+<h3 class="regular-speaker-card__name">Takanori Suzuki</h3>
+<h4 class="regular-speaker-card__title">BeProud Inc.
+, Director
+</h4>
+<p>Takanori is a director of PyCon JP Committee(www.pycon.jp). He is also a director of BeProud Inc.(www.beproud.jp), and his title is "Python Climber". Takanori held PyCon JP 2014 to 2016 as the chairperson. Currently, he teaches Python to beginners as a lecturer at Python Boot Camp(pycamp.pycon.jp) all over Japan. In addition, he published several Python books. Takanori plays the trumpet, climbs boulder, loves Lego and ferrets.</p>
+<ul class="regular-speaker-card__social-links">
+</ul>
+</div>
+</div>
+<div class="regular-speaker-card">
+<style>
+            #regular_speaker_23 {
+              background-image: url('/media/uploads/speaker/cactus_selfi_-_LITING_CHEN.jpg');
+            }
+          </style>
+<div class="blend-pink regular-speaker-card__photo">
+<div class="regular-speaker-card__photo-image" id="regular_speaker_23"></div>
+</div>
+<div class="regular-speaker-card__info">
+<h3 class="regular-speaker-card__name">Li-Ting Chen</h3>
+<h4 class="regular-speaker-card__title">Utrecht Medical Center
+, PhD Student in Bioinformatics
+</h4>
+<p>Li-Ting Chen is a veterinarian and a PhD student who is amazed by the complex mechanisms of human and animal diseases. Python had recently struck her life and opened up new doors to solve problems. Other than research, she enjoys nature, music, and sharing ideas with people.</p>
+<ul class="regular-speaker-card__social-links">
+</ul>
+</div>
+</div>
+<div class="regular-speaker-card">
+<style>
+            #regular_speaker_24 {
+              background-image: url('/media/uploads/speaker/IMG_20190117_124737_074_-_Alde_Sabido.jpg');
+            }
+          </style>
+<div class="blend-blue regular-speaker-card__photo">
+<div class="regular-speaker-card__photo-image" id="regular_speaker_24"></div>
+</div>
+<div class="regular-speaker-card__info">
+<h3 class="regular-speaker-card__name">Alde Sabido</h3>
+<h4 class="regular-speaker-card__title">YAHSHUA Systech
+, Software Developer
+</h4>
+<p>Alde is currently working as a Software Developer at YAHSHUA Systech. He is one of the coaches/mentors for the Django Girls Cagayan de Oro Workshops.</p>
+<ul class="regular-speaker-card__social-links">
+</ul>
+</div>
+</div>
+<div class="regular-speaker-card">
+<style>
+            #regular_speaker_25 {
+              background-image: url('/media/uploads/speaker/IMG_8390_pp-001_small_-_Dmitry_Trofimov.jpg');
+            }
+          </style>
+<div class="blend-blue regular-speaker-card__photo">
+<div class="regular-speaker-card__photo-image" id="regular_speaker_25"></div>
+</div>
+<div class="regular-speaker-card__info">
+<h3 class="regular-speaker-card__name">Dmitry Trofimov</h3>
+<h4 class="regular-speaker-card__title">JetBrains
+, PyCharm Developer and Team Lead
+</h4>
+<p>Dmitry Trofimov currently leads the development of PyCharm, a popular Python IDE by JetBrains. Dmitry is passionate about automation and software tooling. Before PyCharm, he implemented many different tools for a variety of companies including a visual site-scraper generator, model-to-code mappers, and even a code generator for hardware used in submarines. In his spare time, Dmitry enjoys cycling, playing guitar, and skiing.</p>
+<ul class="regular-speaker-card__social-links">
+</ul>
+</div>
+</div>
+<div class="regular-speaker-card">
+<style>
+            #regular_speaker_26 {
+              background-image: url('/media/uploads/speaker/reyes_marc_avatar_-_Marc_Anthony_Reyes.jpg');
+            }
+          </style>
+<div class="blend-orange regular-speaker-card__photo">
+<div class="regular-speaker-card__photo-image" id="regular_speaker_26"></div>
+</div>
+<div class="regular-speaker-card__info">
+<h3 class="regular-speaker-card__name">Marc Anthony Reyes</h3>
+<h4 class="regular-speaker-card__title">Xavier University - Ateneo de Cagayan
+, Student
+</h4>
+<p>Marc is a Fourth Year (graduating) Computer Science Student from Xavier University - Ateneo de Cagayan who's into Data Science and Machine Learning research. Before he was introduced to the world of Machine Learning and AI, he was designing websites and user interfaces for school activities and freelance work. He also is a lover of cats, Python, TensorFlow, and an active supporter of #WomenInTech initiatives like Django Girls and Robogals.</p>
+<ul class="regular-speaker-card__social-links">
+</ul>
+</div>
+</div>
+<div class="regular-speaker-card">
+<style>
+            #regular_speaker_27 {
+              background-image: url('/media/uploads/speaker/19424212_1345556305493575_5376800575250837975_n_-_Aniruddha_Adhikary.jpg');
+            }
+          </style>
+<div class="blend-pink-yellow regular-speaker-card__photo">
+<div class="regular-speaker-card__photo-image" id="regular_speaker_27"></div>
+</div>
+<div class="regular-speaker-card__info">
+<h3 class="regular-speaker-card__name">Aniruddha Adhikary</h3>
+<h4 class="regular-speaker-card__title">Telenor Health, CSM
+, Software Engineer
+</h4>
+<p>Aniruddha Adhikary is a Software Engineer with experience in Firmware, Web Applications and Data Analysis. He has been programming and hacking on open source projects for eight years. Anything about Natural Language Processing and Input Methods gets him excited.</p>
+<ul class="regular-speaker-card__social-links">
+</ul>
+</div>
+</div>
+<div class="regular-speaker-card">
+<style>
+            #regular_speaker_28 {
+              background-image: url('/media/uploads/speaker/Paul_DePaula_-_Paul_de_Paula.jpg');
+            }
+          </style>
+<div class="blend-blue regular-speaker-card__photo">
+<div class="regular-speaker-card__photo-image" id="regular_speaker_28"></div>
+</div>
+<div class="regular-speaker-card__info">
+<h3 class="regular-speaker-card__name">Paul De Paula</h3>
+<h4 class="regular-speaker-card__title">Pantheon
+, Engagement Manager
+</h4>
+<p>Paul de Paula is a full stack engineer and been actively advocating open source software for 10 years. He’s been a known contributor to Drupal and Headless Chrome library projects. Paul also leads the training program for Drupal Pilipinas dubbed as Drupal Apprentice Program that has produced hundreds of developers since 2012. <br>He’s currently working at Pantheon platform as an Engagement manager providing Distributed load testing, Solution architecture, Migration, Pantheon Enterprise Gateway (PEG), SAML OAuth implementation, Microservices implementation using Dockerized Python and Kubernetes, both for enterprise clientele and internal tooling. Over the years Paul has worked with both local and international companies such as Philippine Airlines, ABS-CBN, World Bank and Microsoft.</p>
+<ul class="regular-speaker-card__social-links">
+</ul>
+</div>
+</div>
+<div class="regular-speaker-card">
+<style>
+            #regular_speaker_29 {
+              background-image: url('/media/uploads/speaker/ardie_orden_-_Ardie_Orden.jpg');
+            }
+          </style>
+<div class="blend-red regular-speaker-card__photo">
+<div class="regular-speaker-card__photo-image" id="regular_speaker_29"></div>
+</div>
+<div class="regular-speaker-card__info">
+<h3 class="regular-speaker-card__name">Ardie Orden</h3>
+<h4 class="regular-speaker-card__title">Thinking Machines Data Science
+, Junior Data Analyst
+</h4>
+<p>Ardie Orden is a Junior Data Analyst at Thinking Machines Data Science. He has a background in complex systems research and he's currently doing work in geospatial data science. His particular interests include machine learning applications involving geospatial data and open-source geospatial software.</p>
+<ul class="regular-speaker-card__social-links">
+</ul>
+</div>
+</div>
+<div class="regular-speaker-card">
+<style>
+            #regular_speaker_30 {
+              background-image: url('/media/uploads/speaker/IMG_20180916_114204_307_-_Narendran_R.jpg');
+            }
+          </style>
+<div class="blend-pink regular-speaker-card__photo">
+<div class="regular-speaker-card__photo-image" id="regular_speaker_30"></div>
+</div>
+<div class="regular-speaker-card__info">
+<h3 class="regular-speaker-card__name">Narendran</h3>
+<h4 class="regular-speaker-card__title">Tarka Labs
+, Software Consultant
+</h4>
+<p>Narendran is a Software Consultant at Tarka Labs, primarily focused on building robust backend infrastructures that can scale. He is currently building "www.backend.army". Apart from coding, he read sci-fi books, write blogs and does weight training.</p>
+<ul class="regular-speaker-card__social-links">
+</ul>
+</div>
+</div>
+<div class="regular-speaker-card">
+<style>
+            #regular_speaker_31 {
+              background-image: url('/media/uploads/speaker/IMG_2928_-_Freilla_Mae_Espinola.JPG');
+            }
+          </style>
+<div class="blend-yellow regular-speaker-card__photo">
+<div class="regular-speaker-card__photo-image" id="regular_speaker_31"></div>
+</div>
+<div class="regular-speaker-card__info">
+<h3 class="regular-speaker-card__name">Freilla Mae Espinola</h3>
+<h4 class="regular-speaker-card__title">Misfit Inc.
+, Sr. Web &amp; Software Engineer
+</h4>
+<p>Freilla is a Sr. Web &amp; Software Engineer at Misfit Inc. that is based in Cagayan de Oro. She is an active volunteer and leader of various tech communities. She is the Cagayan de Oro Community Lead of Django Girls and the Marketing Manager of Robogals Cagayan de Oro. She wants to inspire other women to fall in love with programming.</p>
+<ul class="regular-speaker-card__social-links">
+</ul>
+</div>
+</div>
+</div>
+</div>
+</section>
+<div class="program-schedule">
+<div class="program-schedule__container">
+<h3 class="program-schedule__heading">Program Schedule</h3>
+<div class="tabbed-section">
+<input id="tab_left" type="radio" name="tabbed_section" class="tabbed-section__radio" checked=""><label for="tab_left" class="tabbed-section__label">Day 1 (February 23)</label><input id="tab_right" type="radio" name="tabbed_section" class="tabbed-section__radio"><label for="tab_right" class="tabbed-section__label">Day 2 (February 24)</label>
+<div class="tabbed-section__left-tab schedule-list">
+<div class="schedule-list__time-block">
+<div class="schedule-list__dot">
+<div class="schedule-list__dot-circle"></div>
+<div class="schedule-list__dot-line"></div>
+</div>
+<div class="schedule-list__time">
+<span>8:30 AM&nbsp;</span><span>– 9:30 AM</span>
+</div>
+<div class="schedule-list__event-venue schedule-list__event-venue--first">Ground Floor</div>
+<h4 class="schedule-list__event-title">Registration</h4>
+<div class="schedule-list__event-description"><p>Please be sure to bring a valid ID along with a printed or a digital copy of your PyCon APAC 2019 Tickets. We've assigned volunteers who will scan your ticket(s) on the registration table on Day 1 (Feb 23) in exchange for IDs.</p>
+<p>Dress Code: No slippers, sandals, sando or revealing clothing.</p></div>
+</div>
+<div class="schedule-list__time-block">
+<div class="schedule-list__dot">
+<div class="schedule-list__dot-circle"></div>
+<div class="schedule-list__dot-line"></div>
+</div>
+<div class="schedule-list__time">
+<span>9:30 AM&nbsp;</span><span>– 9:45 AM</span>
+</div>
+<div class="schedule-list__event-venue schedule-list__event-venue--first">[Track 1] 12F, Auditorium</div>
+<h4 class="schedule-list__event-title">Opening Remarks</h4>
+<div class="schedule-list__event-speaker">by Matt Lebrun</div>
+</div>
+<div class="schedule-list__time-block">
+<div class="schedule-list__dot">
+<div class="schedule-list__dot-circle"></div>
+<div class="schedule-list__dot-line"></div>
+</div>
+<div class="schedule-list__time">
+<span>9:45 AM&nbsp;</span><span>– 10:45 AM</span>
+</div>
+<div class="schedule-list__event-venue schedule-list__event-venue--first">[Track 1] 12F, Auditorium</div>
+<h4 class="schedule-list__event-title">Keynote 1: PyCon APAC - Back to the Future!</h4>
+<div class="schedule-list__event-speaker">by Beng Keat Liew</div>
+<div class="schedule-list__event-description"><p>This talk will present the state of affairs with PyCon's and Python communities around the region. We will also 'jump back' into history with PyCon APAC and derive the common lessons learned and insights and wishes for the future.</p></div>
+</div>
+<div class="schedule-list__time-block">
+<div class="schedule-list__dot">
+<div class="schedule-list__dot-circle"></div>
+<div class="schedule-list__dot-line"></div>
+</div>
+<div class="schedule-list__time">
+<span>10:45 AM&nbsp;</span><span>– 11:30 AM</span>
+</div>
+<div class="schedule-list__event-venue schedule-list__event-venue--first">[Track 1] 12F, Auditorium</div>
+<h4 class="schedule-list__event-title">Keynote 2: Interviewing as a Python engineer</h4>
+<div class="schedule-list__event-speaker">by Jacob Kaplan-Moss</div>
+<div class="schedule-list__event-description"><p>Jacob has been a hiring manager for many years, and have hired a ton of programmers. He will talk about how to prepare for and execute a good interview.</p></div>
+</div>
+<div class="schedule-list__time-block">
+<div class="schedule-list__dot">
+<div class="schedule-list__dot-circle"></div>
+<div class="schedule-list__dot-line"></div>
+</div>
+<div class="schedule-list__time">
+<span>11:30 AM&nbsp;</span><span>– 12:15 PM</span>
+</div>
+<div class="schedule-list__event-venue schedule-list__event-venue--first">[Track 1] 12F, Auditorium</div>
+<h4 class="schedule-list__event-title">Keynote 3: How did you know? Explaining Black Box Model Predictions in Python</h4>
+<div class="schedule-list__event-speaker">by Suzy Lee</div>
+<div class="schedule-list__event-description"><p>As algorithms get more and more complex (i.e. Ensemble models - XGBoost, Random Forest, Neural Networks), it becomes harder to explain the predictions they make. These “Black Box” models may produce more accurate results but may in fact hard to operationalize in the real world as it gets harder and harder to explain to business decision makers how a model came up with the prediction. In certain cases such as in credit scoring model interpretability is crucial particularly for regulatory compliance. This talk will highlight certain Python tools and libraries such as LIME, ELI5 and Skater, that would allow data scientists to finally be able to explain how their models came up with its predictions.</p></div>
+</div>
+<div class="schedule-list__time-block">
+<div class="schedule-list__dot">
+<div class="schedule-list__dot-circle"></div>
+<div class="schedule-list__dot-line"></div>
+</div>
+<div class="schedule-list__time">
+<span>12:15 PM&nbsp;</span><span>– 1:30 PM</span>
+</div>
+<div class="schedule-list__event-venue schedule-list__event-venue--first">5F, Canteen</div>
+<h4 class="schedule-list__event-title">Lunch (Group Lunches)</h4>
+<div class="schedule-list__event-description"><p>Group Lunches (Part 1)<br>The goal is to have people chat and make new friends. We'll have people gather around topic facilitators during lunch. The topic facilitators will be people from the volunteers, speakers and attendees.</p>
+<p>Before dismissing everyone for lunch, there will be people holding up papers with a topic around the place. If the topic interests you, we encourage you to go there and talk about the topic of your choice with other people interested in the same topic. </p>
+<p>The group lunch topics don't necessarily have to be Python-related. Some ideas from last year are: <br>- Stars and Galaxies<br>- Board Games<br>- DevOps<br>- Community<br>- Women Who Code<br>- etc.</p>
+<p>More info: https://blog.mattlebrun.com/2018/03/pycon-experiments-getting-people-talking.html</p></div>
+</div>
+<div class="schedule-list__time-block">
+<div class="schedule-list__dot">
+<div class="schedule-list__dot-circle"></div>
+<div class="schedule-list__dot-line"></div>
+</div>
+<div class="schedule-list__time">
+<span>1:30 PM&nbsp;</span><span>– 2:30 PM</span>
+</div>
+<div class="schedule-list__event-venue schedule-list__event-venue--first">[Track 1] 12F, Auditorium</div>
+<h4 class="schedule-list__event-title">Talk: Python’s role in accelerating biomedical science</h4>
+<div class="schedule-list__event-speaker">by Liting Chen</div>
+<div class="schedule-list__event-description"><p>Python has an increasingly important role in biomedical research due to its diverse modules available and the flexibility for utilization. In this talk, I will showcase how Python helped us in solving questions in cancer evolution.</p></div>
+<div class="schedule-list__event-venue">[Track 2] 12F, Gallery</div>
+<h4 class="schedule-list__event-title">Talk: Data Science and Machine Learning with Python</h4>
+<div class="schedule-list__event-speaker">by Argeo Tuble Alecha</div>
+<div class="schedule-list__event-description"><p>This is a combination of slides and interactive presentation/demo in coding and notebook operations. Presenting Python packages and tools for Data Science and Machine Learning like Numpy, Pandas, ScikitLearn, Matplotlib, etc.</p></div>
+<div class="schedule-list__event-venue">[Track 3] 9F, Classroom 1</div>
+<h4 class="schedule-list__event-title">Workshop: Django Girls Workshop</h4>
+<div class="schedule-list__event-speaker">by Django Girls CDO</div>
+<div class="schedule-list__event-description"><p>A beginner-friendly workshop about programming in Python and Django for women. There will be dedicated coaches who will guide you during the workshop. The ratio is 1 coach: 3-5 participants<br>More info: https://tutorial.djangogirls.org</p>
+<p>Before the workshop we ask attendees to read a first chapter "How the<br>Internet works".</p>
+<p>You will also need to:<br>1. Install the following:<br>- Python3<br>- Virtualenv<br>- Pip<br>- Django <br>- Code Editor (Gedit or Sublime Text 3)<br>- Git<br>2. Create a PythonAnywhere Account</p>
+<p>It's ideal to finish the installations before the workshop so you can have a better coding experience during the workshop.</p>
+<p>Installing prerequisites and setting up your environment can be a challenge, especially if you've never done this before; many things depend on your operating system, and sometimes the process isn't so smooth. But don't worry, your coach will be there to help you! Just be aware that the installation might take anywhere from 30 minutes to a few hours, so have patience and keep smiling! :)</p></div>
+</div>
+<div class="schedule-list__time-block">
+<div class="schedule-list__dot">
+<div class="schedule-list__dot-circle"></div>
+<div class="schedule-list__dot-line"></div>
+</div>
+<div class="schedule-list__time">
+<span>2:30 PM&nbsp;</span><span>– 3:30 PM</span>
+</div>
+<div class="schedule-list__event-venue schedule-list__event-venue--first">[Track 1] 12F, Auditorium</div>
+<h4 class="schedule-list__event-title">Talk: Using Asyncio in Python 3</h4>
+<div class="schedule-list__event-speaker">by Marte Soliza</div>
+<div class="schedule-list__event-description"><p>Asyncio (together with async / await syntax) is one of the most exciting new features in Python 3. Marte will detail what it is and how it can be used, together with concepts surrounding it.</p></div>
+<div class="schedule-list__event-venue">[Track 2] 12F, Gallery</div>
+<h4 class="schedule-list__event-title">Talk: Python's AI/ML for the Crypto-Industry</h4>
+<div class="schedule-list__event-speaker">by Phillip Andrew Espina</div>
+<div class="schedule-list__event-description"><p>How does python shape the cryptocurrency industry? It's role and how can python developers benefit from it? What business owners. devs and users alike should look out for as python progresses especially in the field of AI and ML.</p></div>
+<div class="schedule-list__event-venue">[Track 3] 9F, Classroom 1</div>
+<h4 class="schedule-list__event-title">Workshop: Django Girls Workshop</h4>
+<div class="schedule-list__event-speaker">by Django Girls CDO</div>
+<div class="schedule-list__event-description"><p>(continued)</p></div>
+</div>
+<div class="schedule-list__time-block">
+<div class="schedule-list__dot">
+<div class="schedule-list__dot-circle"></div>
+<div class="schedule-list__dot-line"></div>
+</div>
+<div class="schedule-list__time">
+<span>3:30 PM&nbsp;</span><span>– 4:30 PM</span>
+</div>
+<div class="schedule-list__event-venue schedule-list__event-venue--first">[Track 1] 12F, Auditorium</div>
+<h4 class="schedule-list__event-title">Talk: Property Based Testing in Python with Hypothesis</h4>
+<div class="schedule-list__event-speaker">by Anthony Khong</div>
+<div class="schedule-list__event-description"><p>High unit-test coverage is great, but it cannot effectively find bugs triggered by interactions between multiple features. Since it is not scalable to write tests for all possible interactions, we turn to property-based testing - an approach where we *generate* tests instead of *writing* them.</p>
+<p>Property-based testing (PBT) is a random-testing approach that first became popular in the Haskell community as QuickCheck. It works by generating random examples to find minimal counterexamples to a pattern or law that ought to always hold true. PBT is especially useful in testing edge cases and interactions between multiple features, particularly in stateful systems. This talk introduces the principles of PBT along with its history and success stories. We then illustrate PBT patterns and examples in Python using Hypothesis. Finally, we see how it fits in with TDD and integration testing.</p></div>
+<div class="schedule-list__event-venue">[Track 2] 12F, Gallery</div>
+<h4 class="schedule-list__event-title">Talk: A Framework for Transfer Learning on Multi-lingual Text Data for Sentiment Classification</h4>
+<div class="schedule-list__event-speaker">by Gyenn Neil Ibo</div>
+<div class="schedule-list__event-description"><p>Labeled Training Datasets or off-the-shelf tools for labeling training datasets for Sentiment Classification are readily available for English and other major languages. For Tagalog and other Filipino languages, however, this is rarely the case. I developed a novel technique that essentially transfers the knowledge of the labeled training dataset on one language (English) into Tagalog and other Filipino languages. This thus enables one to develop Neural Network Sentiment Classification models on several Filipino languages, leveraging on the availability of large amounts of training data on the English language. This is a better approach than manually labeling data on Filipino languages, as it would take too many resources, and Neural Networks need huge amounts of training data in order to be effective.</p></div>
+<div class="schedule-list__event-venue">[Track 3] 9F, Classroom</div>
+<h4 class="schedule-list__event-title">Workshop: Django Girls Workshop</h4>
+<div class="schedule-list__event-speaker">by Django Girls CDO</div>
+<div class="schedule-list__event-description"><p>(continued)</p></div>
+</div>
+<div class="schedule-list__time-block">
+<div class="schedule-list__dot">
+<div class="schedule-list__dot-circle"></div>
+<div class="schedule-list__dot-line"></div>
+</div>
+<div class="schedule-list__time">
+<span>4:30 PM&nbsp;</span><span>– 5:30 PM</span>
+</div>
+<div class="schedule-list__event-venue schedule-list__event-venue--first">[Track 1] 12F, Auditorium</div>
+<h4 class="schedule-list__event-title">Talk: Empathy Maketh an Engineer</h4>
+<div class="schedule-list__event-speaker">by Narendran</div>
+<div class="schedule-list__event-description"><p>The journey towards becoming a better developer involves in more than just coding. If there is one thing that you want to learn this year to make yourself a better developer, it will be empathy. In this talk, we will see, as a developer how to practice empathy and write code empathetically. Also, we will discuss how empathy driven development will make one a better software craftsman and build great teams.</p></div>
+<div class="schedule-list__event-venue">[Track 2] 12F, Gallery</div>
+<h4 class="schedule-list__event-title">Talk: Homemade scientific clusters in Python</h4>
+<div class="schedule-list__event-speaker">by Taihsiang Ho</div>
+<div class="schedule-list__event-description"><p>As a great glue language, Python could (definitely) orchestrate many modern and powerful tools to build a scientific cluster. This talk will illustrate one of the real world examples, which is a cluster built and running on top of KVM.</p></div>
+<div class="schedule-list__event-venue">[Track 3] 9F, Classroom</div>
+<h4 class="schedule-list__event-title">Workshop: Django Girls Workshop</h4>
+<div class="schedule-list__event-speaker">by Django Girls CDO</div>
+<div class="schedule-list__event-description"><p>(continued)</p></div>
+</div>
+<div class="schedule-list__time-block">
+<div class="schedule-list__dot">
+<div class="schedule-list__dot-circle"></div>
+<div class="schedule-list__dot-line"></div>
+</div>
+<div class="schedule-list__time">
+<span>5:30 PM&nbsp;</span><span>– 5:45 PM</span>
+</div>
+<div class="schedule-list__event-venue schedule-list__event-venue--first">[Track 1] 12F, Auditorium</div>
+<h4 class="schedule-list__event-title">Announcements</h4>
+</div>
+</div>
+<div class="tabbed-section__right-tab schedule-list">
+<div class="schedule-list__time-block">
+<div class="schedule-list__dot">
+<div class="schedule-list__dot-circle"></div>
+<div class="schedule-list__dot-line"></div>
+</div>
+<div class="schedule-list__time">
+<span>8:30 AM&nbsp;</span><span>– 9:30 AM</span>
+</div>
+<div class="schedule-list__event-venue schedule-list__event-venue--first">Ground Floor</div>
+<h4 class="schedule-list__event-title">Registration</h4>
+<div class="schedule-list__event-description"><p>Please bring your PyCon APAC 2019 ID.</p></div>
+</div>
+<div class="schedule-list__time-block">
+<div class="schedule-list__dot">
+<div class="schedule-list__dot-circle"></div>
+<div class="schedule-list__dot-line"></div>
+</div>
+<div class="schedule-list__time">
+<span>10:00 AM&nbsp;</span><span>– 11:00 AM</span>
+</div>
+<div class="schedule-list__event-venue schedule-list__event-venue--first">[Track 1] 12F, Auditorium</div>
+<h4 class="schedule-list__event-title">Keynote 4: Here Come The Robots - Python and Machine Learning</h4>
+<div class="schedule-list__event-speaker">by Tom Dyson</div>
+<div class="schedule-list__event-description"><p>Machine Learning is probably the most important development in our industry (and possibly our civilisation!). Previously restricted to math geniuses with access to supercomputers and massive data centres, machine learning tools are increasingly available as web services which are easily consumed from more traditional web applications. Python has become the lingua franca of machine learning, so Python developers are well placed to take advantage of the next wave of application development.</p>
+<p>This talk outlines the various machine learning platforms and provides a set of practical examples that demonstrate how Python developers can start taking advantage of artificial intelligence in their own applications.</p>
+<p>The intended audience is pretty wide: web developers, students, data scientists should all come away with a set of ideas and tools for implementing machine learning without needing a degree in artificial intelligence!</p></div>
+</div>
+<div class="schedule-list__time-block">
+<div class="schedule-list__dot">
+<div class="schedule-list__dot-circle"></div>
+<div class="schedule-list__dot-line"></div>
+</div>
+<div class="schedule-list__time">
+<span>11:00 AM&nbsp;</span><span>– 12:00 PM</span>
+</div>
+<div class="schedule-list__event-venue schedule-list__event-venue--first">[Track 1] 12F, Auditorium</div>
+<h4 class="schedule-list__event-title">Talk: Building Analytics Workflow using Airflow and Spark</h4>
+<div class="schedule-list__event-speaker">by Yohei Onishi</div>
+<div class="schedule-list__event-description"><p>Yohei had built and operates a data analytics system for global retail logistics operations using Airflow and Spark since the end of last year. In this session, He will talk about how you can build a scalable analytics workflow system based on Airflow (Python) and write extensible job using Python. GCP has provided fully managed Airflow service called Cloud Composer. So he will explain how you can easily build Airflow cluster compared to building your own Airflow cluster on the on-premise server or AWS EC2.</p></div>
+<div class="schedule-list__event-venue">[Track 2] 12F, Gallery</div>
+<h4 class="schedule-list__event-title">Talk: Using Artificial Intelligence and Satellite Imagery to Zero In on the Philippines’ Most Vulnerable Communities</h4>
+<div class="schedule-list__event-speaker">by Ardie Orden, Kevin Go and Issa Tingzon</div>
+<div class="schedule-list__event-description"><p>One major challenge in fighting poverty today is the lack of reliable socioeconomic data, which is highly expensive, time-consuming, and labour-intensive to collect through ground surveys. We tackled this problem by using a combination of machine learning, satellite imagery, nighttime lights, and various alternative data sources as a low-cost and robust way to provide reliable estimates of poverty during periods or in areas without sufficient census data. Thinking Machines' team of ML researchers including Issa Tingzon, Ardie Orden, and Kevin Go will present the research methodology and results.</p></div>
+<div class="schedule-list__event-venue">[Track 3] 9F, Classroom 1</div>
+<h4 class="schedule-list__event-title">Workshop: Django Girls Workshop</h4>
+<div class="schedule-list__event-speaker">by Django Girls CDO</div>
+<div class="schedule-list__event-description"><p>(continued)</p></div>
+<div class="schedule-list__event-venue">[Track 4] 9F, Classroom 2</div>
+<h4 class="schedule-list__event-title">Talk: Serverless Python on AWS Lambda using the Serverless Framework</h4>
+<div class="schedule-list__event-speaker">by Ted Mathew dela Cruz</div>
+<div class="schedule-list__event-description"><p>The Serverless Framework is one of the most widely adopted toolkit for building serverless applications. This talk will discuss the basics to get a simple Python serverless up and running on AWS Lambda using the Serverless Framework (https://serverless.com/)</p></div>
+</div>
+<div class="schedule-list__time-block">
+<div class="schedule-list__dot">
+<div class="schedule-list__dot-circle"></div>
+<div class="schedule-list__dot-line"></div>
+</div>
+<div class="schedule-list__time">
+<span>12:00 PM&nbsp;</span><span>– 1:30 PM</span>
+</div>
+<div class="schedule-list__event-venue schedule-list__event-venue--first">5F, Canteen</div>
+<h4 class="schedule-list__event-title">Group Picture and Lunch (Group Lunches)</h4>
+<div class="schedule-list__event-speaker">12F, Auditorium and 5F, Canteen</div>
+<div class="schedule-list__event-description"><p>Group Picture<br>As part of the PyCon tradition, we will be gathering everyone at the 12F Auditorium for a group picture</p>
+<p>Group Lunches (Part 2)<br>The goal is to have people chat and make new friends. We'll have people gather around topic facilitators during lunch. The topic facilitators will be people from the volunteers, speakers and attendees.</p>
+<p>Before dismissing everyone for lunch, there will be people holding up papers with a topic around the place. If the topic interests you, we encourage you to go there and talk about the topic of your choice with other people interested in the same topic.</p>
+<p>The group lunch topics don't necessarily have to be Python-related. Some ideas from last year are: <br>- Stars and Galaxies<br>- Board Games<br>- DevOps<br>- Community<br>- Women Who Code<br>- etc.</p>
+<p>More info: https://blog.mattlebrun.com/2018/03/pycon-experiments-getting-people-talking.html</p></div>
+</div>
+<div class="schedule-list__time-block">
+<div class="schedule-list__dot">
+<div class="schedule-list__dot-circle"></div>
+<div class="schedule-list__dot-line"></div>
+</div>
+<div class="schedule-list__time">
+<span>1:30 PM&nbsp;</span><span>– 2:30 PM</span>
+</div>
+<div class="schedule-list__event-venue schedule-list__event-venue--first">[Track 1] 12F, Auditorium</div>
+<h4 class="schedule-list__event-title">Lightning Talks</h4>
+<div class="schedule-list__event-description"><p>Lightning Talks are an informal, impromptu ~5 minute presentation where anyone from the attendees can speak about any Python-related thing they want.</p>
+<p>PythonPH has an initiative: we believe that anyone can make a product with Python. But no one will know unless you show it off to everyone.</p>
+<p>On day 2, you can have the chance to show off your project. Just sign up at the help desk table and we will give you 5 minutes to awe everyone with your work. It will be your chance to shine!</p>
+<p>Your program can be simple, you might have made a product that is related to the Python ecosystem, or you want to show off what you have done to the community that involves Python. As long as you are passionate about your project, we will give you the chance to show us your work.</p>
+<p>A little warning: since we only have limited time, we can't have everyone talk. So sign up as soon as you get to the venue and ready yourself for the day.</p>
+<p>Here are some ideas from last year:<br>- PyCon PH 2018 Lightning Talks - Part 1 https://youtu.be/hOnwVW8J58w<br>- PyCon PH 2018 Lightning Talks - Part 2 https://youtu.be/zsadpRsntxA</p></div>
+</div>
+<div class="schedule-list__time-block">
+<div class="schedule-list__dot">
+<div class="schedule-list__dot-circle"></div>
+<div class="schedule-list__dot-line"></div>
+</div>
+<div class="schedule-list__time">
+<span>2:30 PM&nbsp;</span><span>– 3:30 PM</span>
+</div>
+<div class="schedule-list__event-venue schedule-list__event-venue--first">[Track 1] 12F, Auditorium</div>
+<h4 class="schedule-list__event-title">Talk: Automate the Boring Stuff with Slackbot</h4>
+<div class="schedule-list__event-speaker">by Takanori Suzuki</div>
+<div class="schedule-list__event-description"><p>Today, there are many tasks to repeat in the company/community. In addition, we often use chat such as Slack for daily communication. So, Takanori-san created a chatbot(PyCon JP Bot: https://github.com/pyconjp/pyconjpbot) to automate various boring tasks related to holding PyCon JP.</p>
+<p>In this talk, Takanori-san will first explain how to create a chatbot using slackbot (https://github.com/lins05/slackbot). He will tell you how to register bot's integration on Slack and how to create a simple bot in Python that responds to specific keywords.</p>
+<p>As specific examples, Takanori-san will explain how to make a bot command to perform the following operations and technical problems.<br>- Emoji reaction<br>- Calculator: SymPy<br>- Karma(plusplus): Peewee<br>- Search issues, display issue details: JIRA API<br>- Create multiple issues from a template: JIRA API, Sheets API<br>- Search files from Google Drive: Google Drive API<br>- Account management of G Suite(user, alias, group and member): G Suite API<br>- etc.</p></div>
+<div class="schedule-list__event-venue">[Track 2] 9F, Gallery</div>
+<h4 class="schedule-list__event-title">Talk: Faster Python apps with open source APM</h4>
+<div class="schedule-list__event-speaker">Aravind Putrevu</div>
+<div class="schedule-list__event-description"><p>Slow applications are no fun. Application performance monitoring (APM) makes tracking down issues problems much easier. But which tools should you use?</p>
+<p>With the release of Elastic APM, there’s a new option. Language server and Python client is fully open source so you can get started with any app.</p>
+<p>Elastic’s APM was released some time ago, so it’s a very fresh option for tracing performance problems in Python applications (and other runtimes as well). The basic platform is free so it should be a welcome change for Go developers used to spending huge bills on comparable hosted platforms.</p>
+<p>It’s useful out of the box for tracing basics on web requests including: - Request details - Response time percentiles - Transaction timelines - Application errors and stack traces - Individual code lines - Distributed Tracing</p>
+<p>It can also be used to track any custom span in any Go application to find out where time is being lost and users are being slowed down.</p></div>
+<div class="schedule-list__event-venue">[Track 3] 9F, Classroom 1</div>
+<h4 class="schedule-list__event-title">Workshop: Django Girls Workshop by Django Girls CDO</h4>
+<div class="schedule-list__event-speaker">by Django Girls CDO</div>
+<div class="schedule-list__event-description"><p>(continued)</p></div>
+<div class="schedule-list__event-venue">[Track 4] 9F, Classroom 2</div>
+<h4 class="schedule-list__event-title">Workshop: Demystifying Natural Language Processing using Python (Scikit-Learn/ Keras)</h4>
+<div class="schedule-list__event-speaker">by Vaibhav Srivastav</div>
+<div class="schedule-list__event-description"><p>By learning how to transform text into data that is usable by machine learning models, you drastically increase the amount of data that your models can learn from. In this tutorial, we’ll build and evaluate predictive models from real-world text using scikit-learn.</p></div>
+<div class="schedule-list__event-venue">[Track 5] 9F, Classroom 3</div>
+<h4 class="schedule-list__event-title">Workshop: Introduction to Testing in Python</h4>
+<div class="schedule-list__event-speaker">by Aniruddha Adhikary</div>
+<div class="schedule-list__event-description"><p>This workshop aims to explore the rich Testing ecosystem of Python. It will take the participants in a voyage through basic unit tests, test runners, mocking, doctests and coverage analysis through a TDD-focused coding exercise.</p></div>
+<div class="schedule-list__event-venue">[Track 6] 9F, Classroom 4</div>
+<h4 class="schedule-list__event-title">Workshop: Graphene for Beginners</h4>
+<div class="schedule-list__event-speaker">by Nicole Tibay</div>
+<div class="schedule-list__event-description"><p>This will be an introductory workshop to learn GraphQL in Python using Graphene. The workshop will introduce first basic GraphQL concepts before getting the attendees' hands dirty creating a schema and playing with it.</p>
+<p>We expect participants to have basic Python programming knowledge. Please have the following installed prior to the workshop:<br>1. Python3 (Bundled with the venv module to create virtual environments)<br>2. Virtualenv if `venv` is not available<br>3. Pip <br>4. Code Editor<br>5. git (optional)</p>
+<p>And follow the setup instructions here https://github.com/neequole/bahay-kubo. If you have any setup problem, please come to the workshop at least 30 minutes so we can assist. See you!</p></div>
+<div class="schedule-list__event-venue">[Track 7] 9F, Classroom 5</div>
+<h4 class="schedule-list__event-title">Workshop: Setting up Computer Vision with Kivy using Tensorflow</h4>
+<div class="schedule-list__event-speaker">by Jairus Jimenez</div>
+<div class="schedule-list__event-description"><p>Kivy is an open source, cross-platform Python framework for the development of applications that<br>make use of innovative, multi-touch user interfaces.</p>
+<p>In this workshop, the aim is to utilize Kivy and Tensorflow to create a Computer Vision application.<br>We'll be using Google's Inception-v3 for our image recognition model.</p>
+<p> <br>Software needed:<br>- Python 3.6<br>- Tensorflow<br>- Kivy<br>- OpenCV</p>
+<p>Optional:<br>- Anaconda</p></div>
+<div class="schedule-list__event-venue">[Track 8] 9F, Classroom 6</div>
+<h4 class="schedule-list__event-title">Workshop: Learn How to Dockerize Your Python Application</h4>
+<div class="schedule-list__event-speaker">by Paul de Paula</div>
+<div class="schedule-list__event-description"><p>Our workshop will focus on the basic of docker and kubernetes for python and for participants to gain some hands-on-experience. We will be using a python application based on flask framework all throughout the workshop.</p>
+<p> — learn the basic of docker<br> — How to convert your python app a flask based rest application into micro services<br> — Minikube or Docker Desktop<br> — Learn how to basic of kubernetes on your local machine<br> — pods, label, services, deployments, replication controller, stateful sets<br> — Kubernetes on GCP<br> — How to deploy your python application in auto pilot </p>
+<p>Software needed:</p>
+<p>Python 3</p>
+<p>Mac: Docker for Mac - https://docs.docker.com/docker-for-mac/install/ </p>
+<p>Windows: Docker for windows - https://docs.docker.com/docker-for-windows/install/</p>
+<p>Google Cloud Account - get a free account from https://cloud.google.com/free/</p></div>
+</div>
+<div class="schedule-list__time-block">
+<div class="schedule-list__dot">
+<div class="schedule-list__dot-circle"></div>
+<div class="schedule-list__dot-line"></div>
+</div>
+<div class="schedule-list__time">
+<span>3:30 PM&nbsp;</span><span>– 4:30 PM</span>
+</div>
+<div class="schedule-list__event-venue schedule-list__event-venue--first">[Track 1] 12F, Auditorium</div>
+<h4 class="schedule-list__event-title">Talk: Best tools for Jupyter notebooks</h4>
+<div class="schedule-list__event-speaker">by Dmitry Trofimov</div>
+<div class="schedule-list__event-description"><p>The jupyter notebook is now a default format for scripting in many areas of computer engineering and education like data science, machine learning, and artificial intelligence. But what are the most efficient practices to work with Jupyter notebooks to get the most out of this technology? In this talk Dmitry Trofimov, team lead of PyCharm IDE, will show how different tools help you solve your daily tasks using Jupyter notebooks: JupyterLab, Hydrogen plugin for Atom, VS Code, and PyCharm (all tools are open-sourced). We will discuss their pros and cons and look at them in action.</p></div>
+<div class="schedule-list__event-venue">[Track 2] 12F, Gallery</div>
+<h4 class="schedule-list__event-title">Talk: Exploiting Auxiliary Information for Better Recommendation</h4>
+<div class="schedule-list__event-speaker">by Sun Zhu</div>
+<div class="schedule-list__event-description"><p>Recommender systems inherently suffer from data sparsity and cold start problem. To address these issues, the auxiliary information (e.g., feature hierarchy, knowledge graph) has been incorporated into recommendation. This talk is focused on the latest recommendation algorithms with incorporation of feature hierarchy and knowledge graph.</p></div>
+<div class="schedule-list__event-venue">[Track 3] 9F, Classroom 1</div>
+<h4 class="schedule-list__event-title">Workshop: Django Girls Workshop</h4>
+<div class="schedule-list__event-speaker">by Django Girls CDO</div>
+<div class="schedule-list__event-description"><p>(continued)</p></div>
+<div class="schedule-list__event-venue">[Track 4] 9F, Classroom 2</div>
+<h4 class="schedule-list__event-title">Workshop: Demystifying Natural Language Processing using Python (Scikit-Learn/ Keras)</h4>
+<div class="schedule-list__event-speaker">by Vaibhav Srivastav</div>
+<div class="schedule-list__event-description"><p>(continued)</p></div>
+<div class="schedule-list__event-venue">[Track 5] 9F, Classroom 3</div>
+<h4 class="schedule-list__event-title">Workshop: Introduction to Testing in Python</h4>
+<div class="schedule-list__event-speaker">by Aniruddha Adhikary</div>
+<div class="schedule-list__event-description"><p>(continued)</p></div>
+<div class="schedule-list__event-venue">[Track 6] 9F, Classroom 4</div>
+<h4 class="schedule-list__event-title">Workshop: Graphene for Beginners</h4>
+<div class="schedule-list__event-speaker">by Nicole Tibay</div>
+<div class="schedule-list__event-description"><p>(continued)</p></div>
+<div class="schedule-list__event-venue">[Track 7] 9F, Classroom 5</div>
+<h4 class="schedule-list__event-title">Workshop: Setting up Computer Vision with Kivy using Tensorflow</h4>
+<div class="schedule-list__event-speaker">by Jairus Jimenez</div>
+<div class="schedule-list__event-description"><p>(continued)</p></div>
+<div class="schedule-list__event-venue">[Track 8] 9F, Classroom 6</div>
+<h4 class="schedule-list__event-title">Workshop: Learn How to Dockerize Your Python Application</h4>
+<div class="schedule-list__event-speaker">by Paul de Paula</div>
+<div class="schedule-list__event-description"><p>(continued)</p></div>
+</div>
+<div class="schedule-list__time-block">
+<div class="schedule-list__dot">
+<div class="schedule-list__dot-circle"></div>
+<div class="schedule-list__dot-line"></div>
+</div>
+<div class="schedule-list__time">
+<span>4:30 PM&nbsp;</span><span>– 5:30 PM</span>
+</div>
+<div class="schedule-list__event-venue schedule-list__event-venue--first">[Track 1] 12F, Auditorium</div>
+<h4 class="schedule-list__event-title">Talk: Turn your Flask App into Async using Quart</h4>
+<div class="schedule-list__event-speaker">by Doni Rubiagatra</div>
+<div class="schedule-list__event-description"><p>Do you already use our beloved micro-framework Flask but have a problem with the speed and scalability? We hear a lot of buzz with the new fancy asynchronous Python programming using async/await keyword to make our Python code run faster. But really how async works are still not spread well and the majority of Python programmer still not familiar using async/await keyword. In this talks, because Flask is not intended to support async (yet), we are will explore Quart, the Python ASGI web microframework. It is intended to provide the easiest way to use asyncio functionality in a web context, especially with existing Flask apps. This is possible as the Quart API is a superset of the Flask API. So you can instantly migrate your Flask app easily!</p></div>
+<div class="schedule-list__event-venue">[Track 2] 12F, Gallery</div>
+<h4 class="schedule-list__event-title">Talk: The Use of Python in the Data World</h4>
+<div class="schedule-list__event-speaker">by Lai-Man Sung</div>
+<div class="schedule-list__event-venue">[Track 3] 9F, Classroom 1</div>
+<h4 class="schedule-list__event-title">Workshop: Django Girls Workshop</h4>
+<div class="schedule-list__event-speaker">by Django Girls CDO</div>
+<div class="schedule-list__event-description"><p>(continued)</p></div>
+<div class="schedule-list__event-venue">[Track 4] 9F, Classroom 2</div>
+<h4 class="schedule-list__event-title">Workshop: Demystifying Natural Language Processing using Python (Scikit-Learn/ Keras)</h4>
+<div class="schedule-list__event-speaker">by Vaibhav Srivastav</div>
+<div class="schedule-list__event-description"><p>(continued)</p></div>
+<div class="schedule-list__event-venue">[Track 5] 9F, Classroom 3</div>
+<h4 class="schedule-list__event-title">Workshop: Introduction to Testing in Python</h4>
+<div class="schedule-list__event-speaker">by Aniruddha Adhikary</div>
+<div class="schedule-list__event-description"><p>(continued)</p></div>
+<div class="schedule-list__event-venue">[Track 6] 9F, Classroom 4</div>
+<h4 class="schedule-list__event-title">Workshop: Graphene for Beginners</h4>
+<div class="schedule-list__event-speaker">by Nicole Tibay</div>
+<div class="schedule-list__event-description"><p>(continued)</p></div>
+<div class="schedule-list__event-venue">[Track 7] 9F, Classroom 5</div>
+<h4 class="schedule-list__event-title">Workshop: Kivy Cross Platform Application Development</h4>
+<div class="schedule-list__event-speaker">by Jairus Jimenez</div>
+<div class="schedule-list__event-description"><p>(continued)</p></div>
+<div class="schedule-list__event-venue">[Track 8] 9F, Classroom 6</div>
+<h4 class="schedule-list__event-title">Workshop: Learn How to Dockerize Your Python Application</h4>
+<div class="schedule-list__event-speaker">by Paul de Paula</div>
+<div class="schedule-list__event-description"><p>(continued)</p></div>
+</div>
+<div class="schedule-list__time-block">
+<div class="schedule-list__dot">
+<div class="schedule-list__dot-circle"></div>
+<div class="schedule-list__dot-line"></div>
+</div>
+<div class="schedule-list__time">
+<span>5:30 PM&nbsp;</span><span>– 6:30 PM</span>
+</div>
+<div class="schedule-list__event-venue schedule-list__event-venue--first">[Track 1] 12F, Auditorium</div>
+<h4 class="schedule-list__event-title">Panel Discussion</h4>
+<div class="schedule-list__event-venue">[Track 2] 12F, Gallery</div>
+<h4 class="schedule-list__event-title">Talk: Python with NoSQL + SQL = MySQL 8.0</h4>
+<div class="schedule-list__event-speaker">by Ronen Baran</div>
+<div class="schedule-list__event-description"><p>MySQL 8.0 is a new and exciting version of MySQL with many changes. This talk will present some new features like CTE and Window Function, but will mainly show how to use MySQL as both NoSQL and SQL database with Python.</p></div>
+</div>
+<div class="schedule-list__time-block">
+<div class="schedule-list__dot">
+<div class="schedule-list__dot-circle"></div>
+<div class="schedule-list__dot-line"></div>
+</div>
+<div class="schedule-list__time">
+<span>6:30 PM&nbsp;</span><span>– 7:00 PM</span>
+</div>
+<div class="schedule-list__event-venue schedule-list__event-venue--first">[Track 1] 12F, Auditorium</div>
+<h4 class="schedule-list__event-title">Games and Closing Remarks</h4>
+<div class="schedule-list__event-speaker">by PyCon APAC 2019 Volunteers</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="event-details">
+<div class="event-details__image"></div>
+<div class="event-details__content">
+<h3>When is it?</h3>
+<h4>February 23–24, 2019</h4>
+<h4>9:00 am–6:30 pm</h4>
+<h4>* Doors open at 8:30 am</h4>
+<h3>Where is it?</h3>
+<h4>iAcademy Nexus (Yakal Campus)</h4>
+<h4>7434, Yakal, Makati, Philippines 1203</h4>
+<a class="button button--yellow button--borderless" target="_blank" href="https://goo.gl/maps/eSy6DqgDQEx">
+Show me directions
+</a>
+</div>
+</div>
+<section class="sponsors-section">
+<div class="sponsors-section__container">
+<h3 class="sponsors-section__heading">Sponsors</h3>
+<div class="sponsors-section__group">
+<h4 class="sponsors-section__subheading">Keystone Sponsors</h4>
+<ul class="sponsors-list">
+<li class="sponsors-list__sponsor">
+<img src="./PyCon APAC 2019_files/pugs_logo.png" data-tippy="test tooltip" tabindex="0">
+<div class="tooltip-box">
+
+</div>
+</li>
+<li class="sponsors-list__sponsor">
+<img src="./PyCon APAC 2019_files/psf-logo-372x84-alpha.png" data-tippy="test tooltip" tabindex="0">
+<div class="tooltip-box">
+
+</div>
+</li>
+</ul>
+</div>
+<div class="sponsors-section__group">
+<h4 class="sponsors-section__subheading">Organizers</h4>
+<ul class="sponsors-list">
+<li class="sponsors-list__sponsor">
+<img src="./PyCon APAC 2019_files/iacademy_shield.png" data-tippy="test tooltip" tabindex="0">
+<div class="tooltip-box">
+
+</div>
+</li>
+<li class="sponsors-list__sponsor">
+<img src="./PyCon APAC 2019_files/1024.png" data-tippy="test tooltip" tabindex="0">
+<div class="tooltip-box">
+
+</div>
+</li>
+</ul>
+</div>
+<div class="sponsors-section__group">
+<h4 class="sponsors-section__subheading">Web Design and Branding Partner</h4>
+<ul class="sponsors-list">
+<li class="sponsors-list__sponsor">
+<img src="./PyCon APAC 2019_files/kirigami.png" data-tippy="test tooltip" tabindex="0">
+<div class="tooltip-box">
+
+</div>
+</li>
+</ul>
+</div>
+<div class="sponsors-section__group">
+<h4 class="sponsors-section__subheading">Platinum Sponsors</h4>
+<ul class="sponsors-list">
+<li class="sponsors-list__sponsor">
+<img src="./PyCon APAC 2019_files/Acc_Technology_Lockup_BLK_1.png" data-tippy="test tooltip" tabindex="0">
+<div class="tooltip-box">
+
+</div>
+</li>
+</ul>
+</div>
+<div class="sponsors-section__group">
+<h4 class="sponsors-section__subheading">Gold Sponsors</h4>
+<ul class="sponsors-list">
+<li class="sponsors-list__sponsor">
+<img src="./PyCon APAC 2019_files/download.png" data-tippy="test tooltip" tabindex="0">
+<div class="tooltip-box">
+
+</div>
+</li>
+<li class="sponsors-list__sponsor">
+<img src="./PyCon APAC 2019_files/images.png" data-tippy="test tooltip" tabindex="0">
+<div class="tooltip-box">
+
+</div>
+</li>
+<li class="sponsors-list__sponsor">
+<img src="./PyCon APAC 2019_files/Orange_Horizontal_Shopee_Logo.png" data-tippy="test tooltip" tabindex="0">
+<div class="tooltip-box">
+
+</div>
+</li>
+<li class="sponsors-list__sponsor">
+<img src="./PyCon APAC 2019_files/logo-mysql-170x115.png" data-tippy="test tooltip" tabindex="0">
+<div class="tooltip-box">
+
+</div>
+</li>
+</ul>
+</div>
+<div class="sponsors-section__group">
+<h4 class="sponsors-section__subheading">Silver Sponsor</h4>
+<ul class="sponsors-list">
+<li class="sponsors-list__sponsor">
+<img src="./PyCon APAC 2019_files/tm-logo-horizontal-red-tag_300dpi_2.png" data-tippy="test tooltip" tabindex="0">
+<div class="tooltip-box">
+
+</div>
+</li>
+<li class="sponsors-list__sponsor">
+<img src="./PyCon APAC 2019_files/PythonED_1.png" data-tippy="test tooltip" tabindex="0">
+<div class="tooltip-box">
+
+</div>
+</li>
+</ul>
+</div>
+<div class="sponsors-section__group">
+<h4 class="sponsors-section__subheading">Diversity Sponsor</h4>
+<ul class="sponsors-list">
+<li class="sponsors-list__sponsor">
+<img src="./PyCon APAC 2019_files/gitkraken-logo-dark-sq.png" data-tippy="test tooltip" tabindex="0">
+<div class="tooltip-box">
+
+</div>
+</li>
+</ul>
+</div>
+<div class="sponsors-section__group">
+<h4 class="sponsors-section__subheading">Coffee Sponsor</h4>
+<ul class="sponsors-list">
+<li class="sponsors-list__sponsor">
+<img src="./PyCon APAC 2019_files/PythonED_ndPjhjC.png" data-tippy="test tooltip" tabindex="0">
+<div class="tooltip-box">
+
+</div>
+</li>
+</ul>
+</div>
+<div class="sponsors-section__group">
+<h4 class="sponsors-section__subheading">Media Partner</h4>
+<ul class="sponsors-list">
+<li class="sponsors-list__sponsor">
+<img src="./PyCon APAC 2019_files/WhenInManila-com-HiRes-logo.jpg" data-tippy="test tooltip" tabindex="0">
+<div class="tooltip-box">
+
+</div>
+</li>
+</ul>
+</div>
+<div class="sponsors-section__group">
+<h4 class="sponsors-section__subheading">Contributing Partners</h4>
+<ul class="sponsors-list">
+<li class="sponsors-list__sponsor">
+<img src="./PyCon APAC 2019_files/jetbrains_F4DjuCM.png" data-tippy="test tooltip" tabindex="0">
+<div class="tooltip-box">
+
+</div>
+</li>
+<li class="sponsors-list__sponsor">
+<img src="./PyCon APAC 2019_files/Upstream_Media_3fzGusI.png" data-tippy="test tooltip" tabindex="0">
+<div class="tooltip-box">
+
+</div>
+</li>
+<li class="sponsors-list__sponsor">
+<img src="./PyCon APAC 2019_files/gourmet_farms_1_Z4qOkqt.png" data-tippy="test tooltip" tabindex="0">
+<div class="tooltip-box">
+
+</div>
+</li>
+</ul>
+</div>
+<div class="sponsors-section__group">
+<h4 class="sponsors-section__subheading">Community Partners</h4>
+<ul class="sponsors-list">
+<li class="sponsors-list__sponsor">
+<img src="./PyCon APAC 2019_files/databeers.jpg" data-tippy="test tooltip" tabindex="0">
+<div class="tooltip-box">
+
+</div>
+</li>
+<li class="sponsors-list__sponsor">
+<img src="./PyCon APAC 2019_files/aws-ug.png" data-tippy="test tooltip" tabindex="0">
+<div class="tooltip-box">
+
+</div>
+</li>
+<li class="sponsors-list__sponsor">
+<img src="./PyCon APAC 2019_files/WWCodeManila-Logo-Github_1.png" data-tippy="test tooltip" tabindex="0">
+<div class="tooltip-box">
+
+</div>
+</li>
+<li class="sponsors-list__sponsor">
+<img src="./PyCon APAC 2019_files/DEVCON_Logo_-_Black_Text_Square.png" data-tippy="test tooltip" tabindex="0">
+<div class="tooltip-box">
+
+</div>
+</li>
+<li class="sponsors-list__sponsor">
+<img src="./PyCon APAC 2019_files/pwdo-logo-square_NN4fzjZ.png" data-tippy="test tooltip" tabindex="0">
+<div class="tooltip-box">
+
+</div>
+</li>
+<li class="sponsors-list__sponsor">
+<img src="./PyCon APAC 2019_files/wpugph_transparent-stroke.png" data-tippy="test tooltip" tabindex="0">
+<div class="tooltip-box">
+
+</div>
+</li>
+</ul>
+</div>
+</div>
+</section>
+<div class="questions-section">
+<div class="questions-section__wrapper">
+<h3>Questions?</h3>
+<p>
+Message us at
+<a href="mailto:pycon@python.ph">pycon@python.ph</a>
+</p>
+</div>
+</div>
+<div class="coc-section">
+<div class="coc-section__short-coc">
+<h3>Code of Conduct</h3>
+<p>
+PyCon PH is a community conference intended for collaboration in the
+developer community.
+</p>
+<p>
+We value the participation of each member of the Python community and
+want all attendees to have an enjoyable and fulfilling experience.
+Accordingly, all attendees are expected to show respect and courtesy to
+other attendees throughout the conference and at all conference events,
+whether officially sponsored by Python.PH or not.
+</p>
+<p>
+To make clear what is expected, all delegates/attendees, speakers,
+exhibitors, organizers and volunteers at any PyCon event are required to
+conform to the following Code of Conduct. Organizers will enforce this
+code throughout the event.
+</p>
+</div>
+<div class="coc-section__boxes-outer">
+<div class="coc-section__boxes-left"></div>
+<div class="coc-section__boxes-right">
+<div class="coc-section__boxes-top-right"></div>
+<div class="coc-section__boxes-bottom-right"></div>
+</div>
+</div>
+<div class="coc-section__long-coc">
+<h3>The long version</h3>
+<p>
+Harassment includes offensive verbal comments related to gender, gender
+identity and expression, sexual orientation, disability, physical
+appearance, body size, race, religion, status, sexual images in public
+spaces, deliberate intimidation, stalking, following, harassing
+photography or recording, sustained disruption of talks or other events,
+inappropriate physical contact, and unwelcome sexual attention.
+</p>
+<p>
+Participants who are asked to stop any harassing behavior are expected to
+comply immediately.
+</p>
+<p>
+Be careful in the words that you choose. Remember that sexist, racist,
+and other exclusionary jokes can be offensive to those around you.
+Excessive swearing and offensive jokes are not appropriate for PyCon.
+</p>
+<p>
+Exhibitors in the expo hall, sponsor or vendor booths, or similar
+activities are also subject to the anti-harassment policy. In particular,
+exhibitors should not use sexualized images, activities, or other
+material. Booth staff (including volunteers) should not use sexualized
+clothing/uniforms/costumes, or otherwise create a sexualized environment.
+</p>
+<p>
+If a participant engages in harassing behavior, the conference organizers
+may take any action they deem appropriate, including warning the offender
+or expulsion from the conference with no refund. If you are being
+harassed, notice that someone else is being harassed, or have any other
+concerns, please contact a member of conference staff immediately.
+</p>
+<p>
+Conference staff can be identified by t-shirts/special badges/head sets.
+</p>
+<p>
+Conference staff will be happy to help participants contact hotel/venue
+security or local law enforcement, provide escorts, or otherwise assist
+those experiencing harassment to feel safe for the duration of the
+conference. We value your attendance.
+</p>
+<p>
+We expect participants to follow these rules at all conference venues and
+conference-related social events.
+</p>
+</div>
+<div class="coc-section__license">
+<h3>License</h3>
+<p>
+This Code of Conduct is based on the <strong>PyCon US 2015 CoC</strong>,
+and is licensed under a <strong>Creative Commons Attribution 3.0 Unported
+License</strong>.
+</p>
+</div>
+</div>
+<footer class="footer-block">
+<div class="footer-block__logo">
+<svg viewBox="0 0 406 68" xmlns="http://www.w3.org/2000/svg"><path class="pycon-logo__path" d="M0 1.4h25.521c7.147 0 12.792 1.756 16.935 5.27 4.143 3.513 6.214 8.503 6.214 14.97 0 6.592-2.055 11.583-6.166 14.972-4.112 3.389-9.772 5.083-16.983 5.083h-7.535v24.906H0V1.399zm74.205 40.482L55.312 1.399h57.873L93.391 41.882v24.719H74.205V41.882zM156.827 68c-6.83 0-12.903-1.4-18.216-4.198-5.313-2.798-9.456-6.762-12.428-11.893-2.973-5.13-4.46-11.084-4.46-17.862 0-6.779 1.487-12.748 4.46-17.91 2.972-5.161 7.115-9.141 12.428-11.94C143.924 1.4 149.996 0 156.827 0c9.108 0 16.73 2.27 22.865 6.81L156.827 34l23.719 27.004C174.853 65.668 166.947 68 156.827 68zm67.171 0c-6.578 0-12.523-1.415-17.836-4.244-5.313-2.83-9.488-6.825-12.524-11.986-3.036-5.162-4.554-11.07-4.554-17.723 0-6.654 1.518-12.562 4.554-17.723 3.036-5.162 7.21-9.173 12.524-12.033C211.475 1.43 217.42 0 223.998 0c6.578 0 12.523 1.43 17.836 4.29 5.313 2.861 9.488 6.872 12.524 12.034 3.036 5.161 4.554 11.069 4.554 17.723 0 6.654-1.518 12.561-4.554 17.723-3.036 5.161-7.21 9.156-12.524 11.986-5.313 2.83-11.258 4.244-17.836 4.244zm45.35-66.6l52.75 65.2h-52.75V1.4zM335 67.724v-3.45l5.862-8.942a64.992 64.992 0 0 1 1.426-2.137 8.307 8.307 0 0 0 .899-1.608 7.313 7.313 0 0 0 .469-1.823c.091-.68.137-1.608.137-2.785 0-1.202-.248-2.19-.743-2.96-.495-.772-1.355-1.157-2.579-1.157-.834 0-1.687.078-2.56.235-.872.157-1.608.3-2.208.431v-2.862c.105-.026.313-.072.626-.138.312-.065.69-.137 1.133-.215.443-.079.925-.15 1.446-.216A12.547 12.547 0 0 1 340.47 40c2.319 0 4.006.608 5.06 1.824 1.056 1.215 1.583 3.052 1.583 5.51 0 1.019-.052 1.901-.156 2.646-.104.745-.28 1.451-.527 2.118a13.155 13.155 0 0 1-.977 2.04 55.602 55.602 0 0 1-1.505 2.411l-5.432 8.275h8.988v2.901H335zm32.912-14.039c0 2.406-.078 4.504-.234 6.294-.157 1.791-.482 3.281-.977 4.471s-1.199 2.078-2.11 2.667c-.913.588-2.124.882-3.635.882-1.511 0-2.722-.294-3.634-.882-.912-.589-1.616-1.477-2.11-2.667-.496-1.19-.821-2.68-.978-4.47-.156-1.791-.234-3.89-.234-6.295 0-2.3.078-4.307.234-6.02.157-1.712.482-3.137.977-4.274s1.199-1.987 2.11-2.549c.913-.562 2.124-.843 3.635-.843 1.537 0 2.762.281 3.673.843.912.562 1.61 1.412 2.091 2.55.482 1.136.801 2.561.958 4.274.156 1.712.234 3.719.234 6.02zm-3.322.196c0-2.17-.045-3.96-.136-5.372-.092-1.412-.267-2.536-.528-3.373-.26-.836-.625-1.425-1.094-1.764-.47-.34-1.094-.51-1.876-.51-.782 0-1.407.17-1.876.51-.469.34-.833.928-1.094 1.764-.26.837-.436 1.961-.528 3.373-.09 1.412-.136 3.202-.136 5.372 0 2.118.045 3.89.136 5.314.092 1.425.261 2.582.508 3.47.248.89.613 1.524 1.095 1.903s1.113.568 1.895.568 1.413-.19 1.895-.568c.482-.38.847-1.013 1.095-1.902.247-.89.416-2.046.508-3.47.09-1.426.136-3.197.136-5.315zm9.8 13.843v-2.94h4.73V43.372l-5.12 2.04v-3.177l4.729-1.96h3.712v24.51h3.869v2.94h-11.92zM392 48.235c0-1.516.176-2.797.528-3.843.351-1.046.84-1.895 1.465-2.549a5.454 5.454 0 0 1 2.188-1.412 8.214 8.214 0 0 1 2.697-.431c1.276 0 2.345.196 3.204.588.86.392 1.55 1.105 2.071 2.137.522 1.033.893 2.458 1.114 4.275.222 1.817.332 4.15.332 7 0 3.163-.162 5.667-.488 7.51-.326 1.843-.814 3.248-1.466 4.215-.65.968-1.458 1.589-2.422 1.863-.964.275-2.085.412-3.361.412-.313 0-.652-.02-1.016-.059a13.763 13.763 0 0 1-1.075-.157c-.352-.065-.677-.13-.977-.196a7.025 7.025 0 0 1-.684-.176v-2.863c.521.13 1.134.268 1.837.412.703.144 1.472.215 2.306.215.677 0 1.263-.098 1.758-.294.495-.196.899-.594 1.212-1.196.312-.601.553-1.477.723-2.627.169-1.15.267-2.667.293-4.55-.417.262-.964.524-1.642.785-.677.262-1.498.392-2.462.392-1.328 0-2.396-.202-3.204-.608a4.18 4.18 0 0 1-1.856-1.823c-.43-.81-.717-1.804-.86-2.98-.143-1.177-.215-2.523-.215-4.04zm5.81 6.628c.99 0 1.817-.144 2.481-.432a31.415 31.415 0 0 0 1.387-.627c0-2.431-.071-4.373-.215-5.824-.143-1.45-.351-2.562-.625-3.333-.273-.771-.632-1.268-1.075-1.49-.442-.222-.977-.333-1.602-.333-1.198 0-2.07.49-2.618 1.47-.547.98-.82 2.399-.82 4.255 0 1.098.025 2.046.077 2.843.053.798.19 1.451.41 1.96.222.51.535.89.939 1.138.403.249.957.373 1.66.373zm-53.993-52l-3.174 14.98h6.388l-3.214-14.98zm5.33 24.862l-1.49-6.94h-7.64l-1.53 6.94H335l6.623-27.45h4.506l6.506 27.45h-3.488zm18.86-18.94c0-1.961-.268-3.445-.804-4.452-.535-1.006-1.509-1.51-2.92-1.51-1.097 0-1.985.04-2.664.118-.392.052-.732.092-1.019.118v11.45h3.684c.548 0 1.051-.097 1.508-.293a2.84 2.84 0 0 0 1.176-.961c.327-.445.581-1.033.764-1.765.183-.732.275-1.634.275-2.706zm3.487-.275c0 1.49-.137 2.79-.411 3.902-.274 1.11-.712 2.032-1.313 2.764-.6.733-1.385 1.282-2.351 1.648-.967.366-2.143.549-3.527.549H360.6v10.352h-3.41V.275c.654-.053 1.346-.105 2.078-.157a32.342 32.342 0 0 1 2.135-.098c.797-.013 1.6-.02 2.41-.02 1.49 0 2.73.216 3.723.647.993.431 1.783 1.033 2.371 1.804.588.771 1 1.673 1.235 2.706a15.09 15.09 0 0 1 .352 3.353zm10.434-5.647l-3.174 14.98h6.388l-3.214-14.98zm5.33 24.862l-1.49-6.94h-7.64l-1.53 6.94h-3.487l6.623-27.45h4.507l6.505 27.45h-3.488zM406 27.333a27.602 27.602 0 0 1-2.018.412 35.05 35.05 0 0 1-1.235.177 8.983 8.983 0 0 1-1.097.078c-1.41 0-2.612-.203-3.605-.608-.993-.405-1.81-1.144-2.45-2.216-.64-1.071-1.11-2.542-1.41-4.411-.3-1.87-.451-4.268-.451-7.196 0-2.902.17-5.236.51-7 .34-1.765.855-3.138 1.547-4.118.693-.98 1.561-1.634 2.606-1.96C399.442.162 400.683 0 402.12 0c.627 0 1.3.059 2.019.176.718.118 1.338.242 1.861.373v2.902a18.109 18.109 0 0 0-2.214-.373 21.473 21.473 0 0 0-2.371-.137c-.705 0-1.326.124-1.861.373-.536.248-.974.758-1.313 1.53-.34.77-.595 1.868-.764 3.293-.17 1.425-.255 3.327-.255 5.706 0 2.458.091 4.425.274 5.902.183 1.477.45 2.608.803 3.392.353.785.79 1.3 1.313 1.55.523.248 1.137.372 1.842.372.81 0 1.646-.066 2.508-.196.862-.131 1.542-.262 2.038-.392v2.862z"></path><ellipse fill="#FFC100" cx="310.977" cy="10.364" rx="10.542" ry="10.364"></ellipse></svg>
+</div>
+<ul class="footer-block__social-links">
+<li class="footer-block__social-link">
+<a href="https://www.facebook.com/pyconph" target="_blank">
+<svg viewBox="0 0 54 54" xmlns="http://www.w3.org/2000/svg"><path d="M48 0H6C2.7 0 0 2.7 0 6v42c0 3.303 2.7 6 6 6h21V33h-6v-7.425h6v-6.15c0-6.492 3.636-11.052 11.298-11.052l5.409.006v7.815h-3.591c-2.982 0-4.116 2.238-4.116 4.314v5.07h7.704L42 33h-6v21h12c3.3 0 6-2.697 6-6V6c0-3.3-2.7-6-6-6z"></path></svg>
+</a>
+</li>
+<li class="footer-block__social-link">
+<a href="https://www.instagram.com/pythonph/" target="_blank">
+<svg viewBox="0 0 54 54" xmlns="http://www.w3.org/2000/svg"><path d="M18.002 27a9 9 0 1 1 18 0 9 9 0 0 1-18 0m-4.866 0c0 7.657 6.208 13.864 13.865 13.864 7.658 0 13.865-6.207 13.865-13.864 0-7.657-6.207-13.864-13.865-13.864-7.657 0-13.864 6.206-13.864 13.864m25.038-14.414a3.24 3.24 0 1 0 3.241-3.239h-.001a3.242 3.242 0 0 0-3.24 3.24m-22.082 36.39c-2.633-.12-4.064-.558-5.015-.928-1.26-.491-2.16-1.075-3.105-2.02-.946-.944-1.531-1.843-2.02-3.103-.37-.95-.81-2.382-.929-5.014-.13-2.846-.157-3.701-.157-10.912 0-7.21.028-8.062.157-10.91.12-2.633.562-4.062.929-5.015.49-1.26 1.075-2.16 2.02-3.105.944-.946 1.843-1.531 3.105-2.02.95-.37 2.382-.81 5.015-.929 2.846-.13 3.7-.157 10.908-.157 7.207 0 8.063.028 10.912.158 2.632.12 4.06.561 5.014.928 1.26.489 2.16 1.076 3.106 2.02.945.944 1.529 1.845 2.02 3.106.37.95.809 2.381.928 5.014.131 2.848.157 3.7.157 10.91 0 7.211-.026 8.064-.157 10.912-.12 2.632-.56 4.063-.929 5.014-.49 1.26-1.075 2.16-2.02 3.104-.944.943-1.844 1.528-3.105 2.02-.95.37-2.382.808-5.014.928-2.846.13-3.701.157-10.912.157-7.21 0-8.063-.026-10.908-.157M15.869.164c-2.874.13-4.839.586-6.554 1.254-1.775.689-3.28 1.614-4.783 3.114-1.503 1.5-2.425 3.005-3.114 4.783C.75 11.03.294 12.995.164 15.868.03 18.748 0 19.668 0 27s.03 8.253.164 11.132c.13 2.874.586 4.837 1.254 6.553.689 1.776 1.612 3.283 3.114 4.783 1.503 1.5 3.006 2.423 4.783 3.114 1.719.668 3.68 1.124 6.554 1.254 2.88.131 3.8.164 11.132.164 7.333 0 8.253-.03 11.132-.164 2.875-.13 4.838-.586 6.554-1.254 1.775-.69 3.28-1.614 4.783-3.114 1.503-1.5 2.423-3.007 3.114-4.783.668-1.716 1.126-3.68 1.255-6.553.13-2.881.161-3.8.161-11.132s-.03-8.253-.161-11.132c-.131-2.874-.587-4.838-1.255-6.553-.69-1.776-1.614-3.28-3.114-4.783-1.5-1.503-3.008-2.425-4.78-3.114C42.97.75 41.007.292 38.134.164 35.255.032 34.335 0 27.005 0 19.672 0 18.75.03 15.87.164"></path></svg>
+</a>
+</li>
+<li class="footer-block__social-link">
+<a href="https://twitter.com/pyconph" target="_blank">
+ <svg viewBox="0 0 54 44" xmlns="http://www.w3.org/2000/svg"><path d="M53.693 5.36a1.18 1.18 0 0 0-1.404-.247c-.293.149-.845.344-1.5.538.827-1.09 1.491-2.31 1.784-3.408A1.16 1.16 0 0 0 52.111.99a1.184 1.184 0 0 0-1.345 0c-.637.44-3.708 1.763-5.65 2.192-4.387-3.813-9.494-4.209-14.802-1.135-4.315 2.5-5.254 7.582-5.071 10.68-9.877-.944-16.017-6.12-19.473-10.402a1.205 1.205 0 0 0-.998-.436c-.385.028-.732.24-.93.568C2.21 5.194 1.756 8.22 2.538 11.208a12.404 12.404 0 0 0 2.04 4.232 6.402 6.402 0 0 1-1.195-.76 1.187 1.187 0 0 0-1.244-.148 1.166 1.166 0 0 0-.669 1.052c0 5.132 3.235 8.555 6.257 10.344a8.831 8.831 0 0 1-1.512-.321c-.442-.133-.92 0-1.226.344A1.154 1.154 0 0 0 4.8 27.2c1.698 3.724 4.914 6.286 8.894 7.216-3.475 2.024-8.126 3.016-12.385 2.529a1.164 1.164 0 0 0-.711 2.17C7.059 42.716 12.9 44 17.948 44c7.346 0 13.016-2.72 16.468-4.996C43.72 32.878 49.519 21.88 48.71 12.039c1.491-1.092 3.722-3.109 5.104-5.277a1.144 1.144 0 0 0-.122-1.403z"></path></svg>
+</a>
+</li>
+<li class="footer-block__social-link">
+<a href="https://github.com/pythonph" target="_blank">
+<svg viewBox="0 0 55 54" xmlns="http://www.w3.org/2000/svg"><path d="M27.5 0C12.336 0 0 12.255 0 27.319c0 12.694 9.052 23.904 21.523 26.654.34.07.692-.01.965-.223a1.14 1.14 0 0 0 .429-.888v-6.193c0-.628-.514-1.138-1.146-1.138h-2.292c-2.86 0-4.805-2.693-6.524-5.067-.177-.244-.35-.488-.527-.724.813.428 1.512.944 2.202 1.452 1.373 1.01 2.794 2.056 4.682 2.056h.023c.146.016 1.485.152 2.52-.751.486-.426 1.062-1.23 1.062-2.657v-.795c0-.51-.34-.956-.835-1.095-6.354-1.787-10.624-6.518-10.624-11.77 0-2.731 1.13-5.338 3.266-7.54a1.13 1.13 0 0 0 .215-1.27c-.852-1.826-.671-4.31.34-5.8 1.338.516 3.073 1.602 4.2 2.932.31.366.818.498 1.27.334 4.297-1.566 9.208-1.566 13.505 0 .456.164.962.03 1.27-.334 1.127-1.33 2.861-2.416 4.197-2.935 1.013 1.491 1.194 3.977.34 5.803-.2.428-.115.931.215 1.27 2.136 2.202 3.266 4.809 3.266 7.54 0 5.514-4.744 10.452-11.534 12.007-.346.08-.637.314-.784.635a1.13 1.13 0 0 0 .03 1.004c.566 1.07.83 2.52.83 4.567v8.469c0 .346.157.671.428.888a1.15 1.15 0 0 0 .965.223C45.947 51.223 55 40.013 55 27.319 55 12.255 42.664 0 27.5 0z"></path></svg>
+</a>
+</li>
+<li class="footer-block__social-link">
+<a href="https://pythonph.slack.com/" target="_blank">
+<svg viewBox="0 0 54 54" xmlns="http://www.w3.org/2000/svg"><path d="M16.146 36.826l-3.749-10.89-7.29 2.51a3.851 3.851 0 1 1-2.508-7.283l7.291-2.51-2.515-7.307a3.851 3.851 0 1 1 7.283-2.508l2.516 7.308 10.89-3.749-2.51-7.29a3.851 3.851 0 1 1 7.283-2.508l2.51 7.291 7.307-2.515a3.851 3.851 0 0 1 2.508 7.283l-7.308 2.516 3.749 10.89 7.29-2.51a3.851 3.851 0 1 1 2.508 7.283l-7.291 2.51 2.515 7.307a3.851 3.851 0 1 1-7.283 2.508l-2.516-7.308-10.89 3.749 2.51 7.29a3.851 3.851 0 1 1-7.283 2.508l-2.51-7.291-7.307 2.515a3.851 3.851 0 1 1-2.508-7.283l7.308-2.516zm7.283-2.507l10.89-3.748-3.748-10.89-10.89 3.748 3.748 10.89z"></path></svg>
+</a>
+</li>
+</ul>
+<div class="footer-block__copyright">
+<span>Logo and branding by</span>
+<a href="https://kirigami.co/?utm_source=pyconapac2019"><svg viewBox="0 0 208 54" xmlns="http://www.w3.org/2000/svg"><path d="M27.614 42.68H17.83L8.452 28.3v14.38H0V7.056a4.226 4.226 0 0 1 8.452 0v19.453l9.262-13.11h9.726L17.251 27.433 27.614 42.68zm4.4 0V13.4h8.451v29.28h-8.452zM56.095 13.4v5.429c.54-1.694 1.437-3.052 2.692-4.072 1.254-1.02 2.71-1.53 4.37-1.53.927 0 1.66.077 2.2.23v7.97c-.926-.423-1.987-.635-3.184-.635-1.814 0-3.28.665-4.4 1.993-1.119 1.328-1.678 3.09-1.678 5.284V42.68h-8.452l.058-29.281h8.394zM69.41 42.68V13.4h8.452v29.28H69.41zM98.124 35c1.814 0 3.232-.683 4.255-2.05 1.023-1.367 1.534-3.013 1.534-4.938 0-5.237-1.91-7.855-5.731-7.855-1.698 0-3.03.655-3.994 1.964-.965 1.309-1.448 3.118-1.448 5.429 0 2.425.463 4.273 1.39 5.544.926 1.27 2.257 1.906 3.994 1.906zm5.79-21.6h8.393v26.45c0 4.698-1.408 8.23-4.226 10.598C105.264 52.816 101.733 54 97.487 54c-4.13 0-7.738-.732-10.825-2.195V43.2c2.701 2.156 6.02 3.234 9.957 3.234 2.547 0 4.4-.539 5.557-1.617 1.158-1.078 1.737-2.772 1.737-5.082V37.77c-1.698 2.618-4.4 3.927-8.104 3.927-3.242 0-6.03-1.193-8.366-3.58-2.335-2.388-3.502-5.93-3.502-10.627 0-4.158 1.129-7.595 3.387-10.31 2.257-2.714 5.22-4.07 8.886-4.07 3.473 0 6.04 1.385 7.7 4.157v-3.87zm29.581 17.268h-2.72c-1.429 0-2.529.308-3.3.924-.772.616-1.158 1.406-1.158 2.368 0 1.964 1.138 2.946 3.415 2.946 1.197 0 2.123-.366 2.779-1.098.656-.731.984-1.732.984-3.003v-2.137zm-13.72-8.258v-7.566c2.316-1.31 5.654-1.964 10.015-1.964 4.168 0 7.275.895 9.32 2.686 2.046 1.79 3.069 4.572 3.069 8.345v18.77H133.9V39.1c-1.235 2.502-3.666 3.753-7.294 3.753-2.856 0-5.085-.808-6.686-2.425-1.602-1.617-2.403-3.639-2.403-6.064 0-2.811 1.033-4.996 3.098-6.555 2.064-1.56 5.123-2.34 9.175-2.34h3.705v-2.02c0-2.465-1.64-3.697-4.92-3.697-3.165 0-6.098.885-8.8 2.657zm37.513-9.01v4.562c1.621-3.234 4.38-4.85 8.278-4.85 4.13 0 6.87 1.847 8.22 5.544.657-1.733 1.757-3.09 3.3-4.072 1.544-.982 3.358-1.473 5.442-1.473 2.895 0 5.181.915 6.86 2.743 1.68 1.83 2.518 4.515 2.518 8.057v18.77h-8.452V25.296c0-1.655-.328-2.964-.984-3.927-.656-.963-1.601-1.444-2.836-1.444-1.312 0-2.48.53-3.503 1.588-1.022 1.06-1.534 2.955-1.534 5.69V42.68h-8.452V25.296c0-1.655-.328-2.964-.984-3.927-.656-.963-1.601-1.444-2.836-1.444-1.313 0-2.48.53-3.503 1.588-1.023 1.06-1.534 2.955-1.534 5.69V42.68h-8.452V13.4h8.452zm41.565 29.281V13.4h8.452v29.28h-8.452zm-.694-37.77c0-1.349.482-2.504 1.447-3.466C200.57.48 201.729 0 203.079 0c1.351 0 2.509.481 3.474 1.444.965.962 1.447 2.117 1.447 3.465 0 1.348-.482 2.503-1.447 3.465-.965.963-2.123 1.444-3.474 1.444-1.35 0-2.508-.481-3.473-1.444-.965-.962-1.447-2.117-1.447-3.465z" fill="#FF6868" fill-rule="evenodd"></path></svg></a>
+</div>
+</footer>
+</div> 
+
+
+
+<script src="./PyCon APAC 2019_files/bundle.js"></script>
+
+
+</body></html>
